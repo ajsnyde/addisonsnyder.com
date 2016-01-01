@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Addison Snyder</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+ <div class="container">
+ 	<PRE>Torrent simulator
+	
+Objective: show how a torrent works
+
+Questions:
+Should each seeder and leech have the same properties? Will be one and the same class: peer.
+Language? Java?
+
+Networking
+	How in-depth will connections be simulated?
+		Connections will consist of a mesh between all users, consisting of node and connection capacities.
+		Ex. User1's NODE has 100Mbit download connection, with 10Mbit upload connection.
+
+How will packets/sections be simulated?
+	Each section has a size. The connection will be classified as 100Mbit format speed.
+	When a section is being transferred, it will "move" along the connection line.
+	Speed will be calculated accordingly. Ex. 50MB section tansferred in 4 seconds if has full upload speed.
+Section/Packet competition:
+	Each connection will be shared equally between section. 2 sections each get 50% of the connection..
+	
+
+Sending section protocol:
+	1.	B wants to send to A (established in torrent rules and protocols)
+		Worry about later. Choose random indexes for now...
+	2.	B considers both nodes' connection and node speeds. Lowest of B.in,B.out,A.in,A.out,AB.speed limits max Speed.
+		Traffic is also considered; (AB.speed/AB.traffic+1), (B.in/B.traffic+1), (A.in/A.traffic+1). Smallest of which determines actual speed.
+	3.	Once a traffic limit is calculated, the traffic is added to the connection/node, and other transmission speeds are updated.
+	4.	Visual object is created and added. Size of square is proportional to section size. Progress/speed is equal to size/(speed/traffic)
+	5.	Every tick, object location is updated by one second.
+
+Receiving section protocol:
+	1.	Section reaches 100% progress (event)
+	2.	Section visual is removed
+	3.	Receiver status is updated accordingly
+	4.	Connection/Nodes are updated; -1 traffic.
+
+Objects:
+	Peer
+		UserID
+		In/Out Nodes
+			Stack of objects
+			Max Speed
+		Torrent
+			Sections complete (bool array)
+			Other stats (worry about later)
+		Connection[]
+
+	Section
+		SectionID
+		SectionIndex (ex. part 5 of 32)
+
+	Connection
+		FullDuplexSpeed
+		User1
+		User2
+
+Plan: Agile Approach
+
+	Create Peer Object
+	Create Connection/Node
+	Create preliminary protocol; Tick() function
+	Create basic 2 peer system
+
+	Expand and polish
+
+	Get to many users/connections
+
+	Add visuals
+
+U=10	D=100
+		D
+	A-------|-------B
+		C
+ 	</PRE>
+ </div>
+
+<footer>     
+    <div class="copyright">
+        <div class="container">
+            <p class="text-center">Copyright 2015 by Addison Snyder</p>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
+
+
+
+
+

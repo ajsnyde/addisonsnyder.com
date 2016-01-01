@@ -1,75 +1,236 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <title>Addison Snyder</title>
 
+    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
 <body>
-    <header>
-        <nav>
- <div class="container">
-            <!-- Logo and responsive toggle -->
-            <nav class="navbar navbar-inverse">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
-                    <span class="glyphicon glyphicon-home"></span> 
-                    Addison Snyder
-                </a>
+                <a class="navbar-brand" href="index.html">Addison Snyder</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="skillset.html">Skillset</a>
                     </li>
-                    <li class="active">
-                        <a href="#">Portfolio</a>
+                    <li>
+                        <a href="contact.html">Contact Info</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">Contact Info</a>
+                        <a href="Mailto:ajsnyde@bgsu.edu">ajsnyde@bgsu.edu</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Portfolio
+                    <small>Recent Projects</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="projects/URL_Fetcher.jar">
+                    <img class="img-responsive" src="pics/URL_Fetcher.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>URL Fetcher <small>12/26/15</small></h3>
+                <h4>Written in Java</h4>
+                <p>Another small side-project, created for giggles. It accepts a list of search queries and grabs the first youtube search result in URL form. It works by taking the HTML, using regex to find the result, and returning it in String form. This does NOT use the Youtube/Google API (this was intentional). Github repo is <a href = https://github.com/ajsnyde/List2URLs>here.</a></p>
+                <a class="btn btn-primary" href="projects/URL_Fetcher.jar">Download Runnable Jar <span class="glyphicon glyphicon-download"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <img class="center-block" src="http://www.tixati.com/discover/dlpic.png" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>Torrent Simulator <small>10/9/15 - </small></h3>
+                <h4>In progress - Written in Java</h4>
+                <p>Current Project. Github repo can be found <a href = https://github.com/ajsnyde/TorrentGUI>here</a>.</p>
+                <a class="btn btn-primary" href="TorrentSim.html">Project Overview <span class="glyphicon glyphicon-download"></span></a>
+            </div>
+        </div>
+        
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <img class="center-block" src="pics/LoginForm.PNG" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>Login Window <small>10/7/15</small></h3>
+                <h4>Written in C# using VS 2015</h4>
+                <p class="hello">I made this program while playing around with Windows forms during a PoliSci lecture. Nothing too interesting, but it is the first time I've played with C# forms. Username is Addison, password is Snyder. While the authentication is primitive, it could easily be modified for server-side applications.</p>
+                <a class="btn btn-primary" href="projects/LoginForm.zip">Download Project <span class="glyphicon glyphicon-download"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+
+            <div class="col-md-7">
+                <a href="pics/CohenSutherland1.png">
+                    <img class="img-responsive" src="pics/CohenSutherland1.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>CohenSutherland & Line Clipping <small>5/6/15</small></h3>
+                <h4>Written in C++ with OpenGL</h4>
+                <p>I had written this for a graphics course. It compares the performance of two different line clipping methods.</p>
+                <!--<a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a> -->
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Four -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="projects/SnowyTrain.jar">
+                    <img class="img-responsive" src="pics/SnowyTrain.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Snowy Train <small>3/2/15</small></h3>
+                <h4>Written in Java</h4>
+                <p>One of my last class-oriented java projects (completed as a no-specs extra credit assignment), SnowyTrain created many Snowflake objects, all of which inherited gravity and windspeed from the environment, which varied over time. A random modifier allowed each flake to have slightly different speeds in relation to the background wind, giving a more realistic feel. A "train" could move in the background, going offscreen for a while before returning to the left. All in all, this project was the height of any graphics project I made.</p>
+                <a class="btn btn-primary" href="projects/SnowyTrain.jar">Download Runnable Jar <span class="glyphicon glyphicon-download"></span></a>
+                <a class="btn btn-primary" href="projects/SnowyTrain.zip">Download Project <span class="glyphicon glyphicon-download"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!--
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Five</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        /.row -->
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
                     </li>
                 </ul>
             </div>
         </div>
+        <!-- /.row -->
 
-        </nav>
-        <h1 class = "text-center">Welcome to my site!</h1>
+        <hr>
+
+        <!-- Footer -->
+        <footer>
             <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-9">Hello! I am a computer science student at BGSU, OH. I've created this webpage as an exercise and a place to hold all of my projects.</div>
-            <div class="col-xs-6 col-md-3"><a href = "#"><img src = "portrait.jpg" class="img-responsive"></a></div>
-        </div>
-            <div class="row">
-            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-            <!-- Optional: clear the XS cols if their content doesn't match in height -->
-            <div class="clearfix visible-xs-block"></div>
-            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-        </div>
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Addison Snyder 2015</p> <!-- This Website was first created on 10/7/15 -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
 
-        
-    </header>
-
-
-<footer>     
-    <div class="copyright">
-        <div class="container">
-            <p class="text-center">Copyright 2015 by Addison Snyder</p>
-        </div>
     </div>
-</footer>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
