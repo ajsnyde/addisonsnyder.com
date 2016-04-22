@@ -1,0 +1,493 @@
+Script started on Tue Nov 04 21:13:13 2014
+sh-4.3$ cat animShapeO.h
+#pragma once
+#include "shapeO.h"
+class animShapeO : public shapeO {
+public:
+        animShapeO();
+        ~animShapeO();
+        void set_direction(double x, double y){         //getters/setters for direction - dimensions availble via ShapeO inheritance
+                direction_x = x; direction_y = y;}
+        void get_direction(double & x, double & y){
+        x = direction_x; y = direction_y;}
+        bool collidesWith(animShapeO * shape){          // Collision function, returns true for overlaps
+                double X, Y, H, W;
+                (*shape).getRect(X, Y, H, W);
+                if(x < X + W && x + width > X && y < Y + H && height + y > Y)
+                        return true;
+                else return false;}
+        void update(){                                  // Moves shape's position and reverses directions accordingly when hitting a boundary
+                x += direction_x;
+                y += direction_y;
+                        if(x < 0 && direction_x < 0)
+                        direction_x = -direction_x;
+                if(y < 0 && direction_y < 0)
+                        direction_y = -direction_y;
+                if(x > 800 && direction_x > 0)
+                        direction_x = -direction_x;
+                if(y > 600 && direction_y > 0)
+                        direction_y = -direction_y;}
+        bool get_destroy(){return destroy;}             //more basic getters and setters
+        void set_destroy(){destroy = true;}
+protected:
+        double direction_x, direction_y;
+        bool destroy;                                   // allows for easy flagging for removal and/or other purposes (potential explosion implentation??)
+};
+sh-4.3$ cat animShapeO.cpp
+#include "animShapeO.h"
+
+
+animShapeO::animShapeO(void)    //sets destroy flag to default false
+{
+        destroy = false;
+}
+
+
+animShapeO::~animShapeO(void)   // nothing really needed here...
+{
+}
+sh-4.3$ cat p3.cpp
+//Addison Snyder
+
+#include "iostream"
+#include "animShapeO.h"
+#include <list>
+#include <stdlib.h>
+#include <time.h> 
+
+using namespace std;
+
+void move_all(list<animShapeO> & in);
+int check_all(list<animShapeO> & in);
+void display_all(list<animShapeO> in);
+
+int main()
+{
+        const int MAX_Y = 600; //Max 'resolution' of area
+        const int MAX_X = 800;
+        const int move_range = 5; // used to calculate range of speeds/directions
+        animShapeO input;       // basic dummy variable for input
+        int num_shapes, min, max;
+        list<animShapeO> world; //      "Hello World!"
+
+        // INPUT PHASE:
+
+        cout << "Please enter number of shapes: ";
+        cin >> num_shapes;
+        cout << "Please enter min. dimensions of shapes: ";
+        cin >> min;
+        cout << "Please enter max. dimensions  shapes: ";
+        cin >> max;
+        srand (time(NULL));
+
+        // INITIALIZE SHAPES
+
+        for(int i = 0; i < num_shapes; i++){//sets up initial shapes with correct random properties in 'world' list container
+                input.setRect(rand() % MAX_X, rand() % MAX_Y,(rand() % (max-min)) + min, rand() % (max-min) + min);
+                input.set_direction((rand() % move_range) - 2, (rand() % move_range) - 2);
+                world.push_front(input);}
+        list<animShapeO>::iterator pos = world.begin();
+        list<animShapeO>::iterator temp = world.begin();
+
+        // PERFORM 10 ITERATIONS OF UPDATES AND COLLISION CHECKS
+
+        int num;
+        for(int i = 1; i <= 10; i++){
+        cout << "Round " << i << ". . .\n";
+        num = check_all(world);
+        move_all(world);
+        }
+
+        // DISPLAY END RESULTS
+
+        display_all(world);
+        cout << num << " shapes left!\n";
+        return 0;
+}
+
+int check_all(list<animShapeO> & in)
+{
+        list<animShapeO>::iterator temp = in.begin();
+        list<animShapeO>::iterator temp2 = temp;
+        for(temp = in.begin(); temp != in.end(); temp++){       // go through to check every single combination of shapes, flagging colliding ones for removal
+                temp2 = temp;
+                for(temp2++; temp2 != in.end(); temp2++){
+                        if((*temp).collidesWith(&(*temp2))){
+                                (*temp).set_destroy();
+                                (*temp2).set_destroy();}
+                }
+        }
+        for(temp = in.begin(); temp != in.end(); temp++)        // remove flagged shapes
+        {
+                if((*temp).get_destroy()){
+                        in.erase(temp);
+                        temp = in.begin();
+                        cout << "Shape deleted!\n";
+                }
+        }
+        return in.size();                                       // returns number of shapes left
+}
+
+void move_all(list<animShapeO> & in)
+{
+        list<animShapeO>::iterator temp = in.begin();           // applies movement to shapes, simulating one 'tick' of the world
+        for(temp = in.begin(); temp != in.end(); temp++){
+                (*temp).update();
+        }
+}
+
+void display_all(list<animShapeO> in)                           // displays all properties of shapes in world
+{
+        list<animShapeO>::iterator temp = in.begin();
+        int i = 0;
+        double x,y,l,h,dx,dy;
+        char tab = 9;
+        cout << "#" << tab << "x" << tab << "y" << tab << "l" << tab << "h" << tab << "dx" << tab << "dy" << "\n";
+        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+        for(temp = in.begin(); temp != in.end(); temp++)
+        {
+                (*temp).getRect(x,y,l,h);
+                (*temp).get_direction(dx,dy);
+                cout << i << tab << x << tab << y << tab << l << tab << h << tab << dx << tab << dy << "\n";
+                i++;
+        }
+}
+sh-4.3$ clear
+[H[2Jsh-4.3$ clearat p3.cpp[8@animShapeO.cpp[2Phsh-4.3$ a.out[Kg++ p3.cpp animShapeO.cpp
+sh-4.3$ a.out
+Please enter number of shapes: 40
+Please enter min. dimensions of shapes: 30
+Please enter max. dimensions  shapes: 40
+Round 1. . .
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Round 2. . .
+Round 3. . .
+Round 4. . .
+Round 5. . .
+Round 6. . .
+Round 7. . .
+Round 8. . .
+Round 9. . .
+Round 10. . .
+#       x       y       l       h       dx      dy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0       137     514     35      37      1       0
+1       786     499     30      35      -2      -1
+2       133     255     32      36      -2      2
+3       352     419     37      36      1       -2
+4       472     110     36      37      -1      1
+5       638     556     33      33      -2      2
+6       270     333     32      33      1       1
+7       217     34      37      31      -2      2
+8       431     239     33      38      -1      -1
+9       706     9       33      38      0       0
+10      448     544     37      37      -1      -2
+11      250     72      39      30      2       -1
+12      79      172     33      36      -1      -1
+13      79      49      31      37      0       0
+14      680     523     33      31      2       2
+15      214     410     34      33      -2      0
+16      184     39      32      31      -2      1
+17      253     249     33      31      2       -1
+18      786     237     36      30      -1      -1
+19      708     281     38      35      0       -2
+20      7       91      39      30      2       0
+21      102     593     30      31      -2      -1
+22      537     286     30      37      0       1
+23      113     97      31      36      1       1
+24 shapes left!
+sh-4.3$ clear
+[H[2Jsh-4.3$ a.out
+Please enter number of shapes: 80
+Please enter min. dimensions of shapes: 50
+Please enter max. dimensions  shapes: 60
+Round 1. . .
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Round 2. . .
+Shape deleted!
+Round 3. . .
+Round 4. . .
+Round 5. . .
+Round 6. . .
+Round 7. . .
+Round 8. . .
+Round 9. . .
+Round 10. . .
+Shape deleted!
+Shape deleted!
+#       x       y       l       h       dx      dy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0       466     569     59      54      0       0
+1       790     127     54      57      -2      -2
+2       784     581     57      57      2       -1
+3       670     568     57      54      0       -2
+4       446     15      58      53      -2      1
+5       342     529     52      52      2       0
+6       777     15      58      51      -1      -2
+7       774     254     53      59      2       -1
+8       166     474     59      51      0       0
+9       52      3       57      55      -1      -2
+10 shapes left!
+sh-4.3$ clear
+[H[2Jsh-4.3$ a.out
+Please enter number of shapes: 160
+Please enter min. dimensions of shapes: 50
+Please enter max. dimensions  shapes: 60
+Round 1. . .
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Shape deleted!
+Round 2. . .
+Shape deleted!
+Round 3. . .
+Round 4. . .
+Round 5. . .
+Round 6. . .
+Round 7. . .
+Round 8. . .
+Round 9. . .
+Round 10. . .
+#       x       y       l       h       dx      dy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0       467     584     52      55      0       0
+1       371     20      52      53      -2      0
+2       199     159     50      57      0       0
+3       364     105     52      57      0       2
+4       9       180     52      50      -1      -2
+5 shapes left!
+sh-4.3$ clear
+[H[2Jsh-4.3$ exit
+
+script done on Tue Nov 04 21:15:18 2014

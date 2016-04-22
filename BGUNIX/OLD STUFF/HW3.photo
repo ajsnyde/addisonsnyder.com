@@ -1,0 +1,147 @@
+Script started on Fri Oct 17 09:49:10 2014
+sh-4.3$ cat HW3.cppsh-4.3$ [6Pa.outg++ HW3.cpp semaphore.osh-4.3$ a.out[Kcat HW3.cpp
+//ADDISON SNYDER
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <iostream>
+#include <time.h>
+#include <math.h>
+#include <stdbool.h>
+#include <errno.h>
+#include "/home/cs/kresman/3270/semaphore/semaphore.h"
+
+using namespace std;
+
+int main ()
+{       
+        
+        Semaphore semaphore(1337, 1);   //creates ONE SEMAPHORE
+        semaphore.Init(0, 0);           //initializes semaphore with 0
+        
+        int pid = fork();//split into 2 proccesses
+
+        const int REPS = 10;    // number of numbers to produce
+        
+        if(pid == 0)//If child
+        {
+                srand (time(NULL));// seeds seperateley for child to maintain randomness
+                cout << "CHILD ID: " << getpid() << "\n"; // shows child ID
+                
+                for(int i = 0; i < REPS; i++)
+                {
+                        while(semaphore.ReadValue(0) != 0)      //MAKES SURE THAT EITHER PARENT HAS JUST OUTPUT, OR SEMAPHORE WAS JUST INIT.
+                                sleep(1);//idles for 1 sec
+                        cout << "Child produced #" << rand() % 100 << "\n"; // shows child process and random output
+                        semaphore.Signal(0);//increments semaphore
+                }
+                exit(1); //kill program
+        }
+        else// If parent
+        {
+                cout << "PARENT ID: " << getpid() << "\n";
+                for(int i = 0; i < REPS; i++)
+                {
+                        while(semaphore.ReadValue(0) != 1)// WAIT UNTIL CHILD HAS GIVEN OUTPUT
+                                sleep(1);//wait for a sec                       
+                        cout << "Parent produced #" << rand() % 100 << "\n"; // shows parent process and random output
+                        semaphore.Wait(0); //decrement semaphore
+                }
+                semaphore.Destroy(); //destroys the semaphore, so the sysadmin doesn't me.Destroy();
+                exit(1);//kill parent
+        }
+}
+sh-4.3$ cat HW3.cppsh-4.3$ [6Pa.outg++ HW3.cpp semaphore.o
+sh-4.3$ g++ HW3.cpp semaphore.osh-4.3$ [12Pcat HW3.cppsh-4.3$ [6Pa.outg++ HW3.cpp semaphore.o[Ksh-4.3$ ls[Ksemaphore.osh-4.3$ ls[Kg++ HW3.cpp semaphore.osh-4.3$ a.out[Kcat HW3.cppsh-4.3$ [6Pa.out
+PARENT ID: 20228
+CHILD ID: 20229
+Child produced #69
+Parent produced #38
+Child produced #40
+Parent produced #58
+^[[A^[[AChild produced #43
+Parent produced #13
+Child produced #21
+Parent produced #15
+Child produced #40
+Parent produced #51
+Child produced #31
+Parent produced #27
+Child produced #94
+Parent produced #10
+Child produced #47
+Parent produced #19
+Child produced #53
+Parent produced #12
+Child produced #33
+Parent produced #86
+sh-4.3$ a.outg++ HW3.cpp semaphore.o                       cat HW3.cppsh-4.3$ [6Pa.outg++ HW3.cpp semaphore.o[Ksh-4.3$ ls[Ksemaphore.osh-4.3$ g++ HW3.cppsh-4.3$ [1P++ HW3.cppsh-4.3$ [5Pclearg++ HW3.cppsh-4.3$ [6Pclear-bash: -bash:: command not foundsh-4.3$ -bash: command substitution: line 4: syntax error: unexpected end of file1: unexpected EOF while looking for matching `''sh-4.3$ [33P> -bash: syntax error near unexpected token `int'sh-4.3$ > ~$ Semaphore::Signal(int)              /var/tmp//ccV4Okyx.osh-4.3$ > [12P-bash: syntax error near unexpected token `int'sh-4.3$ [33@-bash: command substitution: line 1: unexpected EOF while looking for matching `''sh-4.3$ -bash: command substitution: line [9P4: syntax error: unexpected end of filesh-4.3$ -bash: [41P-bash:: command not foundsh-4.3$ clear[Kg++ HW3.cppsh-4.3$ [6Pclear++ HW3.cppsh-4.3$ [1@g++ HW3.cppsh-4.3$ semaphore.osh-4.3$ ls[Kg++ HW3.cpp semaphore.osh-4.3$ a.out[Kcat HW3.cppsh-4.3$ [Ka.out[Ka.out[Kcat HW3.cppsh-4.3$ [6Pa.outg++ HW3.cpp semaphore.o[Ksh-4.3$ ls[Ksemaphore.osh-4.3$ g++ HW3.cppsh-4.3$ [1P++ HW3.cppsh-4.3$ [5Pclearg++ HW3.cppsh-4.3$ [6Pclear-bash: -bash:: command not foundsh-4.3$ -bash: command substitution: line 4: syntax error: unexpected end of filesh-4.3$ -bash: [41P-bash:: command not foundsh-4.3$ clear[Kg++ HW3.cppsh-4.3$ [6Pclear++ HW3.cppsh-4.3$ [1@g++ HW3.cppsh-4.3$ semaphore.osh-4.3$ ls[Kg++ HW3.cpp semaphore.osh-4.3$ a.out[Kcat HW3.cppsh-4.3$ [Ka.out[Kipcs
+IPC status from <running system> as of Fri Oct 17 09:50:16 EDT 2014
+T         ID      KEY        MODE        OWNER    GROUP
+Message Queues:
+Shared Memory:
+m         13   0x741cc1a3 --rw-rw-rw-     root     root
+m         12   0x741cc1a2 --rw-rw-rw-     root     root
+m         11   0x741cc1a1 --rw-rw-rw-     root     root
+m         10   0x741cc1a0 --rw-rw-rw-     root     root
+m          0   0x435dce60 --rw-rw-rw-     root     root
+Semaphores:
+s   50331716   0x4d3      --ra-ra-ra-   jjdean     user
+s   50331715   0x4d2      --ra-ra-ra-   jjdean     user
+sh-4.3$ ipcsa.out &
+[1] 20237
+sh-4.3$ PARENT ID: 20237
+CHILD ID: 20238
+Child produced #60
+Parent produced #38
+a.out &[3Pipcsa.outChild produced #48
+[1PipcsParent produced #58
+Child produced #19
+
+IPC status from <running system> as of Fri Oct 17 09:50:33 EDT 2014
+T         ID      KEY        MODE        OWNER    GROUP
+Message Queues:
+Shared Memory:
+m         13   0x741cc1a3 --rw-rw-rw-     root     root
+m         12   0x741cc1a2 --rw-rw-rw-     root     root
+m         11   0x741cc1a1 --rw-rw-rw-     root     root
+m         10   0x741cc1a0 --rw-rw-rw-     root     root
+m          0   0x435dce60 --rw-rw-rw-     root     root
+Semaphores:
+s   67108960   0x539      --ra-ra-ra-  ajsnyde     user
+s   50331716   0x4d3      --ra-ra-ra-   jjdean     user
+s   50331715   0x4d2      --ra-ra-ra-   jjdean     user
+sh-4.3$ Parent produced #13
+Child produced #43
+Parent produced #15
+Child produced #37
+Parent produced #51
+Child produced #79
+Parent produced #27
+Child produced #30
+Parent produced #10
+Child produced #83
+Parent produced #19
+Child produced #80
+Parent produced #12
+Child produced #60
+Parent produced #86
+ipcsa.out &[3Pipcs
+IPC status from <running system> as of Fri Oct 17 09:50:51 EDT 2014
+T         ID      KEY        MODE        OWNER    GROUP
+Message Queues:
+Shared Memory:
+m         13   0x741cc1a3 --rw-rw-rw-     root     root
+m         12   0x741cc1a2 --rw-rw-rw-     root     root
+m         11   0x741cc1a1 --rw-rw-rw-     root     root
+m         10   0x741cc1a0 --rw-rw-rw-     root     root
+m          0   0x435dce60 --rw-rw-rw-     root     root
+Semaphores:
+s   50331716   0x4d3      --ra-ra-ra-   jjdean     user
+s   50331715   0x4d2      --ra-ra-ra-   jjdean     user
+[1]+  Done(1)                 a.out
+sh-4.3$ clear
+[H[2Jsh-4.3$ exit
+
+script done on Fri Oct 17 09:51:00 2014

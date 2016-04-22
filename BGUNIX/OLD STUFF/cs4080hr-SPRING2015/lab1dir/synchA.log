@@ -1,0 +1,2561 @@
+Script started on Mon Feb 16 16:02:24 2015
+sh-4.3$ pwd
+/home/15/ajsnyde/cs4080hr/lab1dir
+sh-4.3$ ls -l
+total 48
+-rwxr-xr-x   1 ajsnyde  ics4080hr   15696 Feb 16 16:00 a.out
+-rw-r--r--   1 ajsnyde  ics4080hr    3083 Feb 16 16:00 synchA.cpp
+-rw-r--r--   1 ajsnyde  user           0 Feb 16 16:02 synchA.log
+-rw-r--r--   1 ajsnyde  ics4080hr    1320 Feb 16 12:09 test.cpp
+-rw-r--r--   1 ajsnyde  ics4080hr    1803 Feb 14 18:09 threadcount.cpp
+sh-4.3$ g++ synchA.cpp
+sh-4.3$ a.oi ui t
+Iterations: 550
+Producer - Item #0 - #0 Data is now: 367!
+Consumer - #0 Data has been eaten!
+Producer - Item #1 - #1 Data is now: 737!
+Consumer - #1 Data has been eaten!
+Producer - Item #2 - #2 Data is now: 215!
+Consumer - #2 Data has been eaten!
+Producer - Item #3 - #3 Data is now: 365!
+Consumer - #3 Data has been eaten!
+Producer - Item #4 - #4 Data is now: 634!
+Consumer - #4 Data has been eaten!
+Producer - Item #5 - #5 Data is now: 557!
+Consumer - #5 Data has been eaten!
+Producer - Item #6 - #6 Data is now: 104!
+Consumer - #6 Data has been eaten!
+Producer - Item #7 - #7 Data is now: 191!
+Consumer - #7 Data has been eaten!
+Producer - Item #8 - #8 Data is now: 219!
+Consumer - #8 Data has been eaten!
+Producer - Item #9 - #9 Data is now: 616!
+Consumer - #9 Data has been eaten!
+Producer - Item #10 - #0 Data is now: 914!
+Consumer - #0 Data has been eaten!
+Producer - Item #11 - #1 Data is now: 582!
+Consumer - #1 Data has been eaten!
+Producer - Item #12 - #2 Data is now: 558!
+Consumer - #2 Data has been eaten!
+Producer - Item #13 - #3 Data is now: 567!
+Consumer - #3 Data has been eaten!
+Producer - Item #14 - #4 Data is now: 271!
+Consumer - #4 Data has been eaten!
+Producer - Item #15 - #5 Data is now: 580!
+Consumer - #5 Data has been eaten!
+Producer - Item #16 - #6 Data is now: 222!
+Consumer - #6 Data has been eaten!
+Producer - Item #17 - #7 Data is now: 446!
+Consumer - #7 Data has been eaten!
+Producer - Item #18 - #8 Data is now: 67!
+Consumer - #8 Data has been eaten!
+Producer - Item #19 - #9 Data is now: 477!
+Consumer - #9 Data has been eaten!
+Producer - Item #20 - #0 Data is now: 533!
+Consumer - #0 Data has been eaten!
+Producer - Item #21 - #1 Data is now: 347!
+Consumer - #1 Data has been eaten!
+Producer - Item #22 - #2 Data is now: 826!
+Consumer - #2 Data has been eaten!
+Producer - Item #23 - #3 Data is now: 694!
+Consumer - #3 Data has been eaten!
+Producer - Item #24 - #4 Data is now: 578!
+Consumer - #4 Data has been eaten!
+Producer - Item #25 - #5 Data is now: 393!
+Consumer - #5 Data has been eaten!
+Producer - Item #26 - #6 Data is now: 59!
+Consumer - #6 Data has been eaten!
+Producer - Item #27 - #7 Data is now: 353!
+Consumer - #7 Data has been eaten!
+Producer - Item #28 - #8 Data is now: 117!
+Consumer - #8 Data has been eaten!
+Producer - Item #29 - #9 Data is now: 942!
+Consumer - #9 Data has been eaten!
+Producer - Item #30 - #0 Data is now: 272!
+Consumer - #0 Data has been eaten!
+Producer - Item #31 - #1 Data is now: 125!
+Consumer - #1 Data has been eaten!
+Producer - Item #32 - #2 Data is now: 108!
+Consumer - #2 Data has been eaten!
+Producer - Item #33 - #3 Data is now: 19!
+Consumer - #3 Data has been eaten!
+Producer - Item #34 - #4 Data is now: 748!
+Consumer - #4 Data has been eaten!
+Producer - Item #35 - #5 Data is now: 32!
+Consumer - #5 Data has been eaten!
+Producer - Item #36 - #6 Data is now: 507!
+Consumer - #6 Data has been eaten!
+Producer - Item #37 - #7 Data is now: 479!
+Consumer - #7 Data has been eaten!
+Producer - Item #38 - #8 Data is now: 876!
+Consumer - #8 Data has been eaten!
+Producer - Item #39 - #9 Data is now: 404!
+Consumer - #9 Data has been eaten!
+Producer - Item #40 - #0 Data is now: 902!
+Consumer - #0 Data has been eaten!
+Producer - Item #41 - #1 Data is now: 890!
+Consumer - #1 Data has been eaten!
+Producer - Item #42 - #2 Data is now: 936!
+Consumer - #2 Data has been eaten!
+Producer - Item #43 - #3 Data is now: 898!
+Consumer - #3 Data has been eaten!
+Producer - Item #44 - #4 Data is now: 566!
+Consumer - #4 Data has been eaten!
+Producer - Item #45 - #5 Data is now: 714!
+Consumer - #5 Data has been eaten!
+Producer - Item #46 - #6 Data is now: 594!
+Consumer - #6 Data has been eaten!
+Producer - Item #47 - #7 Data is now: 546!
+Consumer - #7 Data has been eaten!
+Producer - Item #48 - #8 Data is now: 180!
+Consumer - #8 Data has been eaten!
+Producer - Item #49 - #9 Data is now: 464!
+Consumer - #9 Data has been eaten!
+Producer - Item #50 - #0 Data is now: 436!
+Consumer - #0 Data has been eaten!
+Producer - Item #51 - #1 Data is now: 261!
+Consumer - #1 Data has been eaten!
+Producer - Item #52 - #2 Data is now: 129!
+Consumer - #2 Data has been eaten!
+Producer - Item #53 - #3 Data is now: 495!
+Consumer - #3 Data has been eaten!
+Producer - Item #54 - #4 Data is now: 134!
+Consumer - #4 Data has been eaten!
+Producer - Item #55 - #5 Data is now: 584!
+Consumer - #5 Data has been eaten!
+Producer - Item #56 - #6 Data is now: 825!
+Consumer - #6 Data has been eaten!
+Producer - Item #57 - #7 Data is now: 810!
+Consumer - #7 Data has been eaten!
+Producer - Item #58 - #8 Data is now: 806!
+Consumer - #8 Data has been eaten!
+Producer - Item #59 - #9 Data is now: 442!
+Consumer - #9 Data has been eaten!
+Producer - Item #60 - #0 Data is now: 379!
+Consumer - #0 Data has been eaten!
+Producer - Item #61 - #1 Data is now: 202!
+Consumer - #1 Data has been eaten!
+Producer - Item #62 - #2 Data is now: 63!
+Consumer - #2 Data has been eaten!
+Producer - Item #63 - #3 Data is now: 392!
+Consumer - #3 Data has been eaten!
+Producer - Item #64 - #4 Data is now: 282!
+Consumer - #4 Data has been eaten!
+Producer - Item #65 - #5 Data is now: 538!
+Consumer - #5 Data has been eaten!
+Producer - Item #66 - #6 Data is now: 5!
+Consumer - #6 Data has been eaten!
+Producer - Item #67 - #7 Data is now: 548!
+Consumer - #7 Data has been eaten!
+Producer - Item #68 - #8 Data is now: 424!
+Consumer - #8 Data has been eaten!
+Producer - Item #69 - #9 Data is now: 163!
+Consumer - #9 Data has been eaten!
+Producer - Item #70 - #0 Data is now: 62!
+Consumer - #0 Data has been eaten!
+Producer - Item #71 - #1 Data is now: 858!
+Consumer - #1 Data has been eaten!
+Producer - Item #72 - #2 Data is now: 663!
+Consumer - #2 Data has been eaten!
+Producer - Item #73 - #3 Data is now: 95!
+Consumer - #3 Data has been eaten!
+Producer - Item #74 - #4 Data is now: 232!
+Consumer - #4 Data has been eaten!
+Producer - Item #75 - #5 Data is now: 462!
+Consumer - #5 Data has been eaten!
+Producer - Item #76 - #6 Data is now: 783!
+Consumer - #6 Data has been eaten!
+Producer - Item #77 - #7 Data is now: 830!
+Consumer - #7 Data has been eaten!
+Producer - Item #78 - #8 Data is now: 458!
+Consumer - #8 Data has been eaten!
+Producer - Item #79 - #9 Data is now: 678!
+Consumer - #9 Data has been eaten!
+Producer - Item #80 - #0 Data is now: 231!
+Consumer - #0 Data has been eaten!
+Producer - Item #81 - #1 Data is now: 193!
+Consumer - #1 Data has been eaten!
+Producer - Item #82 - #2 Data is now: 852!
+Consumer - #2 Data has been eaten!
+Producer - Item #83 - #3 Data is now: 332!
+Consumer - #3 Data has been eaten!
+Producer - Item #84 - #4 Data is now: 236!
+Consumer - #4 Data has been eaten!
+Producer - Item #85 - #5 Data is now: 306!
+Consumer - #5 Data has been eaten!
+Producer - Item #86 - #6 Data is now: 517!
+Consumer - #6 Data has been eaten!
+Producer - Item #87 - #7 Data is now: 648!
+Consumer - #7 Data has been eaten!
+Producer - Item #88 - #8 Data is now: 3!
+Consumer - #8 Data has been eaten!
+Producer - Item #89 - #9 Data is now: 760!
+Consumer - #9 Data has been eaten!
+Producer - Item #90 - #0 Data is now: 744!
+Consumer - #0 Data has been eaten!
+Producer - Item #91 - #1 Data is now: 527!
+Consumer - #1 Data has been eaten!
+Producer - Item #92 - #2 Data is now: 118!
+Consumer - #2 Data has been eaten!
+Producer - Item #93 - #3 Data is now: 332!
+Consumer - #3 Data has been eaten!
+Producer - Item #94 - #4 Data is now: 406!
+Consumer - #4 Data has been eaten!
+Producer - Item #95 - #5 Data is now: 253!
+Consumer - #5 Data has been eaten!
+Producer - Item #96 - #6 Data is now: 879!
+Consumer - #6 Data has been eaten!
+Producer - Item #97 - #7 Data is now: 173!
+Consumer - #7 Data has been eaten!
+Producer - Item #98 - #8 Data is now: 874!
+Consumer - #8 Data has been eaten!
+Producer - Item #99 - #9 Data is now: 243!
+Consumer - #9 Data has been eaten!
+Producer - Item #100 - #0 Data is now: 744!
+Consumer - #0 Data has been eaten!
+Producer - Item #101 - #1 Data is now: 547!
+Consumer - #1 Data has been eaten!
+Producer - Item #102 - #2 Data is now: 743!
+Consumer - #2 Data has been eaten!
+Producer - Item #103 - #3 Data is now: 777!
+Consumer - #3 Data has been eaten!
+Producer - Item #104 - #4 Data is now: 223!
+Consumer - #4 Data has been eaten!
+Producer - Item #105 - #5 Data is now: 942!
+Consumer - #5 Data has been eaten!
+Producer - Item #106 - #6 Data is now: 217!
+Consumer - #6 Data has been eaten!
+Producer - Item #107 - #7 Data is now: 266!
+Consumer - #7 Data has been eaten!
+Producer - Item #108 - #8 Data is now: 50!
+Consumer - #8 Data has been eaten!
+Producer - Item #109 - #9 Data is now: 124!
+Consumer - #9 Data has been eaten!
+Producer - Item #110 - #0 Data is now: 294!
+Consumer - #0 Data has been eaten!
+Producer - Item #111 - #1 Data is now: 234!
+Consumer - #1 Data has been eaten!
+Producer - Item #112 - #2 Data is now: 862!
+Consumer - #2 Data has been eaten!
+Producer - Item #113 - #3 Data is now: 524!
+Consumer - #3 Data has been eaten!
+Producer - Item #114 - #4 Data is now: 835!
+Consumer - #4 Data has been eaten!
+Producer - Item #115 - #5 Data is now: 80!
+Consumer - #5 Data has been eaten!
+Producer - Item #116 - #6 Data is now: 751!
+Consumer - #6 Data has been eaten!
+Producer - Item #117 - #7 Data is now: 837!
+Consumer - #7 Data has been eaten!
+Producer - Item #118 - #8 Data is now: 494!
+Consumer - #8 Data has been eaten!
+Producer - Item #119 - #9 Data is now: 212!
+Consumer - #9 Data has been eaten!
+Producer - Item #120 - #0 Data is now: 246!
+Consumer - #0 Data has been eaten!
+Producer - Item #121 - #1 Data is now: 886!
+Consumer - #1 Data has been eaten!
+Producer - Item #122 - #2 Data is now: 71!
+Consumer - #2 Data has been eaten!
+Producer - Item #123 - #3 Data is now: 743!
+Consumer - #3 Data has been eaten!
+Producer - Item #124 - #4 Data is now: 630!
+Consumer - #4 Data has been eaten!
+Producer - Item #125 - #5 Data is now: 972!
+Consumer - #5 Data has been eaten!
+Producer - Item #126 - #6 Data is now: 94!
+Consumer - #6 Data has been eaten!
+Producer - Item #127 - #7 Data is now: 685!
+Consumer - #7 Data has been eaten!
+Producer - Item #128 - #8 Data is now: 653!
+Consumer - #8 Data has been eaten!
+Producer - Item #129 - #9 Data is now: 357!
+Consumer - #9 Data has been eaten!
+Producer - Item #130 - #0 Data is now: 42!
+Consumer - #0 Data has been eaten!
+Producer - Item #131 - #1 Data is now: 339!
+Consumer - #1 Data has been eaten!
+Producer - Item #132 - #2 Data is now: 203!
+Consumer - #2 Data has been eaten!
+Producer - Item #133 - #3 Data is now: 735!
+Consumer - #3 Data has been eaten!
+Producer - Item #134 - #4 Data is now: 182!
+Consumer - #4 Data has been eaten!
+Producer - Item #135 - #5 Data is now: 896!
+Consumer - #5 Data has been eaten!
+Producer - Item #136 - #6 Data is now: 60!
+Consumer - #6 Data has been eaten!
+Producer - Item #137 - #7 Data is now: 463!
+Consumer - #7 Data has been eaten!
+Producer - Item #138 - #8 Data is now: 109!
+Consumer - #8 Data has been eaten!
+Producer - Item #139 - #9 Data is now: 126!
+Consumer - #9 Data has been eaten!
+Producer - Item #140 - #0 Data is now: 814!
+Consumer - #0 Data has been eaten!
+Producer - Item #141 - #1 Data is now: 203!
+Consumer - #1 Data has been eaten!
+Producer - Item #142 - #2 Data is now: 647!
+Consumer - #2 Data has been eaten!
+Producer - Item #143 - #3 Data is now: 213!
+Consumer - #3 Data has been eaten!
+Producer - Item #144 - #4 Data is now: 321!
+Consumer - #4 Data has been eaten!
+Producer - Item #145 - #5 Data is now: 127!
+Consumer - #5 Data has been eaten!
+Producer - Item #146 - #6 Data is now: 938!
+Consumer - #6 Data has been eaten!
+Producer - Item #147 - #7 Data is now: 259!
+Consumer - #7 Data has been eaten!
+Producer - Item #148 - #8 Data is now: 944!
+Consumer - #8 Data has been eaten!
+Producer - Item #149 - #9 Data is now: 8!
+Consumer - #9 Data has been eaten!
+Producer - Item #150 - #0 Data is now: 2!
+Consumer - #0 Data has been eaten!
+Producer - Item #151 - #1 Data is now: 885!
+Consumer - #1 Data has been eaten!
+Producer - Item #152 - #2 Data is now: 308!
+Consumer - #2 Data has been eaten!
+Producer - Item #153 - #3 Data is now: 73!
+Consumer - #3 Data has been eaten!
+Producer - Item #154 - #4 Data is now: 252!
+Consumer - #4 Data has been eaten!
+Producer - Item #155 - #5 Data is now: 820!
+Consumer - #5 Data has been eaten!
+Producer - Item #156 - #6 Data is now: 515!
+Consumer - #6 Data has been eaten!
+Producer - Item #157 - #7 Data is now: 233!
+Consumer - #7 Data has been eaten!
+Producer - Item #158 - #8 Data is now: 958!
+Consumer - #8 Data has been eaten!
+Producer - Item #159 - #9 Data is now: 176!
+Consumer - #9 Data has been eaten!
+Producer - Item #160 - #0 Data is now: 43!
+Consumer - #0 Data has been eaten!
+Producer - Item #161 - #1 Data is now: 769!
+Consumer - #1 Data has been eaten!
+Producer - Item #162 - #2 Data is now: 159!
+Consumer - #2 Data has been eaten!
+Producer - Item #163 - #3 Data is now: 350!
+Consumer - #3 Data has been eaten!
+Producer - Item #164 - #4 Data is now: 306!
+Consumer - #4 Data has been eaten!
+Producer - Item #165 - #5 Data is now: 534!
+Consumer - #5 Data has been eaten!
+Producer - Item #166 - #6 Data is now: 221!
+Consumer - #6 Data has been eaten!
+Producer - Item #167 - #7 Data is now: 625!
+Consumer - #7 Data has been eaten!
+Producer - Item #168 - #8 Data is now: 272!
+Consumer - #8 Data has been eaten!
+Producer - Item #169 - #9 Data is now: 475!
+Consumer - #9 Data has been eaten!
+Producer - Item #170 - #0 Data is now: 617!
+Consumer - #0 Data has been eaten!
+Producer - Item #171 - #1 Data is now: 681!
+Consumer - #1 Data has been eaten!
+Producer - Item #172 - #2 Data is now: 594!
+Consumer - #2 Data has been eaten!
+Producer - Item #173 - #3 Data is now: 612!
+Consumer - #3 Data has been eaten!
+Producer - Item #174 - #4 Data is now: 941!
+Consumer - #4 Data has been eaten!
+Producer - Item #175 - #5 Data is now: 822!
+Consumer - #5 Data has been eaten!
+Producer - Item #176 - #6 Data is now: 704!
+Consumer - #6 Data has been eaten!
+Producer - Item #177 - #7 Data is now: 762!
+Consumer - #7 Data has been eaten!
+Producer - Item #178 - #8 Data is now: 745!
+Consumer - #8 Data has been eaten!
+Producer - Item #179 - #9 Data is now: 443!
+Consumer - #9 Data has been eaten!
+Producer - Item #180 - #0 Data is now: 89!
+Consumer - #0 Data has been eaten!
+Producer - Item #181 - #1 Data is now: 209!
+Consumer - #1 Data has been eaten!
+Producer - Item #182 - #2 Data is now: 625!
+Consumer - #2 Data has been eaten!
+Producer - Item #183 - #3 Data is now: 715!
+Consumer - #3 Data has been eaten!
+Producer - Item #184 - #4 Data is now: 932!
+Consumer - #4 Data has been eaten!
+Producer - Item #185 - #5 Data is now: 531!
+Consumer - #5 Data has been eaten!
+Producer - Item #186 - #6 Data is now: 247!
+Consumer - #6 Data has been eaten!
+Producer - Item #187 - #7 Data is now: 845!
+Consumer - #7 Data has been eaten!
+Producer - Item #188 - #8 Data is now: 678!
+Consumer - #8 Data has been eaten!
+Producer - Item #189 - #9 Data is now: 91!
+Consumer - #9 Data has been eaten!
+Producer - Item #190 - #0 Data is now: 15!
+Consumer - #0 Data has been eaten!
+Producer - Item #191 - #1 Data is now: 190!
+Consumer - #1 Data has been eaten!
+Producer - Item #192 - #2 Data is now: 410!
+Consumer - #2 Data has been eaten!
+Producer - Item #193 - #3 Data is now: 409!
+Consumer - #3 Data has been eaten!
+Producer - Item #194 - #4 Data is now: 438!
+Consumer - #4 Data has been eaten!
+Producer - Item #195 - #5 Data is now: 450!
+Consumer - #5 Data has been eaten!
+Producer - Item #196 - #6 Data is now: 395!
+Consumer - #6 Data has been eaten!
+Producer - Item #197 - #7 Data is now: 385!
+Consumer - #7 Data has been eaten!
+Producer - Item #198 - #8 Data is now: 882!
+Consumer - #8 Data has been eaten!
+Producer - Item #199 - #9 Data is now: 419!
+Consumer - #9 Data has been eaten!
+Producer - Item #200 - #0 Data is now: 714!
+Consumer - #0 Data has been eaten!
+Producer - Item #201 - #1 Data is now: 809!
+Consumer - #1 Data has been eaten!
+Producer - Item #202 - #2 Data is now: 720!
+Consumer - #2 Data has been eaten!
+Producer - Item #203 - #3 Data is now: 469!
+Consumer - #3 Data has been eaten!
+Producer - Item #204 - #4 Data is now: 448!
+Consumer - #4 Data has been eaten!
+Producer - Item #205 - #5 Data is now: 62!
+Consumer - #5 Data has been eaten!
+Producer - Item #206 - #6 Data is now: 783!
+Consumer - #6 Data has been eaten!
+Producer - Item #207 - #7 Data is now: 15!
+Consumer - #7 Data has been eaten!
+Producer - Item #208 - #8 Data is now: 403!
+Consumer - #8 Data has been eaten!
+Producer - Item #209 - #9 Data is now: 902!
+Consumer - #9 Data has been eaten!
+Producer - Item #210 - #0 Data is now: 32!
+Consumer - #0 Data has been eaten!
+Producer - Item #211 - #1 Data is now: 874!
+Consumer - #1 Data has been eaten!
+Producer - Item #212 - #2 Data is now: 833!
+Consumer - #2 Data has been eaten!
+Producer - Item #213 - #3 Data is now: 467!
+Consumer - #3 Data has been eaten!
+Producer - Item #214 - #4 Data is now: 290!
+Consumer - #4 Data has been eaten!
+Producer - Item #215 - #5 Data is now: 726!
+Consumer - #5 Data has been eaten!
+Producer - Item #216 - #6 Data is now: 550!
+Consumer - #6 Data has been eaten!
+Producer - Item #217 - #7 Data is now: 252!
+Consumer - #7 Data has been eaten!
+Producer - Item #218 - #8 Data is now: 279!
+Consumer - #8 Data has been eaten!
+Producer - Item #219 - #9 Data is now: 33!
+Consumer - #9 Data has been eaten!
+Producer - Item #220 - #0 Data is now: 629!
+Consumer - #0 Data has been eaten!
+Producer - Item #221 - #1 Data is now: 227!
+Consumer - #1 Data has been eaten!
+Producer - Item #222 - #2 Data is now: 393!
+Consumer - #2 Data has been eaten!
+Producer - Item #223 - #3 Data is now: 631!
+Consumer - #3 Data has been eaten!
+Producer - Item #224 - #4 Data is now: 568!
+Consumer - #4 Data has been eaten!
+Producer - Item #225 - #5 Data is now: 62!
+Consumer - #5 Data has been eaten!
+Producer - Item #226 - #6 Data is now: 58!
+Consumer - #6 Data has been eaten!
+Producer - Item #227 - #7 Data is now: 873!
+Consumer - #7 Data has been eaten!
+Producer - Item #228 - #8 Data is now: 888!
+Consumer - #8 Data has been eaten!
+Producer - Item #229 - #9 Data is now: 127!
+Consumer - #9 Data has been eaten!
+Producer - Item #230 - #0 Data is now: 69!
+Consumer - #0 Data has been eaten!
+Producer - Item #231 - #1 Data is now: 637!
+Consumer - #1 Data has been eaten!
+Producer - Item #232 - #2 Data is now: 395!
+Consumer - #2 Data has been eaten!
+Producer - Item #233 - #3 Data is now: 618!
+Consumer - #3 Data has been eaten!
+Producer - Item #234 - #4 Data is now: 352!
+Consumer - #4 Data has been eaten!
+Producer - Item #235 - #5 Data is now: 80!
+Consumer - #5 Data has been eaten!
+Producer - Item #236 - #6 Data is now: 808!
+Consumer - #6 Data has been eaten!
+Producer - Item #237 - #7 Data is now: 433!
+Consumer - #7 Data has been eaten!
+Producer - Item #238 - #8 Data is now: 590!
+Consumer - #8 Data has been eaten!
+Producer - Item #239 - #9 Data is now: 182!
+Consumer - #9 Data has been eaten!
+Producer - Item #240 - #0 Data is now: 963!
+Consumer - #0 Data has been eaten!
+Producer - Item #241 - #1 Data is now: 642!
+Consumer - #1 Data has been eaten!
+Producer - Item #242 - #2 Data is now: 143!
+Consumer - #2 Data has been eaten!
+Producer - Item #243 - #3 Data is now: 310!
+Consumer - #3 Data has been eaten!
+Producer - Item #244 - #4 Data is now: 129!
+Consumer - #4 Data has been eaten!
+Producer - Item #245 - #5 Data is now: 435!
+Consumer - #5 Data has been eaten!
+Producer - Item #246 - #6 Data is now: 342!
+Consumer - #6 Data has been eaten!
+Producer - Item #247 - #7 Data is now: 686!
+Consumer - #7 Data has been eaten!
+Producer - Item #248 - #8 Data is now: 283!
+Consumer - #8 Data has been eaten!
+Producer - Item #249 - #9 Data is now: 779!
+Consumer - #9 Data has been eaten!
+Producer - Item #250 - #0 Data is now: 69!
+Consumer - #0 Data has been eaten!
+Producer - Item #251 - #1 Data is now: 890!
+Consumer - #1 Data has been eaten!
+Producer - Item #252 - #2 Data is now: 418!
+Consumer - #2 Data has been eaten!
+Producer - Item #253 - #3 Data is now: 184!
+Consumer - #3 Data has been eaten!
+Producer - Item #254 - #4 Data is now: 635!
+Consumer - #4 Data has been eaten!
+Producer - Item #255 - #5 Data is now: 451!
+Consumer - #5 Data has been eaten!
+Producer - Item #256 - #6 Data is now: 23!
+Consumer - #6 Data has been eaten!
+Producer - Item #257 - #7 Data is now: 296!
+Consumer - #7 Data has been eaten!
+Producer - Item #258 - #8 Data is now: 225!
+Consumer - #8 Data has been eaten!
+Producer - Item #259 - #9 Data is now: 977!
+Consumer - #9 Data has been eaten!
+Producer - Item #260 - #0 Data is now: 272!
+Consumer - #0 Data has been eaten!
+Producer - Item #261 - #1 Data is now: 536!
+Consumer - #1 Data has been eaten!
+Producer - Item #262 - #2 Data is now: 32!
+Consumer - #2 Data has been eaten!
+Producer - Item #263 - #3 Data is now: 920!
+Consumer - #3 Data has been eaten!
+Producer - Item #264 - #4 Data is now: 545!
+Consumer - #4 Data has been eaten!
+Producer - Item #265 - #5 Data is now: 301!
+Consumer - #5 Data has been eaten!
+Producer - Item #266 - #6 Data is now: 786!
+Consumer - #6 Data has been eaten!
+Producer - Item #267 - #7 Data is now: 772!
+Consumer - #7 Data has been eaten!
+Producer - Item #268 - #8 Data is now: 104!
+Consumer - #8 Data has been eaten!
+Producer - Item #269 - #9 Data is now: 470!
+Consumer - #9 Data has been eaten!
+Producer - Item #270 - #0 Data is now: 730!
+Consumer - #0 Data has been eaten!
+Producer - Item #271 - #1 Data is now: 765!
+Consumer - #1 Data has been eaten!
+Producer - Item #272 - #2 Data is now: 79!
+Consumer - #2 Data has been eaten!
+Producer - Item #273 - #3 Data is now: 22!
+Consumer - #3 Data has been eaten!
+Producer - Item #274 - #4 Data is now: 149!
+Consumer - #4 Data has been eaten!
+Producer - Item #275 - #5 Data is now: 408!
+Consumer - #5 Data has been eaten!
+Producer - Item #276 - #6 Data is now: 231!
+Consumer - #6 Data has been eaten!
+Producer - Item #277 - #7 Data is now: 11!
+Consumer - #7 Data has been eaten!
+Producer - Item #278 - #8 Data is now: 5!
+Consumer - #8 Data has been eaten!
+Producer - Item #279 - #9 Data is now: 803!
+Consumer - #9 Data has been eaten!
+Producer - Item #280 - #0 Data is now: 937!
+Consumer - #0 Data has been eaten!
+Producer - Item #281 - #1 Data is now: 440!
+Consumer - #1 Data has been eaten!
+Producer - Item #282 - #2 Data is now: 137!
+Consumer - #2 Data has been eaten!
+Producer - Item #283 - #3 Data is now: 582!
+Consumer - #3 Data has been eaten!
+Producer - Item #284 - #4 Data is now: 932!
+Consumer - #4 Data has been eaten!
+Producer - Item #285 - #5 Data is now: 979!
+Consumer - #5 Data has been eaten!
+Producer - Item #286 - #6 Data is now: 398!
+Consumer - #6 Data has been eaten!
+Producer - Item #287 - #7 Data is now: 738!
+Consumer - #7 Data has been eaten!
+Producer - Item #288 - #8 Data is now: 270!
+Consumer - #8 Data has been eaten!
+Producer - Item #289 - #9 Data is now: 997!
+Consumer - #9 Data has been eaten!
+Producer - Item #290 - #0 Data is now: 644!
+Consumer - #0 Data has been eaten!
+Producer - Item #291 - #1 Data is now: 715!
+Consumer - #1 Data has been eaten!
+Producer - Item #292 - #2 Data is now: 107!
+Consumer - #2 Data has been eaten!
+Producer - Item #293 - #3 Data is now: 557!
+Consumer - #3 Data has been eaten!
+Producer - Item #294 - #4 Data is now: 433!
+Consumer - #4 Data has been eaten!
+Producer - Item #295 - #5 Data is now: 117!
+Consumer - #5 Data has been eaten!
+Producer - Item #296 - #6 Data is now: 318!
+Consumer - #6 Data has been eaten!
+Producer - Item #297 - #7 Data is now: 347!
+Consumer - #7 Data has been eaten!
+Producer - Item #298 - #8 Data is now: 254!
+Consumer - #8 Data has been eaten!
+Producer - Item #299 - #9 Data is now: 87!
+Consumer - #9 Data has been eaten!
+Producer - Item #300 - #0 Data is now: 914!
+Consumer - #0 Data has been eaten!
+Producer - Item #301 - #1 Data is now: 157!
+Consumer - #1 Data has been eaten!
+Producer - Item #302 - #2 Data is now: 147!
+Consumer - #2 Data has been eaten!
+Producer - Item #303 - #3 Data is now: 106!
+Consumer - #3 Data has been eaten!
+Producer - Item #304 - #4 Data is now: 975!
+Consumer - #4 Data has been eaten!
+Producer - Item #305 - #5 Data is now: 475!
+Consumer - #5 Data has been eaten!
+Producer - Item #306 - #6 Data is now: 386!
+Consumer - #6 Data has been eaten!
+Producer - Item #307 - #7 Data is now: 952!
+Consumer - #7 Data has been eaten!
+Producer - Item #308 - #8 Data is now: 237!
+Consumer - #8 Data has been eaten!
+Producer - Item #309 - #9 Data is now: 187!
+Consumer - #9 Data has been eaten!
+Producer - Item #310 - #0 Data is now: 78!
+Consumer - #0 Data has been eaten!
+Producer - Item #311 - #1 Data is now: 565!
+Consumer - #1 Data has been eaten!
+Producer - Item #312 - #2 Data is now: 778!
+Consumer - #2 Data has been eaten!
+Producer - Item #313 - #3 Data is now: 812!
+Consumer - #3 Data has been eaten!
+Producer - Item #314 - #4 Data is now: 195!
+Consumer - #4 Data has been eaten!
+Producer - Item #315 - #5 Data is now: 871!
+Consumer - #5 Data has been eaten!
+Producer - Item #316 - #6 Data is now: 363!
+Consumer - #6 Data has been eaten!
+Producer - Item #317 - #7 Data is now: 491!
+Consumer - #7 Data has been eaten!
+Producer - Item #318 - #8 Data is now: 682!
+Consumer - #8 Data has been eaten!
+Producer - Item #319 - #9 Data is now: 628!
+Consumer - #9 Data has been eaten!
+Producer - Item #320 - #0 Data is now: 189!
+Consumer - #0 Data has been eaten!
+Producer - Item #321 - #1 Data is now: 768!
+Consumer - #1 Data has been eaten!
+Producer - Item #322 - #2 Data is now: 283!
+Consumer - #2 Data has been eaten!
+Producer - Item #323 - #3 Data is now: 863!
+Consumer - #3 Data has been eaten!
+Producer - Item #324 - #4 Data is now: 257!
+Consumer - #4 Data has been eaten!
+Producer - Item #325 - #5 Data is now: 301!
+Consumer - #5 Data has been eaten!
+Producer - Item #326 - #6 Data is now: 817!
+Consumer - #6 Data has been eaten!
+Producer - Item #327 - #7 Data is now: 282!
+Consumer - #7 Data has been eaten!
+Producer - Item #328 - #8 Data is now: 89!
+Consumer - #8 Data has been eaten!
+Producer - Item #329 - #9 Data is now: 259!
+Consumer - #9 Data has been eaten!
+Producer - Item #330 - #0 Data is now: 19!
+Consumer - #0 Data has been eaten!
+Producer - Item #331 - #1 Data is now: 467!
+Consumer - #1 Data has been eaten!
+Producer - Item #332 - #2 Data is now: 349!
+Consumer - #2 Data has been eaten!
+Producer - Item #333 - #3 Data is now: 341!
+Consumer - #3 Data has been eaten!
+Producer - Item #334 - #4 Data is now: 200!
+Consumer - #4 Data has been eaten!
+Producer - Item #335 - #5 Data is now: 294!
+Consumer - #5 Data has been eaten!
+Producer - Item #336 - #6 Data is now: 491!
+Consumer - #6 Data has been eaten!
+Producer - Item #337 - #7 Data is now: 377!
+Consumer - #7 Data has been eaten!
+Producer - Item #338 - #8 Data is now: 456!
+Consumer - #8 Data has been eaten!
+Producer - Item #339 - #9 Data is now: 14!
+Consumer - #9 Data has been eaten!
+Producer - Item #340 - #0 Data is now: 314!
+Consumer - #0 Data has been eaten!
+Producer - Item #341 - #1 Data is now: 658!
+Consumer - #1 Data has been eaten!
+Producer - Item #342 - #2 Data is now: 850!
+Consumer - #2 Data has been eaten!
+Producer - Item #343 - #3 Data is now: 900!
+Consumer - #3 Data has been eaten!
+Producer - Item #344 - #4 Data is now: 525!
+Consumer - #4 Data has been eaten!
+Producer - Item #345 - #5 Data is now: 559!
+Consumer - #5 Data has been eaten!
+Producer - Item #346 - #6 Data is now: 754!
+Consumer - #6 Data has been eaten!
+Producer - Item #347 - #7 Data is now: 571!
+Consumer - #7 Data has been eaten!
+Producer - Item #348 - #8 Data is now: 744!
+Consumer - #8 Data has been eaten!
+Producer - Item #349 - #9 Data is now: 73!
+Consumer - #9 Data has been eaten!
+Producer - Item #350 - #0 Data is now: 671!
+Consumer - #0 Data has been eaten!
+Producer - Item #351 - #1 Data is now: 697!
+Consumer - #1 Data has been eaten!
+Producer - Item #352 - #2 Data is now: 652!
+Consumer - #2 Data has been eaten!
+Producer - Item #353 - #3 Data is now: 598!
+Consumer - #3 Data has been eaten!
+Producer - Item #354 - #4 Data is now: 605!
+Consumer - #4 Data has been eaten!
+Producer - Item #355 - #5 Data is now: 861!
+Consumer - #5 Data has been eaten!
+Producer - Item #356 - #6 Data is now: 426!
+Consumer - #6 Data has been eaten!
+Producer - Item #357 - #7 Data is now: 513!
+Consumer - #7 Data has been eaten!
+Producer - Item #358 - #8 Data is now: 839!
+Consumer - #8 Data has been eaten!
+Producer - Item #359 - #9 Data is now: 984!
+Consumer - #9 Data has been eaten!
+Producer - Item #360 - #0 Data is now: 386!
+Consumer - #0 Data has been eaten!
+Producer - Item #361 - #1 Data is now: 326!
+Consumer - #1 Data has been eaten!
+Producer - Item #362 - #2 Data is now: 306!
+Consumer - #2 Data has been eaten!
+Producer - Item #363 - #3 Data is now: 406!
+Consumer - #3 Data has been eaten!
+Producer - Item #364 - #4 Data is now: 57!
+Consumer - #4 Data has been eaten!
+Producer - Item #365 - #5 Data is now: 38!
+Consumer - #5 Data has been eaten!
+Producer - Item #366 - #6 Data is now: 130!
+Consumer - #6 Data has been eaten!
+Producer - Item #367 - #7 Data is now: 930!
+Consumer - #7 Data has been eaten!
+Producer - Item #368 - #8 Data is now: 995!
+Consumer - #8 Data has been eaten!
+Producer - Item #369 - #9 Data is now: 727!
+Consumer - #9 Data has been eaten!
+Producer - Item #370 - #0 Data is now: 221!
+Consumer - #0 Data has been eaten!
+Producer - Item #371 - #1 Data is now: 794!
+Consumer - #1 Data has been eaten!
+Producer - Item #372 - #2 Data is now: 934!
+Consumer - #2 Data has been eaten!
+Producer - Item #373 - #3 Data is now: 752!
+Consumer - #3 Data has been eaten!
+Producer - Item #374 - #4 Data is now: 881!
+Consumer - #4 Data has been eaten!
+Producer - Item #375 - #5 Data is now: 711!
+Consumer - #5 Data has been eaten!
+Producer - Item #376 - #6 Data is now: 818!
+Consumer - #6 Data has been eaten!
+Producer - Item #377 - #7 Data is now: 127!
+Consumer - #7 Data has been eaten!
+Producer - Item #378 - #8 Data is now: 822!
+Consumer - #8 Data has been eaten!
+Producer - Item #379 - #9 Data is now: 395!
+Consumer - #9 Data has been eaten!
+Producer - Item #380 - #0 Data is now: 409!
+Consumer - #0 Data has been eaten!
+Producer - Item #381 - #1 Data is now: 172!
+Consumer - #1 Data has been eaten!
+Producer - Item #382 - #2 Data is now: 196!
+Consumer - #2 Data has been eaten!
+Producer - Item #383 - #3 Data is now: 264!
+Consumer - #3 Data has been eaten!
+Producer - Item #384 - #4 Data is now: 915!
+Consumer - #4 Data has been eaten!
+Producer - Item #385 - #5 Data is now: 193!
+Consumer - #5 Data has been eaten!
+Producer - Item #386 - #6 Data is now: 875!
+Consumer - #6 Data has been eaten!
+Producer - Item #387 - #7 Data is now: 205!
+Consumer - #7 Data has been eaten!
+Producer - Item #388 - #8 Data is now: 623!
+Consumer - #8 Data has been eaten!
+Producer - Item #389 - #9 Data is now: 872!
+Consumer - #9 Data has been eaten!
+Producer - Item #390 - #0 Data is now: 804!
+Consumer - #0 Data has been eaten!
+Producer - Item #391 - #1 Data is now: 1000!
+Consumer - #1 Data has been eaten!
+Producer - Item #392 - #2 Data is now: 497!
+Consumer - #2 Data has been eaten!
+Producer - Item #393 - #3 Data is now: 619!
+Consumer - #3 Data has been eaten!
+Producer - Item #394 - #4 Data is now: 907!
+Consumer - #4 Data has been eaten!
+Producer - Item #395 - #5 Data is now: 297!
+Consumer - #5 Data has been eaten!
+Producer - Item #396 - #6 Data is now: 62!
+Consumer - #6 Data has been eaten!
+Producer - Item #397 - #7 Data is now: 201!
+Consumer - #7 Data has been eaten!
+Producer - Item #398 - #8 Data is now: 56!
+Consumer - #8 Data has been eaten!
+Producer - Item #399 - #9 Data is now: 52!
+Consumer - #9 Data has been eaten!
+Producer - Item #400 - #0 Data is now: 472!
+Consumer - #0 Data has been eaten!
+Producer - Item #401 - #1 Data is now: 237!
+Consumer - #1 Data has been eaten!
+Producer - Item #402 - #2 Data is now: 274!
+Consumer - #2 Data has been eaten!
+Producer - Item #403 - #3 Data is now: 620!
+Consumer - #3 Data has been eaten!
+Producer - Item #404 - #4 Data is now: 641!
+Consumer - #4 Data has been eaten!
+Producer - Item #405 - #5 Data is now: 502!
+Consumer - #5 Data has been eaten!
+Producer - Item #406 - #6 Data is now: 451!
+Consumer - #6 Data has been eaten!
+Producer - Item #407 - #7 Data is now: 648!
+Consumer - #7 Data has been eaten!
+Producer - Item #408 - #8 Data is now: 521!
+Consumer - #8 Data has been eaten!
+Producer - Item #409 - #9 Data is now: 983!
+Consumer - #9 Data has been eaten!
+Producer - Item #410 - #0 Data is now: 441!
+Consumer - #0 Data has been eaten!
+Producer - Item #411 - #1 Data is now: 415!
+Consumer - #1 Data has been eaten!
+Producer - Item #412 - #2 Data is now: 768!
+Consumer - #2 Data has been eaten!
+Producer - Item #413 - #3 Data is now: 708!
+Consumer - #3 Data has been eaten!
+Producer - Item #414 - #4 Data is now: 898!
+Consumer - #4 Data has been eaten!
+Producer - Item #415 - #5 Data is now: 627!
+Consumer - #5 Data has been eaten!
+Producer - Item #416 - #6 Data is now: 763!
+Consumer - #6 Data has been eaten!
+Producer - Item #417 - #7 Data is now: 809!
+Consumer - #7 Data has been eaten!
+Producer - Item #418 - #8 Data is now: 549!
+Consumer - #8 Data has been eaten!
+Producer - Item #419 - #9 Data is now: 983!
+Consumer - #9 Data has been eaten!
+Producer - Item #420 - #0 Data is now: 927!
+Consumer - #0 Data has been eaten!
+Producer - Item #421 - #1 Data is now: 226!
+Consumer - #1 Data has been eaten!
+Producer - Item #422 - #2 Data is now: 432!
+Consumer - #2 Data has been eaten!
+Producer - Item #423 - #3 Data is now: 312!
+Consumer - #3 Data has been eaten!
+Producer - Item #424 - #4 Data is now: 94!
+Consumer - #4 Data has been eaten!
+Producer - Item #425 - #5 Data is now: 530!
+Consumer - #5 Data has been eaten!
+Producer - Item #426 - #6 Data is now: 573!
+Consumer - #6 Data has been eaten!
+Producer - Item #427 - #7 Data is now: 892!
+Consumer - #7 Data has been eaten!
+Producer - Item #428 - #8 Data is now: 692!
+Consumer - #8 Data has been eaten!
+Producer - Item #429 - #9 Data is now: 413!
+Consumer - #9 Data has been eaten!
+Producer - Item #430 - #0 Data is now: 979!
+Consumer - #0 Data has been eaten!
+Producer - Item #431 - #1 Data is now: 445!
+Consumer - #1 Data has been eaten!
+Producer - Item #432 - #2 Data is now: 896!
+Consumer - #2 Data has been eaten!
+Producer - Item #433 - #3 Data is now: 708!
+Consumer - #3 Data has been eaten!
+Producer - Item #434 - #4 Data is now: 238!
+Consumer - #4 Data has been eaten!
+Producer - Item #435 - #5 Data is now: 644!
+Consumer - #5 Data has been eaten!
+Producer - Item #436 - #6 Data is now: 587!
+Consumer - #6 Data has been eaten!
+Producer - Item #437 - #7 Data is now: 339!
+Consumer - #7 Data has been eaten!
+Producer - Item #438 - #8 Data is now: 183!
+Consumer - #8 Data has been eaten!
+Producer - Item #439 - #9 Data is now: 334!
+Consumer - #9 Data has been eaten!
+Producer - Item #440 - #0 Data is now: 419!
+Consumer - #0 Data has been eaten!
+Producer - Item #441 - #1 Data is now: 140!
+Consumer - #1 Data has been eaten!
+Producer - Item #442 - #2 Data is now: 609!
+Consumer - #2 Data has been eaten!
+Producer - Item #443 - #3 Data is now: 992!
+Consumer - #3 Data has been eaten!
+Producer - Item #444 - #4 Data is now: 300!
+Consumer - #4 Data has been eaten!
+Producer - Item #445 - #5 Data is now: 466!
+Consumer - #5 Data has been eaten!
+Producer - Item #446 - #6 Data is now: 600!
+Consumer - #6 Data has been eaten!
+Producer - Item #447 - #7 Data is now: 289!
+Consumer - #7 Data has been eaten!
+Producer - Item #448 - #8 Data is now: 363!
+Consumer - #8 Data has been eaten!
+Producer - Item #449 - #9 Data is now: 21!
+Consumer - #9 Data has been eaten!
+Producer - Item #450 - #0 Data is now: 882!
+Consumer - #0 Data has been eaten!
+Producer - Item #451 - #1 Data is now: 179!
+Consumer - #1 Data has been eaten!
+Producer - Item #452 - #2 Data is now: 258!
+Consumer - #2 Data has been eaten!
+Producer - Item #453 - #3 Data is now: 824!
+Consumer - #3 Data has been eaten!
+Producer - Item #454 - #4 Data is now: 250!
+Consumer - #4 Data has been eaten!
+Producer - Item #455 - #5 Data is now: 417!
+Consumer - #5 Data has been eaten!
+Producer - Item #456 - #6 Data is now: 74!
+Consumer - #6 Data has been eaten!
+Producer - Item #457 - #7 Data is now: 700!
+Consumer - #7 Data has been eaten!
+Producer - Item #458 - #8 Data is now: 857!
+Consumer - #8 Data has been eaten!
+Producer - Item #459 - #9 Data is now: 464!
+Consumer - #9 Data has been eaten!
+Producer - Item #460 - #0 Data is now: 580!
+Consumer - #0 Data has been eaten!
+Producer - Item #461 - #1 Data is now: 194!
+Consumer - #1 Data has been eaten!
+Producer - Item #462 - #2 Data is now: 779!
+Consumer - #2 Data has been eaten!
+Producer - Item #463 - #3 Data is now: 869!
+Consumer - #3 Data has been eaten!
+Producer - Item #464 - #4 Data is now: 165!
+Consumer - #4 Data has been eaten!
+Producer - Item #465 - #5 Data is now: 723!
+Consumer - #5 Data has been eaten!
+Producer - Item #466 - #6 Data is now: 234!
+Consumer - #6 Data has been eaten!
+Producer - Item #467 - #7 Data is now: 378!
+Consumer - #7 Data has been eaten!
+Producer - Item #468 - #8 Data is now: 925!
+Consumer - #8 Data has been eaten!
+Producer - Item #469 - #9 Data is now: 560!
+Consumer - #9 Data has been eaten!
+Producer - Item #470 - #0 Data is now: 814!
+Consumer - #0 Data has been eaten!
+Producer - Item #471 - #1 Data is now: 600!
+Consumer - #1 Data has been eaten!
+Producer - Item #472 - #2 Data is now: 982!
+Consumer - #2 Data has been eaten!
+Producer - Item #473 - #3 Data is now: 168!
+Consumer - #3 Data has been eaten!
+Producer - Item #474 - #4 Data is now: 127!
+Consumer - #4 Data has been eaten!
+Producer - Item #475 - #5 Data is now: 916!
+Consumer - #5 Data has been eaten!
+Producer - Item #476 - #6 Data is now: 325!
+Consumer - #6 Data has been eaten!
+Producer - Item #477 - #7 Data is now: 701!
+Consumer - #7 Data has been eaten!
+Producer - Item #478 - #8 Data is now: 776!
+Consumer - #8 Data has been eaten!
+Producer - Item #479 - #9 Data is now: 265!
+Consumer - #9 Data has been eaten!
+Producer - Item #480 - #0 Data is now: 339!
+Consumer - #0 Data has been eaten!
+Producer - Item #481 - #1 Data is now: 653!
+Consumer - #1 Data has been eaten!
+Producer - Item #482 - #2 Data is now: 627!
+Consumer - #2 Data has been eaten!
+Producer - Item #483 - #3 Data is now: 833!
+Consumer - #3 Data has been eaten!
+Producer - Item #484 - #4 Data is now: 840!
+Consumer - #4 Data has been eaten!
+Producer - Item #485 - #5 Data is now: 618!
+Consumer - #5 Data has been eaten!
+Producer - Item #486 - #6 Data is now: 972!
+Consumer - #6 Data has been eaten!
+Producer - Item #487 - #7 Data is now: 787!
+Consumer - #7 Data has been eaten!
+Producer - Item #488 - #8 Data is now: 787!
+Consumer - #8 Data has been eaten!
+Producer - Item #489 - #9 Data is now: 320!
+Consumer - #9 Data has been eaten!
+Producer - Item #490 - #0 Data is now: 807!
+Consumer - #0 Data has been eaten!
+Producer - Item #491 - #1 Data is now: 251!
+Consumer - #1 Data has been eaten!
+Producer - Item #492 - #2 Data is now: 196!
+Consumer - #2 Data has been eaten!
+Producer - Item #493 - #3 Data is now: 1!
+Consumer - #3 Data has been eaten!
+Producer - Item #494 - #4 Data is now: 216!
+Consumer - #4 Data has been eaten!
+Producer - Item #495 - #5 Data is now: 292!
+Consumer - #5 Data has been eaten!
+Producer - Item #496 - #6 Data is now: 166!
+Consumer - #6 Data has been eaten!
+Producer - Item #497 - #7 Data is now: 883!
+Consumer - #7 Data has been eaten!
+Producer - Item #498 - #8 Data is now: 414!
+Consumer - #8 Data has been eaten!
+Producer - Item #499 - #9 Data is now: 694!
+Consumer - #9 Data has been eaten!
+Producer - Item #500 - #0 Data is now: 182!
+Consumer - #0 Data has been eaten!
+Producer - Item #501 - #1 Data is now: 468!
+Consumer - #1 Data has been eaten!
+Producer - Item #502 - #2 Data is now: 263!
+Consumer - #2 Data has been eaten!
+Producer - Item #503 - #3 Data is now: 256!
+Consumer - #3 Data has been eaten!
+Producer - Item #504 - #4 Data is now: 444!
+Consumer - #4 Data has been eaten!
+Producer - Item #505 - #5 Data is now: 883!
+Consumer - #5 Data has been eaten!
+Producer - Item #506 - #6 Data is now: 523!
+Consumer - #6 Data has been eaten!
+Producer - Item #507 - #7 Data is now: 36!
+Consumer - #7 Data has been eaten!
+Producer - Item #508 - #8 Data is now: 700!
+Consumer - #8 Data has been eaten!
+Producer - Item #509 - #9 Data is now: 766!
+Consumer - #9 Data has been eaten!
+Producer - Item #510 - #0 Data is now: 8!
+Consumer - #0 Data has been eaten!
+Producer - Item #511 - #1 Data is now: 245!
+Consumer - #1 Data has been eaten!
+Producer - Item #512 - #2 Data is now: 771!
+Consumer - #2 Data has been eaten!
+Producer - Item #513 - #3 Data is now: 618!
+Consumer - #3 Data has been eaten!
+Producer - Item #514 - #4 Data is now: 568!
+Consumer - #4 Data has been eaten!
+Producer - Item #515 - #5 Data is now: 881!
+Consumer - #5 Data has been eaten!
+Producer - Item #516 - #6 Data is now: 969!
+Consumer - #6 Data has been eaten!
+Producer - Item #517 - #7 Data is now: 655!
+Consumer - #7 Data has been eaten!
+Producer - Item #518 - #8 Data is now: 187!
+Consumer - #8 Data has been eaten!
+Producer - Item #519 - #9 Data is now: 566!
+Consumer - #9 Data has been eaten!
+Producer - Item #520 - #0 Data is now: 739!
+Consumer - #0 Data has been eaten!
+Producer - Item #521 - #1 Data is now: 671!
+Consumer - #1 Data has been eaten!
+Producer - Item #522 - #2 Data is now: 430!
+Consumer - #2 Data has been eaten!
+Producer - Item #523 - #3 Data is now: 246!
+Consumer - #3 Data has been eaten!
+Producer - Item #524 - #4 Data is now: 550!
+Consumer - #4 Data has been eaten!
+Producer - Item #525 - #5 Data is now: 154!
+Consumer - #5 Data has been eaten!
+Producer - Item #526 - #6 Data is now: 697!
+Consumer - #6 Data has been eaten!
+Producer - Item #527 - #7 Data is now: 426!
+Consumer - #7 Data has been eaten!
+Producer - Item #528 - #8 Data is now: 403!
+Consumer - #8 Data has been eaten!
+Producer - Item #529 - #9 Data is now: 107!
+Consumer - #9 Data has been eaten!
+Producer - Item #530 - #0 Data is now: 426!
+Consumer - #0 Data has been eaten!
+Producer - Item #531 - #1 Data is now: 520!
+Consumer - #1 Data has been eaten!
+Producer - Item #532 - #2 Data is now: 190!
+Consumer - #2 Data has been eaten!
+Producer - Item #533 - #3 Data is now: 696!
+Consumer - #3 Data has been eaten!
+Producer - Item #534 - #4 Data is now: 27!
+Consumer - #4 Data has been eaten!
+Producer - Item #535 - #5 Data is now: 388!
+Consumer - #5 Data has been eaten!
+Producer - Item #536 - #6 Data is now: 884!
+Consumer - #6 Data has been eaten!
+Producer - Item #537 - #7 Data is now: 956!
+Consumer - #7 Data has been eaten!
+Producer - Item #538 - #8 Data is now: 124!
+Consumer - #8 Data has been eaten!
+Producer - Item #539 - #9 Data is now: 560!
+Consumer - #9 Data has been eaten!
+Producer - Item #540 - #0 Data is now: 887!
+Consumer - #0 Data has been eaten!
+Producer - Item #541 - #1 Data is now: 484!
+Consumer - #1 Data has been eaten!
+Producer - Item #542 - #2 Data is now: 992!
+Consumer - #2 Data has been eaten!
+Producer - Item #543 - #3 Data is now: 195!
+Consumer - #3 Data has been eaten!
+Producer - Item #544 - #4 Data is now: 195!
+Consumer - #4 Data has been eaten!
+Producer - Item #545 - #5 Data is now: 76!
+Consumer - #5 Data has been eaten!
+Producer - Item #546 - #6 Data is now: 216!
+Consumer - #6 Data has been eaten!
+Producer - Item #547 - #7 Data is now: 314!
+Consumer - #7 Data has been eaten!
+Producer - Item #548 - #8 Data is now: 14!
+Consumer - #8 Data has been eaten!
+Producer - Item #549 - #9 Data is now: 455!
+Consumer - #9 Data has been eaten!
+DONE PRODUCING!
+Got a DONE signal!
+DONE CONSUMING!
+MIN: 1
+MAX: 1000
+AVG: 479.367
+NUM ITEMS: 550
+sh-4.3$ a.out
+Iterations: 714
+Producer - Item #0 - #0 Data is now: 234!
+Consumer - #0 Data has been eaten!
+Producer - Item #1 - #1 Data is now: 515!
+Consumer - #1 Data has been eaten!
+Producer - Item #2 - #2 Data is now: 197!
+Consumer - #2 Data has been eaten!
+Producer - Item #3 - #3 Data is now: 814!
+Consumer - #3 Data has been eaten!
+Producer - Item #4 - #4 Data is now: 231!
+Consumer - #4 Data has been eaten!
+Producer - Item #5 - #5 Data is now: 328!
+Consumer - #5 Data has been eaten!
+Producer - Item #6 - #6 Data is now: 615!
+Consumer - #6 Data has been eaten!
+Producer - Item #7 - #7 Data is now: 542!
+Consumer - #7 Data has been eaten!
+Producer - Item #8 - #8 Data is now: 761!
+Consumer - #8 Data has been eaten!
+Producer - Item #9 - #9 Data is now: 608!
+Consumer - #9 Data has been eaten!
+Producer - Item #10 - #0 Data is now: 379!
+Consumer - #0 Data has been eaten!
+Producer - Item #11 - #1 Data is now: 639!
+Consumer - #1 Data has been eaten!
+Producer - Item #12 - #2 Data is now: 739!
+Consumer - #2 Data has been eaten!
+Producer - Item #13 - #3 Data is now: 829!
+Consumer - #3 Data has been eaten!
+Producer - Item #14 - #4 Data is now: 354!
+Consumer - #4 Data has been eaten!
+Producer - Item #15 - #5 Data is now: 132!
+Consumer - #5 Data has been eaten!
+Producer - Item #16 - #6 Data is now: 950!
+Consumer - #6 Data has been eaten!
+Producer - Item #17 - #7 Data is now: 373!
+Consumer - #7 Data has been eaten!
+Producer - Item #18 - #8 Data is now: 541!
+Consumer - #8 Data has been eaten!
+Producer - Item #19 - #9 Data is now: 973!
+Consumer - #9 Data has been eaten!
+Producer - Item #20 - #0 Data is now: 734!
+Consumer - #0 Data has been eaten!
+Producer - Item #21 - #1 Data is now: 14!
+Consumer - #1 Data has been eaten!
+Producer - Item #22 - #2 Data is now: 282!
+Consumer - #2 Data has been eaten!
+Producer - Item #23 - #3 Data is now: 402!
+Consumer - #3 Data has been eaten!
+Producer - Item #24 - #4 Data is now: 78!
+Consumer - #4 Data has been eaten!
+Producer - Item #25 - #5 Data is now: 609!
+Consumer - #5 Data has been eaten!
+Producer - Item #26 - #6 Data is now: 695!
+Consumer - #6 Data has been eaten!
+Producer - Item #27 - #7 Data is now: 414!
+Consumer - #7 Data has been eaten!
+Producer - Item #28 - #8 Data is now: 283!
+Consumer - #8 Data has been eaten!
+Producer - Item #29 - #9 Data is now: 423!
+Consumer - #9 Data has been eaten!
+Producer - Item #30 - #0 Data is now: 728!
+Consumer - #0 Data has been eaten!
+Producer - Item #31 - #1 Data is now: 991!
+Consumer - #1 Data has been eaten!
+Producer - Item #32 - #2 Data is now: 793!
+Consumer - #2 Data has been eaten!
+Producer - Item #33 - #3 Data is now: 68!
+Consumer - #3 Data has been eaten!
+Producer - Item #34 - #4 Data is now: 648!
+Consumer - #4 Data has been eaten!
+Producer - Item #35 - #5 Data is now: 14!
+Consumer - #5 Data has been eaten!
+Producer - Item #36 - #6 Data is now: 975!
+Consumer - #6 Data has been eaten!
+Producer - Item #37 - #7 Data is now: 645!
+Consumer - #7 Data has been eaten!
+Producer - Item #38 - #8 Data is now: 608!
+Consumer - #8 Data has been eaten!
+Producer - Item #39 - #9 Data is now: 267!
+Consumer - #9 Data has been eaten!
+Producer - Item #40 - #0 Data is now: 755!
+Consumer - #0 Data has been eaten!
+Producer - Item #41 - #1 Data is now: 458!
+Consumer - #1 Data has been eaten!
+Producer - Item #42 - #2 Data is now: 963!
+Consumer - #2 Data has been eaten!
+Producer - Item #43 - #3 Data is now: 542!
+Consumer - #3 Data has been eaten!
+Producer - Item #44 - #4 Data is now: 405!
+Consumer - #4 Data has been eaten!
+Producer - Item #45 - #5 Data is now: 36!
+Consumer - #5 Data has been eaten!
+Producer - Item #46 - #6 Data is now: 309!
+Consumer - #6 Data has been eaten!
+Producer - Item #47 - #7 Data is now: 317!
+Consumer - #7 Data has been eaten!
+Producer - Item #48 - #8 Data is now: 885!
+Consumer - #8 Data has been eaten!
+Producer - Item #49 - #9 Data is now: 742!
+Consumer - #9 Data has been eaten!
+Producer - Item #50 - #0 Data is now: 991!
+Consumer - #0 Data has been eaten!
+Producer - Item #51 - #1 Data is now: 345!
+Consumer - #1 Data has been eaten!
+Producer - Item #52 - #2 Data is now: 708!
+Consumer - #2 Data has been eaten!
+Producer - Item #53 - #3 Data is now: 42!
+Consumer - #3 Data has been eaten!
+Producer - Item #54 - #4 Data is now: 156!
+Consumer - #4 Data has been eaten!
+Producer - Item #55 - #5 Data is now: 527!
+Consumer - #5 Data has been eaten!
+Producer - Item #56 - #6 Data is now: 347!
+Consumer - #6 Data has been eaten!
+Producer - Item #57 - #7 Data is now: 778!
+Consumer - #7 Data has been eaten!
+Producer - Item #58 - #8 Data is now: 409!
+Consumer - #8 Data has been eaten!
+Producer - Item #59 - #9 Data is now: 655!
+Consumer - #9 Data has been eaten!
+Producer - Item #60 - #0 Data is now: 310!
+Consumer - #0 Data has been eaten!
+Producer - Item #61 - #1 Data is now: 187!
+Consumer - #1 Data has been eaten!
+Producer - Item #62 - #2 Data is now: 102!
+Consumer - #2 Data has been eaten!
+Producer - Item #63 - #3 Data is now: 230!
+Consumer - #3 Data has been eaten!
+Producer - Item #64 - #4 Data is now: 749!
+Consumer - #4 Data has been eaten!
+Producer - Item #65 - #5 Data is now: 201!
+Consumer - #5 Data has been eaten!
+Producer - Item #66 - #6 Data is now: 127!
+Consumer - #6 Data has been eaten!
+Producer - Item #67 - #7 Data is now: 260!
+Consumer - #7 Data has been eaten!
+Producer - Item #68 - #8 Data is now: 40!
+Consumer - #8 Data has been eaten!
+Producer - Item #69 - #9 Data is now: 206!
+Consumer - #9 Data has been eaten!
+Producer - Item #70 - #0 Data is now: 633!
+Consumer - #0 Data has been eaten!
+Producer - Item #71 - #1 Data is now: 245!
+Consumer - #1 Data has been eaten!
+Producer - Item #72 - #2 Data is now: 256!
+Consumer - #2 Data has been eaten!
+Producer - Item #73 - #3 Data is now: 263!
+Consumer - #3 Data has been eaten!
+Producer - Item #74 - #4 Data is now: 101!
+Consumer - #4 Data has been eaten!
+Producer - Item #75 - #5 Data is now: 384!
+Consumer - #5 Data has been eaten!
+Producer - Item #76 - #6 Data is now: 926!
+Consumer - #6 Data has been eaten!
+Producer - Item #77 - #7 Data is now: 372!
+Consumer - #7 Data has been eaten!
+Producer - Item #78 - #8 Data is now: 942!
+Consumer - #8 Data has been eaten!
+Producer - Item #79 - #9 Data is now: 865!
+Consumer - #9 Data has been eaten!
+Producer - Item #80 - #0 Data is now: 437!
+Consumer - #0 Data has been eaten!
+Producer - Item #81 - #1 Data is now: 125!
+Consumer - #1 Data has been eaten!
+Producer - Item #82 - #2 Data is now: 818!
+Consumer - #2 Data has been eaten!
+Producer - Item #83 - #3 Data is now: 470!
+Consumer - #3 Data has been eaten!
+Producer - Item #84 - #4 Data is now: 182!
+Consumer - #4 Data has been eaten!
+Producer - Item #85 - #5 Data is now: 445!
+Consumer - #5 Data has been eaten!
+Producer - Item #86 - #6 Data is now: 570!
+Consumer - #6 Data has been eaten!
+Producer - Item #87 - #7 Data is now: 60!
+Consumer - #7 Data has been eaten!
+Producer - Item #88 - #8 Data is now: 719!
+Consumer - #8 Data has been eaten!
+Producer - Item #89 - #9 Data is now: 745!
+Consumer - #9 Data has been eaten!
+Producer - Item #90 - #0 Data is now: 74!
+Consumer - #0 Data has been eaten!
+Producer - Item #91 - #1 Data is now: 335!
+Consumer - #1 Data has been eaten!
+Producer - Item #92 - #2 Data is now: 971!
+Consumer - #2 Data has been eaten!
+Producer - Item #93 - #3 Data is now: 269!
+Consumer - #3 Data has been eaten!
+Producer - Item #94 - #4 Data is now: 87!
+Consumer - #4 Data has been eaten!
+Producer - Item #95 - #5 Data is now: 652!
+Consumer - #5 Data has been eaten!
+Producer - Item #96 - #6 Data is now: 743!
+Consumer - #6 Data has been eaten!
+Producer - Item #97 - #7 Data is now: 970!
+Consumer - #7 Data has been eaten!
+Producer - Item #98 - #8 Data is now: 947!
+Consumer - #8 Data has been eaten!
+Producer - Item #99 - #9 Data is now: 223!
+Consumer - #9 Data has been eaten!
+Producer - Item #100 - #0 Data is now: 506!
+Consumer - #0 Data has been eaten!
+Producer - Item #101 - #1 Data is now: 593!
+Consumer - #1 Data has been eaten!
+Producer - Item #102 - #2 Data is now: 379!
+Consumer - #2 Data has been eaten!
+Producer - Item #103 - #3 Data is now: 787!
+Consumer - #3 Data has been eaten!
+Producer - Item #104 - #4 Data is now: 162!
+Consumer - #4 Data has been eaten!
+Producer - Item #105 - #5 Data is now: 934!
+Consumer - #5 Data has been eaten!
+Producer - Item #106 - #6 Data is now: 546!
+Consumer - #6 Data has been eaten!
+Producer - Item #107 - #7 Data is now: 765!
+Consumer - #7 Data has been eaten!
+Producer - Item #108 - #8 Data is now: 926!
+Consumer - #8 Data has been eaten!
+Producer - Item #109 - #9 Data is now: 109!
+Consumer - #9 Data has been eaten!
+Producer - Item #110 - #0 Data is now: 365!
+Consumer - #0 Data has been eaten!
+Producer - Item #111 - #1 Data is now: 919!
+Consumer - #1 Data has been eaten!
+Producer - Item #112 - #2 Data is now: 31!
+Consumer - #2 Data has been eaten!
+Producer - Item #113 - #3 Data is now: 797!
+Consumer - #3 Data has been eaten!
+Producer - Item #114 - #4 Data is now: 718!
+Consumer - #4 Data has been eaten!
+Producer - Item #115 - #5 Data is now: 221!
+Consumer - #5 Data has been eaten!
+Producer - Item #116 - #6 Data is now: 829!
+Consumer - #6 Data has been eaten!
+Producer - Item #117 - #7 Data is now: 295!
+Consumer - #7 Data has been eaten!
+Producer - Item #118 - #8 Data is now: 637!
+Consumer - #8 Data has been eaten!
+Producer - Item #119 - #9 Data is now: 857!
+Consumer - #9 Data has been eaten!
+Producer - Item #120 - #0 Data is now: 955!
+Consumer - #0 Data has been eaten!
+Producer - Item #121 - #1 Data is now: 717!
+Consumer - #1 Data has been eaten!
+Producer - Item #122 - #2 Data is now: 978!
+Consumer - #2 Data has been eaten!
+Producer - Item #123 - #3 Data is now: 175!
+Consumer - #3 Data has been eaten!
+Producer - Item #124 - #4 Data is now: 331!
+Consumer - #4 Data has been eaten!
+Producer - Item #125 - #5 Data is now: 347!
+Consumer - #5 Data has been eaten!
+Producer - Item #126 - #6 Data is now: 139!
+Consumer - #6 Data has been eaten!
+Producer - Item #127 - #7 Data is now: 792!
+Consumer - #7 Data has been eaten!
+Producer - Item #128 - #8 Data is now: 983!
+Consumer - #8 Data has been eaten!
+Producer - Item #129 - #9 Data is now: 559!
+Consumer - #9 Data has been eaten!
+Producer - Item #130 - #0 Data is now: 261!
+Consumer - #0 Data has been eaten!
+Producer - Item #131 - #1 Data is now: 744!
+Consumer - #1 Data has been eaten!
+Producer - Item #132 - #2 Data is now: 636!
+Consumer - #2 Data has been eaten!
+Producer - Item #133 - #3 Data is now: 831!
+Consumer - #3 Data has been eaten!
+Producer - Item #134 - #4 Data is now: 148!
+Consumer - #4 Data has been eaten!
+Producer - Item #135 - #5 Data is now: 222!
+Consumer - #5 Data has been eaten!
+Producer - Item #136 - #6 Data is now: 399!
+Consumer - #6 Data has been eaten!
+Producer - Item #137 - #7 Data is now: 439!
+Consumer - #7 Data has been eaten!
+Producer - Item #138 - #8 Data is now: 355!
+Consumer - #8 Data has been eaten!
+Producer - Item #139 - #9 Data is now: 990!
+Consumer - #9 Data has been eaten!
+Producer - Item #140 - #0 Data is now: 604!
+Consumer - #0 Data has been eaten!
+Producer - Item #141 - #1 Data is now: 31!
+Consumer - #1 Data has been eaten!
+Producer - Item #142 - #2 Data is now: 379!
+Consumer - #2 Data has been eaten!
+Producer - Item #143 - #3 Data is now: 408!
+Consumer - #3 Data has been eaten!
+Producer - Item #144 - #4 Data is now: 123!
+Consumer - #4 Data has been eaten!
+Producer - Item #145 - #5 Data is now: 853!
+Consumer - #5 Data has been eaten!
+Producer - Item #146 - #6 Data is now: 763!
+Consumer - #6 Data has been eaten!
+Producer - Item #147 - #7 Data is now: 637!
+Consumer - #7 Data has been eaten!
+Producer - Item #148 - #8 Data is now: 433!
+Consumer - #8 Data has been eaten!
+Producer - Item #149 - #9 Data is now: 104!
+Consumer - #9 Data has been eaten!
+Producer - Item #150 - #0 Data is now: 691!
+Consumer - #0 Data has been eaten!
+Producer - Item #151 - #1 Data is now: 255!
+Consumer - #1 Data has been eaten!
+Producer - Item #152 - #2 Data is now: 311!
+Consumer - #2 Data has been eaten!
+Producer - Item #153 - #3 Data is now: 728!
+Consumer - #3 Data has been eaten!
+Producer - Item #154 - #4 Data is now: 713!
+Consumer - #4 Data has been eaten!
+Producer - Item #155 - #5 Data is now: 759!
+Consumer - #5 Data has been eaten!
+Producer - Item #156 - #6 Data is now: 29!
+Consumer - #6 Data has been eaten!
+Producer - Item #157 - #7 Data is now: 774!
+Consumer - #7 Data has been eaten!
+Producer - Item #158 - #8 Data is now: 400!
+Consumer - #8 Data has been eaten!
+Producer - Item #159 - #9 Data is now: 507!
+Consumer - #9 Data has been eaten!
+Producer - Item #160 - #0 Data is now: 637!
+Consumer - #0 Data has been eaten!
+Producer - Item #161 - #1 Data is now: 744!
+Consumer - #1 Data has been eaten!
+Producer - Item #162 - #2 Data is now: 756!
+Consumer - #2 Data has been eaten!
+Producer - Item #163 - #3 Data is now: 598!
+Consumer - #3 Data has been eaten!
+Producer - Item #164 - #4 Data is now: 503!
+Consumer - #4 Data has been eaten!
+Producer - Item #165 - #5 Data is now: 457!
+Consumer - #5 Data has been eaten!
+Producer - Item #166 - #6 Data is now: 6!
+Consumer - #6 Data has been eaten!
+Producer - Item #167 - #7 Data is now: 661!
+Consumer - #7 Data has been eaten!
+Producer - Item #168 - #8 Data is now: 88!
+Consumer - #8 Data has been eaten!
+Producer - Item #169 - #9 Data is now: 641!
+Consumer - #9 Data has been eaten!
+Producer - Item #170 - #0 Data is now: 655!
+Consumer - #0 Data has been eaten!
+Producer - Item #171 - #1 Data is now: 762!
+Consumer - #1 Data has been eaten!
+Producer - Item #172 - #2 Data is now: 577!
+Consumer - #2 Data has been eaten!
+Producer - Item #173 - #3 Data is now: 361!
+Consumer - #3 Data has been eaten!
+Producer - Item #174 - #4 Data is now: 238!
+Consumer - #4 Data has been eaten!
+Producer - Item #175 - #5 Data is now: 347!
+Consumer - #5 Data has been eaten!
+Producer - Item #176 - #6 Data is now: 896!
+Consumer - #6 Data has been eaten!
+Producer - Item #177 - #7 Data is now: 517!
+Consumer - #7 Data has been eaten!
+Producer - Item #178 - #8 Data is now: 562!
+Consumer - #8 Data has been eaten!
+Producer - Item #179 - #9 Data is now: 695!
+Consumer - #9 Data has been eaten!
+Producer - Item #180 - #0 Data is now: 425!
+Consumer - #0 Data has been eaten!
+Producer - Item #181 - #1 Data is now: 664!
+Consumer - #1 Data has been eaten!
+Producer - Item #182 - #2 Data is now: 454!
+Consumer - #2 Data has been eaten!
+Producer - Item #183 - #3 Data is now: 910!
+Consumer - #3 Data has been eaten!
+Producer - Item #184 - #4 Data is now: 379!
+Consumer - #4 Data has been eaten!
+Producer - Item #185 - #5 Data is now: 401!
+Consumer - #5 Data has been eaten!
+Producer - Item #186 - #6 Data is now: 176!
+Consumer - #6 Data has been eaten!
+Producer - Item #187 - #7 Data is now: 910!
+Consumer - #7 Data has been eaten!
+Producer - Item #188 - #8 Data is now: 890!
+Consumer - #8 Data has been eaten!
+Producer - Item #189 - #9 Data is now: 647!
+Consumer - #9 Data has been eaten!
+Producer - Item #190 - #0 Data is now: 472!
+Consumer - #0 Data has been eaten!
+Producer - Item #191 - #1 Data is now: 901!
+Consumer - #1 Data has been eaten!
+Producer - Item #192 - #2 Data is now: 672!
+Consumer - #2 Data has been eaten!
+Producer - Item #193 - #3 Data is now: 196!
+Consumer - #3 Data has been eaten!
+Producer - Item #194 - #4 Data is now: 960!
+Consumer - #4 Data has been eaten!
+Producer - Item #195 - #5 Data is now: 425!
+Consumer - #5 Data has been eaten!
+Producer - Item #196 - #6 Data is now: 363!
+Consumer - #6 Data has been eaten!
+Producer - Item #197 - #7 Data is now: 213!
+Consumer - #7 Data has been eaten!
+Producer - Item #198 - #8 Data is now: 936!
+Consumer - #8 Data has been eaten!
+Producer - Item #199 - #9 Data is now: 305!
+Consumer - #9 Data has been eaten!
+Producer - Item #200 - #0 Data is now: 684!
+Consumer - #0 Data has been eaten!
+Producer - Item #201 - #1 Data is now: 230!
+Consumer - #1 Data has been eaten!
+Producer - Item #202 - #2 Data is now: 646!
+Consumer - #2 Data has been eaten!
+Producer - Item #203 - #3 Data is now: 185!
+Consumer - #3 Data has been eaten!
+Producer - Item #204 - #4 Data is now: 341!
+Consumer - #4 Data has been eaten!
+Producer - Item #205 - #5 Data is now: 301!
+Consumer - #5 Data has been eaten!
+Producer - Item #206 - #6 Data is now: 584!
+Consumer - #6 Data has been eaten!
+Producer - Item #207 - #7 Data is now: 232!
+Consumer - #7 Data has been eaten!
+Producer - Item #208 - #8 Data is now: 31!
+Consumer - #8 Data has been eaten!
+Producer - Item #209 - #9 Data is now: 605!
+Consumer - #9 Data has been eaten!
+Producer - Item #210 - #0 Data is now: 562!
+Consumer - #0 Data has been eaten!
+Producer - Item #211 - #1 Data is now: 2!
+Consumer - #1 Data has been eaten!
+Producer - Item #212 - #2 Data is now: 350!
+Consumer - #2 Data has been eaten!
+Producer - Item #213 - #3 Data is now: 438!
+Consumer - #3 Data has been eaten!
+Producer - Item #214 - #4 Data is now: 173!
+Consumer - #4 Data has been eaten!
+Producer - Item #215 - #5 Data is now: 493!
+Consumer - #5 Data has been eaten!
+Producer - Item #216 - #6 Data is now: 406!
+Consumer - #6 Data has been eaten!
+Producer - Item #217 - #7 Data is now: 255!
+Consumer - #7 Data has been eaten!
+Producer - Item #218 - #8 Data is now: 870!
+Consumer - #8 Data has been eaten!
+Producer - Item #219 - #9 Data is now: 548!
+Consumer - #9 Data has been eaten!
+Producer - Item #220 - #0 Data is now: 314!
+Consumer - #0 Data has been eaten!
+Producer - Item #221 - #1 Data is now: 572!
+Consumer - #1 Data has been eaten!
+Producer - Item #222 - #2 Data is now: 642!
+Consumer - #2 Data has been eaten!
+Producer - Item #223 - #3 Data is now: 396!
+Consumer - #3 Data has been eaten!
+Producer - Item #224 - #4 Data is now: 785!
+Consumer - #4 Data has been eaten!
+Producer - Item #225 - #5 Data is now: 109!
+Consumer - #5 Data has been eaten!
+Producer - Item #226 - #6 Data is now: 241!
+Consumer - #6 Data has been eaten!
+Producer - Item #227 - #7 Data is now: 338!
+Consumer - #7 Data has been eaten!
+Producer - Item #228 - #8 Data is now: 815!
+Consumer - #8 Data has been eaten!
+Producer - Item #229 - #9 Data is now: 356!
+Consumer - #9 Data has been eaten!
+Producer - Item #230 - #0 Data is now: 842!
+Consumer - #0 Data has been eaten!
+Producer - Item #231 - #1 Data is now: 65!
+Consumer - #1 Data has been eaten!
+Producer - Item #232 - #2 Data is now: 604!
+Consumer - #2 Data has been eaten!
+Producer - Item #233 - #3 Data is now: 484!
+Consumer - #3 Data has been eaten!
+Producer - Item #234 - #4 Data is now: 369!
+Consumer - #4 Data has been eaten!
+Producer - Item #235 - #5 Data is now: 301!
+Consumer - #5 Data has been eaten!
+Producer - Item #236 - #6 Data is now: 503!
+Consumer - #6 Data has been eaten!
+Producer - Item #237 - #7 Data is now: 794!
+Consumer - #7 Data has been eaten!
+Producer - Item #238 - #8 Data is now: 352!
+Consumer - #8 Data has been eaten!
+Producer - Item #239 - #9 Data is now: 880!
+Consumer - #9 Data has been eaten!
+Producer - Item #240 - #0 Data is now: 776!
+Consumer - #0 Data has been eaten!
+Producer - Item #241 - #1 Data is now: 756!
+Consumer - #1 Data has been eaten!
+Producer - Item #242 - #2 Data is now: 514!
+Consumer - #2 Data has been eaten!
+Producer - Item #243 - #3 Data is now: 871!
+Consumer - #3 Data has been eaten!
+Producer - Item #244 - #4 Data is now: 400!
+Consumer - #4 Data has been eaten!
+Producer - Item #245 - #5 Data is now: 404!
+Consumer - #5 Data has been eaten!
+Producer - Item #246 - #6 Data is now: 481!
+Consumer - #6 Data has been eaten!
+Producer - Item #247 - #7 Data is now: 996!
+Consumer - #7 Data has been eaten!
+Producer - Item #248 - #8 Data is now: 977!
+Consumer - #8 Data has been eaten!
+Producer - Item #249 - #9 Data is now: 635!
+Consumer - #9 Data has been eaten!
+Producer - Item #250 - #0 Data is now: 370!
+Consumer - #0 Data has been eaten!
+Producer - Item #251 - #1 Data is now: 298!
+Consumer - #1 Data has been eaten!
+Producer - Item #252 - #2 Data is now: 653!
+Consumer - #2 Data has been eaten!
+Producer - Item #253 - #3 Data is now: 62!
+Consumer - #3 Data has been eaten!
+Producer - Item #254 - #4 Data is now: 886!
+Consumer - #4 Data has been eaten!
+Producer - Item #255 - #5 Data is now: 202!
+Consumer - #5 Data has been eaten!
+Producer - Item #256 - #6 Data is now: 704!
+Consumer - #6 Data has been eaten!
+Producer - Item #257 - #7 Data is now: 106!
+Consumer - #7 Data has been eaten!
+Producer - Item #258 - #8 Data is now: 504!
+Consumer - #8 Data has been eaten!
+Producer - Item #259 - #9 Data is now: 312!
+Consumer - #9 Data has been eaten!
+Producer - Item #260 - #0 Data is now: 644!
+Consumer - #0 Data has been eaten!
+Producer - Item #261 - #1 Data is now: 814!
+Consumer - #1 Data has been eaten!
+Producer - Item #262 - #2 Data is now: 620!
+Consumer - #2 Data has been eaten!
+Producer - Item #263 - #3 Data is now: 477!
+Consumer - #3 Data has been eaten!
+Producer - Item #264 - #4 Data is now: 760!
+Consumer - #4 Data has been eaten!
+Producer - Item #265 - #5 Data is now: 812!
+Consumer - #5 Data has been eaten!
+Producer - Item #266 - #6 Data is now: 398!
+Consumer - #6 Data has been eaten!
+Producer - Item #267 - #7 Data is now: 547!
+Consumer - #7 Data has been eaten!
+Producer - Item #268 - #8 Data is now: 88!
+Consumer - #8 Data has been eaten!
+Producer - Item #269 - #9 Data is now: 527!
+Consumer - #9 Data has been eaten!
+Producer - Item #270 - #0 Data is now: 94!
+Consumer - #0 Data has been eaten!
+Producer - Item #271 - #1 Data is now: 122!
+Consumer - #1 Data has been eaten!
+Producer - Item #272 - #2 Data is now: 339!
+Consumer - #2 Data has been eaten!
+Producer - Item #273 - #3 Data is now: 508!
+Consumer - #3 Data has been eaten!
+Producer - Item #274 - #4 Data is now: 13!
+Consumer - #4 Data has been eaten!
+Producer - Item #275 - #5 Data is now: 245!
+Consumer - #5 Data has been eaten!
+Producer - Item #276 - #6 Data is now: 647!
+Consumer - #6 Data has been eaten!
+Producer - Item #277 - #7 Data is now: 513!
+Consumer - #7 Data has been eaten!
+Producer - Item #278 - #8 Data is now: 232!
+Consumer - #8 Data has been eaten!
+Producer - Item #279 - #9 Data is now: 428!
+Consumer - #9 Data has been eaten!
+Producer - Item #280 - #0 Data is now: 404!
+Consumer - #0 Data has been eaten!
+Producer - Item #281 - #1 Data is now: 478!
+Consumer - #1 Data has been eaten!
+Producer - Item #282 - #2 Data is now: 791!
+Consumer - #2 Data has been eaten!
+Producer - Item #283 - #3 Data is now: 183!
+Consumer - #3 Data has been eaten!
+Producer - Item #284 - #4 Data is now: 66!
+Consumer - #4 Data has been eaten!
+Producer - Item #285 - #5 Data is now: 677!
+Consumer - #5 Data has been eaten!
+Producer - Item #286 - #6 Data is now: 868!
+Consumer - #6 Data has been eaten!
+Producer - Item #287 - #7 Data is now: 543!
+Consumer - #7 Data has been eaten!
+Producer - Item #288 - #8 Data is now: 884!
+Consumer - #8 Data has been eaten!
+Producer - Item #289 - #9 Data is now: 634!
+Consumer - #9 Data has been eaten!
+Producer - Item #290 - #0 Data is now: 491!
+Consumer - #0 Data has been eaten!
+Producer - Item #291 - #1 Data is now: 28!
+Consumer - #1 Data has been eaten!
+Producer - Item #292 - #2 Data is now: 978!
+Consumer - #2 Data has been eaten!
+Producer - Item #293 - #3 Data is now: 27!
+Consumer - #3 Data has been eaten!
+Producer - Item #294 - #4 Data is now: 319!
+Consumer - #4 Data has been eaten!
+Producer - Item #295 - #5 Data is now: 558!
+Consumer - #5 Data has been eaten!
+Producer - Item #296 - #6 Data is now: 632!
+Consumer - #6 Data has been eaten!
+Producer - Item #297 - #7 Data is now: 983!
+Consumer - #7 Data has been eaten!
+Producer - Item #298 - #8 Data is now: 919!
+Consumer - #8 Data has been eaten!
+Producer - Item #299 - #9 Data is now: 533!
+Consumer - #9 Data has been eaten!
+Producer - Item #300 - #0 Data is now: 232!
+Consumer - #0 Data has been eaten!
+Producer - Item #301 - #1 Data is now: 398!
+Consumer - #1 Data has been eaten!
+Producer - Item #302 - #2 Data is now: 354!
+Consumer - #2 Data has been eaten!
+Producer - Item #303 - #3 Data is now: 111!
+Consumer - #3 Data has been eaten!
+Producer - Item #304 - #4 Data is now: 423!
+Consumer - #4 Data has been eaten!
+Producer - Item #305 - #5 Data is now: 220!
+Consumer - #5 Data has been eaten!
+Producer - Item #306 - #6 Data is now: 952!
+Consumer - #6 Data has been eaten!
+Producer - Item #307 - #7 Data is now: 237!
+Consumer - #7 Data has been eaten!
+Producer - Item #308 - #8 Data is now: 42!
+Consumer - #8 Data has been eaten!
+Producer - Item #309 - #9 Data is now: 924!
+Consumer - #9 Data has been eaten!
+Producer - Item #310 - #0 Data is now: 203!
+Consumer - #0 Data has been eaten!
+Producer - Item #311 - #1 Data is now: 580!
+Consumer - #1 Data has been eaten!
+Producer - Item #312 - #2 Data is now: 262!
+Consumer - #2 Data has been eaten!
+Producer - Item #313 - #3 Data is now: 78!
+Consumer - #3 Data has been eaten!
+Producer - Item #314 - #4 Data is now: 314!
+Consumer - #4 Data has been eaten!
+Producer - Item #315 - #5 Data is now: 396!
+Consumer - #5 Data has been eaten!
+Producer - Item #316 - #6 Data is now: 666!
+Consumer - #6 Data has been eaten!
+Producer - Item #317 - #7 Data is now: 417!
+Consumer - #7 Data has been eaten!
+Producer - Item #318 - #8 Data is now: 244!
+Consumer - #8 Data has been eaten!
+Producer - Item #319 - #9 Data is now: 962!
+Consumer - #9 Data has been eaten!
+Producer - Item #320 - #0 Data is now: 46!
+Consumer - #0 Data has been eaten!
+Producer - Item #321 - #1 Data is now: 199!
+Consumer - #1 Data has been eaten!
+Producer - Item #322 - #2 Data is now: 20!
+Consumer - #2 Data has been eaten!
+Producer - Item #323 - #3 Data is now: 30!
+Consumer - #3 Data has been eaten!
+Producer - Item #324 - #4 Data is now: 824!
+Consumer - #4 Data has been eaten!
+Producer - Item #325 - #5 Data is now: 643!
+Consumer - #5 Data has been eaten!
+Producer - Item #326 - #6 Data is now: 977!
+Consumer - #6 Data has been eaten!
+Producer - Item #327 - #7 Data is now: 107!
+Consumer - #7 Data has been eaten!
+Producer - Item #328 - #8 Data is now: 659!
+Consumer - #8 Data has been eaten!
+Producer - Item #329 - #9 Data is now: 51!
+Consumer - #9 Data has been eaten!
+Producer - Item #330 - #0 Data is now: 883!
+Consumer - #0 Data has been eaten!
+Producer - Item #331 - #1 Data is now: 34!
+Consumer - #1 Data has been eaten!
+Producer - Item #332 - #2 Data is now: 950!
+Consumer - #2 Data has been eaten!
+Producer - Item #333 - #3 Data is now: 741!
+Consumer - #3 Data has been eaten!
+Producer - Item #334 - #4 Data is now: 829!
+Consumer - #4 Data has been eaten!
+Producer - Item #335 - #5 Data is now: 782!
+Consumer - #5 Data has been eaten!
+Producer - Item #336 - #6 Data is now: 301!
+Consumer - #6 Data has been eaten!
+Producer - Item #337 - #7 Data is now: 611!
+Consumer - #7 Data has been eaten!
+Producer - Item #338 - #8 Data is now: 532!
+Consumer - #8 Data has been eaten!
+Producer - Item #339 - #9 Data is now: 126!
+Consumer - #9 Data has been eaten!
+Producer - Item #340 - #0 Data is now: 417!
+Consumer - #0 Data has been eaten!
+Producer - Item #341 - #1 Data is now: 774!
+Consumer - #1 Data has been eaten!
+Producer - Item #342 - #2 Data is now: 395!
+Consumer - #2 Data has been eaten!
+Producer - Item #343 - #3 Data is now: 564!
+Consumer - #3 Data has been eaten!
+Producer - Item #344 - #4 Data is now: 856!
+Consumer - #4 Data has been eaten!
+Producer - Item #345 - #5 Data is now: 860!
+Consumer - #5 Data has been eaten!
+Producer - Item #346 - #6 Data is now: 732!
+Consumer - #6 Data has been eaten!
+Producer - Item #347 - #7 Data is now: 528!
+Consumer - #7 Data has been eaten!
+Producer - Item #348 - #8 Data is now: 909!
+Consumer - #8 Data has been eaten!
+Producer - Item #349 - #9 Data is now: 258!
+Consumer - #9 Data has been eaten!
+Producer - Item #350 - #0 Data is now: 287!
+Consumer - #0 Data has been eaten!
+Producer - Item #351 - #1 Data is now: 19!
+Consumer - #1 Data has been eaten!
+Producer - Item #352 - #2 Data is now: 710!
+Consumer - #2 Data has been eaten!
+Producer - Item #353 - #3 Data is now: 735!
+Consumer - #3 Data has been eaten!
+Producer - Item #354 - #4 Data is now: 978!
+Consumer - #4 Data has been eaten!
+Producer - Item #355 - #5 Data is now: 332!
+Consumer - #5 Data has been eaten!
+Producer - Item #356 - #6 Data is now: 840!
+Consumer - #6 Data has been eaten!
+Producer - Item #357 - #7 Data is now: 822!
+Consumer - #7 Data has been eaten!
+Producer - Item #358 - #8 Data is now: 556!
+Consumer - #8 Data has been eaten!
+Producer - Item #359 - #9 Data is now: 781!
+Consumer - #9 Data has been eaten!
+Producer - Item #360 - #0 Data is now: 778!
+Consumer - #0 Data has been eaten!
+Producer - Item #361 - #1 Data is now: 505!
+Consumer - #1 Data has been eaten!
+Producer - Item #362 - #2 Data is now: 386!
+Consumer - #2 Data has been eaten!
+Producer - Item #363 - #3 Data is now: 995!
+Consumer - #3 Data has been eaten!
+Producer - Item #364 - #4 Data is now: 907!
+Consumer - #4 Data has been eaten!
+Producer - Item #365 - #5 Data is now: 942!
+Consumer - #5 Data has been eaten!
+Producer - Item #366 - #6 Data is now: 205!
+Consumer - #6 Data has been eaten!
+Producer - Item #367 - #7 Data is now: 320!
+Consumer - #7 Data has been eaten!
+Producer - Item #368 - #8 Data is now: 668!
+Consumer - #8 Data has been eaten!
+Producer - Item #369 - #9 Data is now: 763!
+Consumer - #9 Data has been eaten!
+Producer - Item #370 - #0 Data is now: 330!
+Consumer - #0 Data has been eaten!
+Producer - Item #371 - #1 Data is now: 360!
+Consumer - #1 Data has been eaten!
+Producer - Item #372 - #2 Data is now: 254!
+Consumer - #2 Data has been eaten!
+Producer - Item #373 - #3 Data is now: 712!
+Consumer - #3 Data has been eaten!
+Producer - Item #374 - #4 Data is now: 727!
+Consumer - #4 Data has been eaten!
+Producer - Item #375 - #5 Data is now: 741!
+Consumer - #5 Data has been eaten!
+Producer - Item #376 - #6 Data is now: 58!
+Consumer - #6 Data has been eaten!
+Producer - Item #377 - #7 Data is now: 536!
+Consumer - #7 Data has been eaten!
+Producer - Item #378 - #8 Data is now: 374!
+Consumer - #8 Data has been eaten!
+Producer - Item #379 - #9 Data is now: 107!
+Consumer - #9 Data has been eaten!
+Producer - Item #380 - #0 Data is now: 131!
+Consumer - #0 Data has been eaten!
+Producer - Item #381 - #1 Data is now: 688!
+Consumer - #1 Data has been eaten!
+Producer - Item #382 - #2 Data is now: 795!
+Consumer - #2 Data has been eaten!
+Producer - Item #383 - #3 Data is now: 595!
+Consumer - #3 Data has been eaten!
+Producer - Item #384 - #4 Data is now: 355!
+Consumer - #4 Data has been eaten!
+Producer - Item #385 - #5 Data is now: 468!
+Consumer - #5 Data has been eaten!
+Producer - Item #386 - #6 Data is now: 558!
+Consumer - #6 Data has been eaten!
+Producer - Item #387 - #7 Data is now: 584!
+Consumer - #7 Data has been eaten!
+Producer - Item #388 - #8 Data is now: 559!
+Consumer - #8 Data has been eaten!
+Producer - Item #389 - #9 Data is now: 396!
+Consumer - #9 Data has been eaten!
+Producer - Item #390 - #0 Data is now: 935!
+Consumer - #0 Data has been eaten!
+Producer - Item #391 - #1 Data is now: 180!
+Consumer - #1 Data has been eaten!
+Producer - Item #392 - #2 Data is now: 492!
+Consumer - #2 Data has been eaten!
+Producer - Item #393 - #3 Data is now: 889!
+Consumer - #3 Data has been eaten!
+Producer - Item #394 - #4 Data is now: 524!
+Consumer - #4 Data has been eaten!
+Producer - Item #395 - #5 Data is now: 991!
+Consumer - #5 Data has been eaten!
+Producer - Item #396 - #6 Data is now: 111!
+Consumer - #6 Data has been eaten!
+Producer - Item #397 - #7 Data is now: 287!
+Consumer - #7 Data has been eaten!
+Producer - Item #398 - #8 Data is now: 324!
+Consumer - #8 Data has been eaten!
+Producer - Item #399 - #9 Data is now: 764!
+Consumer - #9 Data has been eaten!
+Producer - Item #400 - #0 Data is now: 558!
+Consumer - #0 Data has been eaten!
+Producer - Item #401 - #1 Data is now: 346!
+Consumer - #1 Data has been eaten!
+Producer - Item #402 - #2 Data is now: 921!
+Consumer - #2 Data has been eaten!
+Producer - Item #403 - #3 Data is now: 556!
+Consumer - #3 Data has been eaten!
+Producer - Item #404 - #4 Data is now: 911!
+Consumer - #4 Data has been eaten!
+Producer - Item #405 - #5 Data is now: 56!
+Consumer - #5 Data has been eaten!
+Producer - Item #406 - #6 Data is now: 343!
+Consumer - #6 Data has been eaten!
+Producer - Item #407 - #7 Data is now: 791!
+Consumer - #7 Data has been eaten!
+Producer - Item #408 - #8 Data is now: 932!
+Consumer - #8 Data has been eaten!
+Producer - Item #409 - #9 Data is now: 251!
+Consumer - #9 Data has been eaten!
+Producer - Item #410 - #0 Data is now: 175!
+Consumer - #0 Data has been eaten!
+Producer - Item #411 - #1 Data is now: 830!
+Consumer - #1 Data has been eaten!
+Producer - Item #412 - #2 Data is now: 315!
+Consumer - #2 Data has been eaten!
+Producer - Item #413 - #3 Data is now: 98!
+Consumer - #3 Data has been eaten!
+Producer - Item #414 - #4 Data is now: 722!
+Consumer - #4 Data has been eaten!
+Producer - Item #415 - #5 Data is now: 586!
+Consumer - #5 Data has been eaten!
+Producer - Item #416 - #6 Data is now: 726!
+Consumer - #6 Data has been eaten!
+Producer - Item #417 - #7 Data is now: 748!
+Consumer - #7 Data has been eaten!
+Producer - Item #418 - #8 Data is now: 22!
+Consumer - #8 Data has been eaten!
+Producer - Item #419 - #9 Data is now: 602!
+Consumer - #9 Data has been eaten!
+Producer - Item #420 - #0 Data is now: 168!
+Consumer - #0 Data has been eaten!
+Producer - Item #421 - #1 Data is now: 708!
+Consumer - #1 Data has been eaten!
+Producer - Item #422 - #2 Data is now: 218!
+Consumer - #2 Data has been eaten!
+Producer - Item #423 - #3 Data is now: 294!
+Consumer - #3 Data has been eaten!
+Producer - Item #424 - #4 Data is now: 731!
+Consumer - #4 Data has been eaten!
+Producer - Item #425 - #5 Data is now: 339!
+Consumer - #5 Data has been eaten!
+Producer - Item #426 - #6 Data is now: 1!
+Consumer - #6 Data has been eaten!
+Producer - Item #427 - #7 Data is now: 303!
+Consumer - #7 Data has been eaten!
+Producer - Item #428 - #8 Data is now: 521!
+Consumer - #8 Data has been eaten!
+Producer - Item #429 - #9 Data is now: 113!
+Consumer - #9 Data has been eaten!
+Producer - Item #430 - #0 Data is now: 249!
+Consumer - #0 Data has been eaten!
+Producer - Item #431 - #1 Data is now: 867!
+Consumer - #1 Data has been eaten!
+Producer - Item #432 - #2 Data is now: 729!
+Consumer - #2 Data has been eaten!
+Producer - Item #433 - #3 Data is now: 857!
+Consumer - #3 Data has been eaten!
+Producer - Item #434 - #4 Data is now: 25!
+Consumer - #4 Data has been eaten!
+Producer - Item #435 - #5 Data is now: 497!
+Consumer - #5 Data has been eaten!
+Producer - Item #436 - #6 Data is now: 93!
+Consumer - #6 Data has been eaten!
+Producer - Item #437 - #7 Data is now: 407!
+Consumer - #7 Data has been eaten!
+Producer - Item #438 - #8 Data is now: 76!
+Consumer - #8 Data has been eaten!
+Producer - Item #439 - #9 Data is now: 409!
+Consumer - #9 Data has been eaten!
+Producer - Item #440 - #0 Data is now: 341!
+Consumer - #0 Data has been eaten!
+Producer - Item #441 - #1 Data is now: 203!
+Consumer - #1 Data has been eaten!
+Producer - Item #442 - #2 Data is now: 71!
+Consumer - #2 Data has been eaten!
+Producer - Item #443 - #3 Data is now: 25!
+Consumer - #3 Data has been eaten!
+Producer - Item #444 - #4 Data is now: 557!
+Consumer - #4 Data has been eaten!
+Producer - Item #445 - #5 Data is now: 930!
+Consumer - #5 Data has been eaten!
+Producer - Item #446 - #6 Data is now: 939!
+Consumer - #6 Data has been eaten!
+Producer - Item #447 - #7 Data is now: 902!
+Consumer - #7 Data has been eaten!
+Producer - Item #448 - #8 Data is now: 599!
+Consumer - #8 Data has been eaten!
+Producer - Item #449 - #9 Data is now: 520!
+Consumer - #9 Data has been eaten!
+Producer - Item #450 - #0 Data is now: 475!
+Consumer - #0 Data has been eaten!
+Producer - Item #451 - #1 Data is now: 369!
+Consumer - #1 Data has been eaten!
+Producer - Item #452 - #2 Data is now: 961!
+Consumer - #2 Data has been eaten!
+Producer - Item #453 - #3 Data is now: 80!
+Consumer - #3 Data has been eaten!
+Producer - Item #454 - #4 Data is now: 734!
+Consumer - #4 Data has been eaten!
+Producer - Item #455 - #5 Data is now: 61!
+Consumer - #5 Data has been eaten!
+Producer - Item #456 - #6 Data is now: 525!
+Consumer - #6 Data has been eaten!
+Producer - Item #457 - #7 Data is now: 887!
+Consumer - #7 Data has been eaten!
+Producer - Item #458 - #8 Data is now: 594!
+Consumer - #8 Data has been eaten!
+Producer - Item #459 - #9 Data is now: 610!
+Consumer - #9 Data has been eaten!
+Producer - Item #460 - #0 Data is now: 674!
+Consumer - #0 Data has been eaten!
+Producer - Item #461 - #1 Data is now: 428!
+Consumer - #1 Data has been eaten!
+Producer - Item #462 - #2 Data is now: 732!
+Consumer - #2 Data has been eaten!
+Producer - Item #463 - #3 Data is now: 4!
+Consumer - #3 Data has been eaten!
+Producer - Item #464 - #4 Data is now: 669!
+Consumer - #4 Data has been eaten!
+Producer - Item #465 - #5 Data is now: 456!
+Consumer - #5 Data has been eaten!
+Producer - Item #466 - #6 Data is now: 362!
+Consumer - #6 Data has been eaten!
+Producer - Item #467 - #7 Data is now: 600!
+Consumer - #7 Data has been eaten!
+Producer - Item #468 - #8 Data is now: 687!
+Consumer - #8 Data has been eaten!
+Producer - Item #469 - #9 Data is now: 38!
+Consumer - #9 Data has been eaten!
+Producer - Item #470 - #0 Data is now: 908!
+Consumer - #0 Data has been eaten!
+Producer - Item #471 - #1 Data is now: 379!
+Consumer - #1 Data has been eaten!
+Producer - Item #472 - #2 Data is now: 414!
+Consumer - #2 Data has been eaten!
+Producer - Item #473 - #3 Data is now: 417!
+Consumer - #3 Data has been eaten!
+Producer - Item #474 - #4 Data is now: 910!
+Consumer - #4 Data has been eaten!
+Producer - Item #475 - #5 Data is now: 954!
+Consumer - #5 Data has been eaten!
+Producer - Item #476 - #6 Data is now: 139!
+Consumer - #6 Data has been eaten!
+Producer - Item #477 - #7 Data is now: 831!
+Consumer - #7 Data has been eaten!
+Producer - Item #478 - #8 Data is now: 847!
+Consumer - #8 Data has been eaten!
+Producer - Item #479 - #9 Data is now: 778!
+Consumer - #9 Data has been eaten!
+Producer - Item #480 - #0 Data is now: 246!
+Consumer - #0 Data has been eaten!
+Producer - Item #481 - #1 Data is now: 857!
+Consumer - #1 Data has been eaten!
+Producer - Item #482 - #2 Data is now: 326!
+Consumer - #2 Data has been eaten!
+Producer - Item #483 - #3 Data is now: 269!
+Consumer - #3 Data has been eaten!
+Producer - Item #484 - #4 Data is now: 347!
+Consumer - #4 Data has been eaten!
+Producer - Item #485 - #5 Data is now: 807!
+Consumer - #5 Data has been eaten!
+Producer - Item #486 - #6 Data is now: 193!
+Consumer - #6 Data has been eaten!
+Producer - Item #487 - #7 Data is now: 505!
+Consumer - #7 Data has been eaten!
+Producer - Item #488 - #8 Data is now: 330!
+Consumer - #8 Data has been eaten!
+Producer - Item #489 - #9 Data is now: 389!
+Consumer - #9 Data has been eaten!
+Producer - Item #490 - #0 Data is now: 614!
+Consumer - #0 Data has been eaten!
+Producer - Item #491 - #1 Data is now: 761!
+Consumer - #1 Data has been eaten!
+Producer - Item #492 - #2 Data is now: 754!
+Consumer - #2 Data has been eaten!
+Producer - Item #493 - #3 Data is now: 984!
+Consumer - #3 Data has been eaten!
+Producer - Item #494 - #4 Data is now: 214!
+Consumer - #4 Data has been eaten!
+Producer - Item #495 - #5 Data is now: 495!
+Consumer - #5 Data has been eaten!
+Producer - Item #496 - #6 Data is now: 668!
+Consumer - #6 Data has been eaten!
+Producer - Item #497 - #7 Data is now: 360!
+Consumer - #7 Data has been eaten!
+Producer - Item #498 - #8 Data is now: 260!
+Consumer - #8 Data has been eaten!
+Producer - Item #499 - #9 Data is now: 984!
+Consumer - #9 Data has been eaten!
+Producer - Item #500 - #0 Data is now: 695!
+Consumer - #0 Data has been eaten!
+Producer - Item #501 - #1 Data is now: 267!
+Consumer - #1 Data has been eaten!
+Producer - Item #502 - #2 Data is now: 585!
+Consumer - #2 Data has been eaten!
+Producer - Item #503 - #3 Data is now: 198!
+Consumer - #3 Data has been eaten!
+Producer - Item #504 - #4 Data is now: 6!
+Consumer - #4 Data has been eaten!
+Producer - Item #505 - #5 Data is now: 348!
+Consumer - #5 Data has been eaten!
+Producer - Item #506 - #6 Data is now: 772!
+Consumer - #6 Data has been eaten!
+Producer - Item #507 - #7 Data is now: 284!
+Consumer - #7 Data has been eaten!
+Producer - Item #508 - #8 Data is now: 915!
+Consumer - #8 Data has been eaten!
+Producer - Item #509 - #9 Data is now: 656!
+Consumer - #9 Data has been eaten!
+Producer - Item #510 - #0 Data is now: 692!
+Consumer - #0 Data has been eaten!
+Producer - Item #511 - #1 Data is now: 995!
+Consumer - #1 Data has been eaten!
+Producer - Item #512 - #2 Data is now: 666!
+Consumer - #2 Data has been eaten!
+Producer - Item #513 - #3 Data is now: 885!
+Consumer - #3 Data has been eaten!
+Producer - Item #514 - #4 Data is now: 54!
+Consumer - #4 Data has been eaten!
+Producer - Item #515 - #5 Data is now: 623!
+Consumer - #5 Data has been eaten!
+Producer - Item #516 - #6 Data is now: 686!
+Consumer - #6 Data has been eaten!
+Producer - Item #517 - #7 Data is now: 392!
+Consumer - #7 Data has been eaten!
+Producer - Item #518 - #8 Data is now: 301!
+Consumer - #8 Data has been eaten!
+Producer - Item #519 - #9 Data is now: 201!
+Consumer - #9 Data has been eaten!
+Producer - Item #520 - #0 Data is now: 404!
+Consumer - #0 Data has been eaten!
+Producer - Item #521 - #1 Data is now: 525!
+Consumer - #1 Data has been eaten!
+Producer - Item #522 - #2 Data is now: 981!
+Consumer - #2 Data has been eaten!
+Producer - Item #523 - #3 Data is now: 235!
+Consumer - #3 Data has been eaten!
+Producer - Item #524 - #4 Data is now: 593!
+Consumer - #4 Data has been eaten!
+Producer - Item #525 - #5 Data is now: 509!
+Consumer - #5 Data has been eaten!
+Producer - Item #526 - #6 Data is now: 589!
+Consumer - #6 Data has been eaten!
+Producer - Item #527 - #7 Data is now: 53!
+Consumer - #7 Data has been eaten!
+Producer - Item #528 - #8 Data is now: 276!
+Consumer - #8 Data has been eaten!
+Producer - Item #529 - #9 Data is now: 375!
+Consumer - #9 Data has been eaten!
+Producer - Item #530 - #0 Data is now: 120!
+Consumer - #0 Data has been eaten!
+Producer - Item #531 - #1 Data is now: 170!
+Consumer - #1 Data has been eaten!
+Producer - Item #532 - #2 Data is now: 995!
+Consumer - #2 Data has been eaten!
+Producer - Item #533 - #3 Data is now: 319!
+Consumer - #3 Data has been eaten!
+Producer - Item #534 - #4 Data is now: 2!
+Consumer - #4 Data has been eaten!
+Producer - Item #535 - #5 Data is now: 449!
+Consumer - #5 Data has been eaten!
+Producer - Item #536 - #6 Data is now: 238!
+Consumer - #6 Data has been eaten!
+Producer - Item #537 - #7 Data is now: 974!
+Consumer - #7 Data has been eaten!
+Producer - Item #538 - #8 Data is now: 114!
+Consumer - #8 Data has been eaten!
+Producer - Item #539 - #9 Data is now: 380!
+Consumer - #9 Data has been eaten!
+Producer - Item #540 - #0 Data is now: 158!
+Consumer - #0 Data has been eaten!
+Producer - Item #541 - #1 Data is now: 239!
+Consumer - #1 Data has been eaten!
+Producer - Item #542 - #2 Data is now: 484!
+Consumer - #2 Data has been eaten!
+Producer - Item #543 - #3 Data is now: 355!
+Consumer - #3 Data has been eaten!
+Producer - Item #544 - #4 Data is now: 428!
+Consumer - #4 Data has been eaten!
+Producer - Item #545 - #5 Data is now: 629!
+Consumer - #5 Data has been eaten!
+Producer - Item #546 - #6 Data is now: 211!
+Consumer - #6 Data has been eaten!
+Producer - Item #547 - #7 Data is now: 151!
+Consumer - #7 Data has been eaten!
+Producer - Item #548 - #8 Data is now: 377!
+Consumer - #8 Data has been eaten!
+Producer - Item #549 - #9 Data is now: 85!
+Consumer - #9 Data has been eaten!
+Producer - Item #550 - #0 Data is now: 913!
+Consumer - #0 Data has been eaten!
+Producer - Item #551 - #1 Data is now: 973!
+Consumer - #1 Data has been eaten!
+Producer - Item #552 - #2 Data is now: 497!
+Consumer - #2 Data has been eaten!
+Producer - Item #553 - #3 Data is now: 639!
+Consumer - #3 Data has been eaten!
+Producer - Item #554 - #4 Data is now: 919!
+Consumer - #4 Data has been eaten!
+Producer - Item #555 - #5 Data is now: 984!
+Consumer - #5 Data has been eaten!
+Producer - Item #556 - #6 Data is now: 366!
+Consumer - #6 Data has been eaten!
+Producer - Item #557 - #7 Data is now: 707!
+Consumer - #7 Data has been eaten!
+Producer - Item #558 - #8 Data is now: 211!
+Consumer - #8 Data has been eaten!
+Producer - Item #559 - #9 Data is now: 101!
+Consumer - #9 Data has been eaten!
+Producer - Item #560 - #0 Data is now: 237!
+Consumer - #0 Data has been eaten!
+Producer - Item #561 - #1 Data is now: 206!
+Consumer - #1 Data has been eaten!
+Producer - Item #562 - #2 Data is now: 412!
+Consumer - #2 Data has been eaten!
+Producer - Item #563 - #3 Data is now: 309!
+Consumer - #3 Data has been eaten!
+Producer - Item #564 - #4 Data is now: 115!
+Consumer - #4 Data has been eaten!
+Producer - Item #565 - #5 Data is now: 698!
+Consumer - #5 Data has been eaten!
+Producer - Item #566 - #6 Data is now: 279!
+Consumer - #6 Data has been eaten!
+Producer - Item #567 - #7 Data is now: 269!
+Consumer - #7 Data has been eaten!
+Producer - Item #568 - #8 Data is now: 494!
+Consumer - #8 Data has been eaten!
+Producer - Item #569 - #9 Data is now: 398!
+Consumer - #9 Data has been eaten!
+Producer - Item #570 - #0 Data is now: 463!
+Consumer - #0 Data has been eaten!
+Producer - Item #571 - #1 Data is now: 477!
+Consumer - #1 Data has been eaten!
+Producer - Item #572 - #2 Data is now: 483!
+Consumer - #2 Data has been eaten!
+Producer - Item #573 - #3 Data is now: 154!
+Consumer - #3 Data has been eaten!
+Producer - Item #574 - #4 Data is now: 918!
+Consumer - #4 Data has been eaten!
+Producer - Item #575 - #5 Data is now: 442!
+Consumer - #5 Data has been eaten!
+Producer - Item #576 - #6 Data is now: 59!
+Consumer - #6 Data has been eaten!
+Producer - Item #577 - #7 Data is now: 169!
+Consumer - #7 Data has been eaten!
+Producer - Item #578 - #8 Data is now: 190!
+Consumer - #8 Data has been eaten!
+Producer - Item #579 - #9 Data is now: 739!
+Consumer - #9 Data has been eaten!
+Producer - Item #580 - #0 Data is now: 309!
+Consumer - #0 Data has been eaten!
+Producer - Item #581 - #1 Data is now: 108!
+Consumer - #1 Data has been eaten!
+Producer - Item #582 - #2 Data is now: 645!
+Consumer - #2 Data has been eaten!
+Producer - Item #583 - #3 Data is now: 734!
+Consumer - #3 Data has been eaten!
+Producer - Item #584 - #4 Data is now: 625!
+Consumer - #4 Data has been eaten!
+Producer - Item #585 - #5 Data is now: 131!
+Consumer - #5 Data has been eaten!
+Producer - Item #586 - #6 Data is now: 492!
+Consumer - #6 Data has been eaten!
+Producer - Item #587 - #7 Data is now: 825!
+Consumer - #7 Data has been eaten!
+Producer - Item #588 - #8 Data is now: 434!
+Consumer - #8 Data has been eaten!
+Producer - Item #589 - #9 Data is now: 794!
+Consumer - #9 Data has been eaten!
+Producer - Item #590 - #0 Data is now: 351!
+Consumer - #0 Data has been eaten!
+Producer - Item #591 - #1 Data is now: 616!
+Consumer - #1 Data has been eaten!
+Producer - Item #592 - #2 Data is now: 401!
+Consumer - #2 Data has been eaten!
+Producer - Item #593 - #3 Data is now: 381!
+Consumer - #3 Data has been eaten!
+Producer - Item #594 - #4 Data is now: 146!
+Consumer - #4 Data has been eaten!
+Producer - Item #595 - #5 Data is now: 25!
+Consumer - #5 Data has been eaten!
+Producer - Item #596 - #6 Data is now: 929!
+Consumer - #6 Data has been eaten!
+Producer - Item #597 - #7 Data is now: 580!
+Consumer - #7 Data has been eaten!
+Producer - Item #598 - #8 Data is now: 688!
+Consumer - #8 Data has been eaten!
+Producer - Item #599 - #9 Data is now: 809!
+Consumer - #9 Data has been eaten!
+Producer - Item #600 - #0 Data is now: 190!
+Consumer - #0 Data has been eaten!
+Producer - Item #601 - #1 Data is now: 620!
+Consumer - #1 Data has been eaten!
+Producer - Item #602 - #2 Data is now: 883!
+Consumer - #2 Data has been eaten!
+Producer - Item #603 - #3 Data is now: 740!
+Consumer - #3 Data has been eaten!
+Producer - Item #604 - #4 Data is now: 692!
+Consumer - #4 Data has been eaten!
+Producer - Item #605 - #5 Data is now: 723!
+Consumer - #5 Data has been eaten!
+Producer - Item #606 - #6 Data is now: 610!
+Consumer - #6 Data has been eaten!
+Producer - Item #607 - #7 Data is now: 391!
+Consumer - #7 Data has been eaten!
+Producer - Item #608 - #8 Data is now: 353!
+Consumer - #8 Data has been eaten!
+Producer - Item #609 - #9 Data is now: 481!
+Consumer - #9 Data has been eaten!
+Producer - Item #610 - #0 Data is now: 149!
+Consumer - #0 Data has been eaten!
+Producer - Item #611 - #1 Data is now: 677!
+Consumer - #1 Data has been eaten!
+Producer - Item #612 - #2 Data is now: 641!
+Consumer - #2 Data has been eaten!
+Producer - Item #613 - #3 Data is now: 895!
+Consumer - #3 Data has been eaten!
+Producer - Item #614 - #4 Data is now: 730!
+Consumer - #4 Data has been eaten!
+Producer - Item #615 - #5 Data is now: 875!
+Consumer - #5 Data has been eaten!
+Producer - Item #616 - #6 Data is now: 70!
+Consumer - #6 Data has been eaten!
+Producer - Item #617 - #7 Data is now: 760!
+Consumer - #7 Data has been eaten!
+Producer - Item #618 - #8 Data is now: 533!
+Consumer - #8 Data has been eaten!
+Producer - Item #619 - #9 Data is now: 277!
+Consumer - #9 Data has been eaten!
+Producer - Item #620 - #0 Data is now: 500!
+Consumer - #0 Data has been eaten!
+Producer - Item #621 - #1 Data is now: 122!
+Consumer - #1 Data has been eaten!
+Producer - Item #622 - #2 Data is now: 969!
+Consumer - #2 Data has been eaten!
+Producer - Item #623 - #3 Data is now: 893!
+Consumer - #3 Data has been eaten!
+Producer - Item #624 - #4 Data is now: 270!
+Consumer - #4 Data has been eaten!
+Producer - Item #625 - #5 Data is now: 788!
+Consumer - #5 Data has been eaten!
+Producer - Item #626 - #6 Data is now: 705!
+Consumer - #6 Data has been eaten!
+Producer - Item #627 - #7 Data is now: 807!
+Consumer - #7 Data has been eaten!
+Producer - Item #628 - #8 Data is now: 258!
+Consumer - #8 Data has been eaten!
+Producer - Item #629 - #9 Data is now: 188!
+Consumer - #9 Data has been eaten!
+Producer - Item #630 - #0 Data is now: 493!
+Consumer - #0 Data has been eaten!
+Producer - Item #631 - #1 Data is now: 237!
+Consumer - #1 Data has been eaten!
+Producer - Item #632 - #2 Data is now: 933!
+Consumer - #2 Data has been eaten!
+Producer - Item #633 - #3 Data is now: 928!
+Consumer - #3 Data has been eaten!
+Producer - Item #634 - #4 Data is now: 46!
+Consumer - #4 Data has been eaten!
+Producer - Item #635 - #5 Data is now: 507!
+Consumer - #5 Data has been eaten!
+Producer - Item #636 - #6 Data is now: 695!
+Consumer - #6 Data has been eaten!
+Producer - Item #637 - #7 Data is now: 936!
+Consumer - #7 Data has been eaten!
+Producer - Item #638 - #8 Data is now: 632!
+Consumer - #8 Data has been eaten!
+Producer - Item #639 - #9 Data is now: 122!
+Consumer - #9 Data has been eaten!
+Producer - Item #640 - #0 Data is now: 363!
+Consumer - #0 Data has been eaten!
+Producer - Item #641 - #1 Data is now: 133!
+Consumer - #1 Data has been eaten!
+Producer - Item #642 - #2 Data is now: 626!
+Consumer - #2 Data has been eaten!
+Producer - Item #643 - #3 Data is now: 957!
+Consumer - #3 Data has been eaten!
+Producer - Item #644 - #4 Data is now: 23!
+Consumer - #4 Data has been eaten!
+Producer - Item #645 - #5 Data is now: 388!
+Consumer - #5 Data has been eaten!
+Producer - Item #646 - #6 Data is now: 158!
+Consumer - #6 Data has been eaten!
+Producer - Item #647 - #7 Data is now: 645!
+Consumer - #7 Data has been eaten!
+Producer - Item #648 - #8 Data is now: 606!
+Consumer - #8 Data has been eaten!
+Producer - Item #649 - #9 Data is now: 648!
+Consumer - #9 Data has been eaten!
+Producer - Item #650 - #0 Data is now: 17!
+Consumer - #0 Data has been eaten!
+Producer - Item #651 - #1 Data is now: 725!
+Consumer - #1 Data has been eaten!
+Producer - Item #652 - #2 Data is now: 917!
+Consumer - #2 Data has been eaten!
+Producer - Item #653 - #3 Data is now: 627!
+Consumer - #3 Data has been eaten!
+Producer - Item #654 - #4 Data is now: 17!
+Consumer - #4 Data has been eaten!
+Producer - Item #655 - #5 Data is now: 245!
+Consumer - #5 Data has been eaten!
+Producer - Item #656 - #6 Data is now: 685!
+Consumer - #6 Data has been eaten!
+Producer - Item #657 - #7 Data is now: 139!
+Consumer - #7 Data has been eaten!
+Producer - Item #658 - #8 Data is now: 242!
+Consumer - #8 Data has been eaten!
+Producer - Item #659 - #9 Data is now: 846!
+Consumer - #9 Data has been eaten!
+Producer - Item #660 - #0 Data is now: 969!
+Consumer - #0 Data has been eaten!
+Producer - Item #661 - #1 Data is now: 652!
+Consumer - #1 Data has been eaten!
+Producer - Item #662 - #2 Data is now: 879!
+Consumer - #2 Data has been eaten!
+Producer - Item #663 - #3 Data is now: 42!
+Consumer - #3 Data has been eaten!
+Producer - Item #664 - #4 Data is now: 668!
+Consumer - #4 Data has been eaten!
+Producer - Item #665 - #5 Data is now: 505!
+Consumer - #5 Data has been eaten!
+Producer - Item #666 - #6 Data is now: 392!
+Consumer - #6 Data has been eaten!
+Producer - Item #667 - #7 Data is now: 514!
+Consumer - #7 Data has been eaten!
+Producer - Item #668 - #8 Data is now: 516!
+Consumer - #8 Data has been eaten!
+Producer - Item #669 - #9 Data is now: 298!
+Consumer - #9 Data has been eaten!
+Producer - Item #670 - #0 Data is now: 512!
+Consumer - #0 Data has been eaten!
+Producer - Item #671 - #1 Data is now: 108!
+Consumer - #1 Data has been eaten!
+Producer - Item #672 - #2 Data is now: 180!
+Consumer - #2 Data has been eaten!
+Producer - Item #673 - #3 Data is now: 516!
+Consumer - #3 Data has been eaten!
+Producer - Item #674 - #4 Data is now: 460!
+Consumer - #4 Data has been eaten!
+Producer - Item #675 - #5 Data is now: 434!
+Consumer - #5 Data has been eaten!
+Producer - Item #676 - #6 Data is now: 141!
+Consumer - #6 Data has been eaten!
+Producer - Item #677 - #7 Data is now: 972!
+Consumer - #7 Data has been eaten!
+Producer - Item #678 - #8 Data is now: 843!
+Consumer - #8 Data has been eaten!
+Producer - Item #679 - #9 Data is now: 3!
+Consumer - #9 Data has been eaten!
+Producer - Item #680 - #0 Data is now: 506!
+Consumer - #0 Data has been eaten!
+Producer - Item #681 - #1 Data is now: 274!
+Consumer - #1 Data has been eaten!
+Producer - Item #682 - #2 Data is now: 920!
+Consumer - #2 Data has been eaten!
+Producer - Item #683 - #3 Data is now: 256!
+Consumer - #3 Data has been eaten!
+Producer - Item #684 - #4 Data is now: 685!
+Consumer - #4 Data has been eaten!
+Producer - Item #685 - #5 Data is now: 917!
+Consumer - #5 Data has been eaten!
+Producer - Item #686 - #6 Data is now: 832!
+Consumer - #6 Data has been eaten!
+Producer - Item #687 - #7 Data is now: 535!
+Consumer - #7 Data has been eaten!
+Producer - Item #688 - #8 Data is now: 213!
+Consumer - #8 Data has been eaten!
+Producer - Item #689 - #9 Data is now: 41!
+Consumer - #9 Data has been eaten!
+Producer - Item #690 - #0 Data is now: 747!
+Consumer - #0 Data has been eaten!
+Producer - Item #691 - #1 Data is now: 199!
+Consumer - #1 Data has been eaten!
+Producer - Item #692 - #2 Data is now: 645!
+Consumer - #2 Data has been eaten!
+Producer - Item #693 - #3 Data is now: 379!
+Consumer - #3 Data has been eaten!
+Producer - Item #694 - #4 Data is now: 485!
+Consumer - #4 Data has been eaten!
+Producer - Item #695 - #5 Data is now: 264!
+Consumer - #5 Data has been eaten!
+Producer - Item #696 - #6 Data is now: 298!
+Consumer - #6 Data has been eaten!
+Producer - Item #697 - #7 Data is now: 593!
+Consumer - #7 Data has been eaten!
+Producer - Item #698 - #8 Data is now: 738!
+Consumer - #8 Data has been eaten!
+Producer - Item #699 - #9 Data is now: 431!
+Consumer - #9 Data has been eaten!
+Producer - Item #700 - #0 Data is now: 828!
+Consumer - #0 Data has been eaten!
+Producer - Item #701 - #1 Data is now: 290!
+Consumer - #1 Data has been eaten!
+Producer - Item #702 - #2 Data is now: 467!
+Consumer - #2 Data has been eaten!
+Producer - Item #703 - #3 Data is now: 836!
+Consumer - #3 Data has been eaten!
+Producer - Item #704 - #4 Data is now: 618!
+Consumer - #4 Data has been eaten!
+Producer - Item #705 - #5 Data is now: 152!
+Consumer - #5 Data has been eaten!
+Producer - Item #706 - #6 Data is now: 27!
+Consumer - #6 Data has been eaten!
+Producer - Item #707 - #7 Data is now: 669!
+Consumer - #7 Data has been eaten!
+Producer - Item #708 - #8 Data is now: 635!
+Consumer - #8 Data has been eaten!
+Producer - Item #709 - #9 Data is now: 543!
+Consumer - #9 Data has been eaten!
+Producer - Item #710 - #0 Data is now: 616!
+Consumer - #0 Data has been eaten!
+Producer - Item #711 - #1 Data is now: 766!
+Consumer - #1 Data has been eaten!
+Producer - Item #712 - #2 Data is now: 841!
+Consumer - #2 Data has been eaten!
+Producer - Item #713 - #3 Data is now: 173!
+Consumer - #3 Data has been eaten!
+DONE PRODUCING!
+Got a DONE signal!
+DONE CONSUMING!
+MIN: 1
+MAX: 996
+AVG: 497.549
+NUM ITEMS: 714
+sh-4.3$ clear
+[H[2Jsh-4.3$ exit
+
+script done on Mon Feb 16 16:04:32 2015

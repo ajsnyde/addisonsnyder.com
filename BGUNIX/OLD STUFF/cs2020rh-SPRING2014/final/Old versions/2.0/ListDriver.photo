@@ -1,0 +1,533 @@
+Script started on Mon Apr 28 10:56:13 2014
+sh-3.00$ pwd
+/home/15/ajsnyde/cs2020rh/final
+sh-3.00$ ls -l
+total 60
+-rw-r--r--   1 ajsnyde  ics2020rh    3203 Apr 28 10:48 Car.cpp
+-rw-r--r--   1 ajsnyde  ics2020rh    1015 Apr 28 10:40 Car.h
+-rw-r--r--   1 ajsnyde  ics2020rh    2498 Apr 28 10:54 List.cpp
+-rw-r--r--   1 ajsnyde  ics2020rh     754 Apr 28 10:55 List.h
+-rw-r--r--   1 ajsnyde  ics2020rh     944 Apr 28 10:55 ListDriver.cpp
+-rw-r--r--   1 ajsnyde  user           0 Apr 28 10:56 ListDriver.photo
+drwxr-sr-x   2 ajsnyde  ics2020rh     512 Apr 28 10:47 Old versions
+-rwxr-xr-x   1 ajsnyde  ics2020rh   19424 Apr 28 10:49 a.out
+sh-3.00$ cat ListDriver.cpp
+///////////////////////////////////////////////////////////////
+// FILE NAME:           driver.cpp         
+// TITLE:               Test driver for List class and compatibility with Car class
+// PROGRAMMER:          Addison Snyder
+// FOR COURSE:          CS 2020
+// DUE DATE:            4/28/2014
+//
+// ALL CODE IS MINE UNLESS OTHERWISE NOTED
+///////////////////////////////////////////////////////////////
+
+#include "iostream"
+#include "Car.h"
+#include "List.h"
+
+using namespace std;
+
+int main()
+{
+
+        //declaring all variables
+
+        List Lot;
+        Lot.addcar();
+        Lot.addcar();
+        Lot.addcar();
+        cout << "Inserting car between 3rd and 4th spots. . .\n";
+        Lot.insertcar(2);
+
+        Lot.displayall();
+        cout << "Getting new car's pointer and using it to change gascap to 9000. . .\n";
+        (*(Lot.getcar(2))).setgascap(9000);
+        Lot.displayall();
+        cout << "Sending that car to the junkyard without get function.\n";
+        Lot.killcar(1);
+        cout << "Car should be gone!\n";
+        Lot.displayall();
+        return 0;
+}
+
+sh-3.00$ cat List.cpp
+#include "iostream"
+#include "List.h"
+
+using namespace std;
+
+/////////////////////////////////
+//Standard constructor, forces head to start out NULL
+/////////////////////////////////
+
+List::List()
+{
+        head = NULL;
+}
+
+////////////////////////////////
+//Destructor
+////////////////////////////////
+
+List::~List()
+{
+}
+
+////////////////////////////////
+//Adds cars to the end of list
+////////////////////////////////
+
+void List::addcar()
+{
+        if(head == NULL)
+                head = new Car();
+        else
+        {
+                Car *node;
+                node = head;
+                while(node->next != NULL)
+                        node = node->next;
+                node->next = new Car();
+        }
+}
+
+//////////////////////////////////
+//inserts a car. num is beginning number. i.e. if there were 3 cars and num is 2, the new car will be between 2 and 3.
+//////////////////////////////////
+
+void List::insertcar(int num)
+{
+        if(num < 0)
+        {
+                cout << "Cannot insert car. Number out of range!\n";
+                return;
+        }
+        if(head == NULL)
+                head = new Car();
+                else
+        {
+                Car *node;
+                node = head;
+                for(int i = 0; i < num; i++)
+                {
+                        if(node->next == NULL)
+                        {
+                                cout << "Out of range!\n";
+                                return;
+                        }
+                        else
+                                node = node->next;
+                }
+                node->next = new Car();
+                cout << "Created new car on spot " << num+1 << "\n";
+        }
+}
+////////////////////////////////////
+//destroys car #num
+////////////////////////////////////
+void List::killcar(int num)
+{
+        if(num < 0)
+        {
+                cout << "Cannot insert car. Number out of range!\n";
+                return;
+        }
+        if(head == NULL)
+                head = new Car();
+                else
+        {
+                Car *node;
+                node = head;
+                for(int i = 0; i < num; i++)
+                {
+                        if(node->next == NULL)
+                        {
+                                cout << "Out of range!\n";
+                                return;
+                        }
+                        else
+                                node = node->next;
+                }
+                Car* temp;
+                temp = node->next->next;
+                delete node->next;
+                node->next = temp;
+                cout << "Deleted car on spot " << 1 << "\n";
+        }
+}
+/////////////////////////////////
+//Displays all cars using display() from Car class
+/////////////////////////////////
+void List::displayall()
+{
+        if(head == NULL)
+        {
+                cout << "No cars!\n";
+                return;
+        }
+        Car* counter;
+        counter = head;
+        for(int i = 1; counter->next != NULL; i++)
+        {
+                cout << "Car #" << i << "\n";
+        (*counter).display();
+        counter = counter->next;
+        }
+        (*counter).display();
+}
+
+//////////////////////////////////
+//returns the pointer of car #num
+//////////////////////////////////
+
+
+Car* List::getcar(int num)
+{
+        Car *counter = head;
+                for(int i = 0; i < num; i++)
+        {
+                if(counter->next == NULL)
+                {
+                        cout << "Out of range!\n";
+                        return head;
+                }
+                else
+                        counter = counter->next;
+        }
+                return counter;
+}sh-3.00$ catL  List.h
+///////////////////////////////////////////////////////////////
+// FILE NAME:           List.h
+// TITLE:               List Header File
+// PROGRAMMER:          Addison Snyder
+// FOR COURSE:          CS 2020
+// DUE DATE:            4/28/2014
+//
+// ALL CODE IS MINE UNLESS OTHERWISE NOTED
+///////////////////////////////////////////////////////////////
+
+#ifndef LIST_H
+#define LIST_H
+#include "string"
+#include "Car.h"
+
+using namespace std;
+
+
+class List
+{
+
+private:
+        Car* head;
+public:
+        List(void);
+        ~List(void);
+        void addcar();//adds car to the end of list.
+        void insertcar(int);//inserts car at point (specified by parameter)
+        void killcar(int);//sends car to the junkyard. :[
+        void displayall();//displays cars in order (head first)
+        Car* getcar(int);//returns pointer for nth car
+};
+
+#endif
+sh-3.00$ cat Car.cpp
+#include "iostream"
+#include "Car.h"
+#include "string"
+
+using namespace std;
+
+///////////////////////////////////////////////////////////////
+//      Constructor - Sets values to a default.. (no return, no parameters)
+///////////////////////////////////////////////////////////////
+Car::Car()
+{
+        cout << "Creating a DEFAULT vehicle\n";
+        delivery = 0;
+        year = 2007;
+        value = 9200;
+        gascap = 9.2;
+}
+
+Car::Car(string test)
+{
+        cout << test;
+}
+
+Car::Car(double g, int y, int v, bool d, Car* c)
+{
+        gascap = g;
+        year = y;
+        value = v;
+        delivery = d;
+        next = c;
+}
+
+
+///////////////////////////////////////////////////////////////
+//      Function Name - Display
+//      No parameters, void return.
+///////////////////////////////////////////////////////////////
+
+void Car::display() const
+{
+        cout << "Displaying all vehicle attributes:\n";
+        cout << "----------------------------------------\n";
+        cout << "Delivery? (1 = yes, 0 = no) - " << delivery << "\n";
+        cout << "Year                        - " << year << "\n";
+        cout << "Value (in USD)              - " << value << "\n";
+        cout << "Gas Tank Capacity           - " << gascap << "\n";
+        cout << "----------------------------------------\n";
+}
+
+///////////////////////////////////////////////////////////////
+//      Function Name - Returns Gas tank cap
+//      No parameters, double return.
+///////////////////////////////////////////////////////////////
+
+double Car::getgascap() const
+{
+        return gascap;
+}
+
+///////////////////////////////////////////////////////////////
+//      Function Name - Sets gas
+//      Gas parameter, no return.
+///////////////////////////////////////////////////////////////
+
+void Car::setgascap(double g)
+{
+        gascap = g;
+}
+
+///////////////////////////////////////////////////////////////
+//      Function Name - Returns value of stored car
+//      No parameters, int return.
+///////////////////////////////////////////////////////////////
+
+int Car::getvalue() const
+{
+        return value;
+}
+
+///////////////////////////////////////////////////////////////
+//      Function Name - sets value
+//      Value is parameter, no return.
+///////////////////////////////////////////////////////////////
+
+void Car::setvalue(int v)
+{
+        value = v;
+}
+
+///////////////////////////////////////////////////////////////
+//      Function Name - Returns Year
+//      No parameters, int return.
+///////////////////////////////////////////////////////////////
+
+int Car::getyear() const
+{
+        return year;
+}
+
+///////////////////////////////////////////////////////////////
+//      Function Name - sets year
+//      year (int) parameter, no return.
+///////////////////////////////////////////////////////////////
+
+void Car::setyear(int y)
+{
+        year = y;
+}
+
+///////////////////////////////////////////////////////////////
+//      Function Name - Returns delivery bool
+//      No parameters, Bool return.
+///////////////////////////////////////////////////////////////
+
+bool Car::getdelivery() const
+{
+        return delivery;
+}
+
+///////////////////////////////////////////////////////////////
+//      Function Name - Sets delivery status
+//      bool parameter, no return.
+///////////////////////////////////////////////////////////////
+
+void Car::setdelivery(bool d)
+{
+        delivery = d;
+}
+
+void Car::setcar(Car* c)
+{
+        next = c;
+}
+
+Car* Car::getcar() const
+{
+        return next;
+}sh-3.00$ cat Car.h
+///////////////////////////////////////////////////////////////
+// FILE NAME:           Car.h
+// TITLE:                       Car Header File
+// PROGRAMMER:          Addison Snyder
+// FOR COURSE:          CS 2020
+// DUE DATE:            4/21/2014
+//
+// ALL CODE IS MINE UNLESS OTHERWISE NOTED
+///////////////////////////////////////////////////////////////
+
+#ifndef CAR_H
+#define CAR_H
+#include "string"
+
+using namespace std;
+
+class Car {
+        friend class List;
+
+        private://variables
+        bool delivery;
+        int year;
+        int value;
+        double gascap;
+        Car* next;
+
+        public:
+        Car(); // constructor!
+        Car(string);//overloaded constructor
+        Car(double, int, int, bool, Car*); // setup value overloaded constructor
+        void display() const;//displays all attributes
+        //getters
+        int getvalue() const;
+        int getyear() const;
+        bool getdelivery() const;
+        double getgascap() const;
+        Car* getcar() const;
+        //setters
+        void setgascap(double);
+        void setyear(int);
+        void setvalue(int);
+        void setdelivery(bool);
+        void setcar(Car*);
+};
+
+#endif // !CAR_Hsh-3.00$ cler ar
+[H[2Jsh-3.00$ g++ ListDriver.cpp                    cler
+sh: cler: command not found
+sh-3.00$ clear
+[H[2Jsh-3.00$ g++ Car.cpp List.cpp ListDriver.cpp
+In file included from Car.cpp:2:
+Car.h:46:17: warning: no newline at end of file
+Car.cpp:138:2: warning: no newline at end of file
+In file included from List.h:14,
+                 from List.cpp:2:
+Car.h:46:17: warning: no newline at end of file
+List.cpp:145:2: warning: no newline at end of file
+In file included from ListDriver.cpp:12:
+Car.h:46:17: warning: no newline at end of file
+sh-3.00$ a.out
+Creating a DEFAULT vehicle
+Creating a DEFAULT vehicle
+Creating a DEFAULT vehicle
+Inserting car between 3rd and 4th spots. . .
+Creating a DEFAULT vehicle
+Created new car on spot 3
+Car #1
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9.2
+----------------------------------------
+Car #2
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9.2
+----------------------------------------
+Car #3
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9.2
+----------------------------------------
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9.2
+----------------------------------------
+Getting new car's pointer and using it to change gascap to 9000. . .
+Car #1
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9.2
+----------------------------------------
+Car #2
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9.2
+----------------------------------------
+Car #3
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9000
+----------------------------------------
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9.2
+----------------------------------------
+Sending that car to the junkyard without get function.
+Deleted car on spot 1
+Car should be gone!
+Car #1
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9.2
+----------------------------------------
+Car #2
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9.2
+----------------------------------------
+Displaying all vehicle attributes:
+----------------------------------------
+Delivery? (1 = yes, 0 = no) - 0
+Year                        - 2007
+Value (in USD)              - 9200
+Gas Tank Capacity           - 9.2
+----------------------------------------
+sh-3.00$ That's all, folks!
+> sh: unexpected EOF while looking for matching `''
+sh: syntax error: unexpected end of file
+sh-3.00$ exit
+
+script done on Mon Apr 28 10:58:25 2014

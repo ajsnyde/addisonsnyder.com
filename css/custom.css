@@ -1,5 +1,12 @@
 body {
 	background-color: #333;
+	color: #f8f8f2;
+	font-family: "Consolas", monaco, monospace;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
 }
 
 h1 {
@@ -129,4 +136,11 @@ b {
     cursor: default;
     background-color: #A6E22E;
     border-color: #A6E22E;
+}
+
+::selection {
+  background: #757575; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #757575; /* Gecko Browsers */
 }

@@ -1,0 +1,19 @@
+Addison Snyder
+
+INPUT: Ask for width/length
+PROCESSING: area =  width * length
+OUTPUT: "your area is equal to" << area << "square ft."
+
+INPUT: length/width
+PROCESSING: parimeter = (length * 2) + (width * 2)
+OUTPUT: parimeter
+
+INPUT: length, width, cost per sq. ft.
+PROCESSING: total_cost =  length * width * cost
+OUTPUT: total_cost
+
+INPUT: length, width, cost (sq. ft.), cost (trim)
+PROCESSING: (perimeter * trim_cost) + (area * cost)
+OUTPUT: total cost. Goodbye, (name)
+
+Variables to be declared: area, width, length, perimeter, cost_sqft, total_cost, trim_ft, name (string)

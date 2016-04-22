@@ -1,0 +1,94 @@
+Script started on Mon Apr 28 23:44:26 2014
+sh-3.00$ csoso 
+[2J[H
+                    Welcome to the csos operating system!
+                               CS 217
+               To see a list of commands type 'help' or '?'
+
+csos: cat   ^Z
+[1]+  Stopped(SIGTSTP)        csos
+sh-3.00$ cat lab6.src
+        ORG 100 ;Addison Snyder
+        ENTRY
+        LDA N1  ;Load operand at A
+        CMA     ;COMPLEMENT AC
+        ADD N2  ;ADDS N2 TO COMPLEMENTED N1
+        SNA     ;SKIP NEXT IF AC NEGATIVE
+        STA A   ;STORE AC IN A
+        SPA     ;SKIP NEXT IF AC POSITIVE
+        STA B   ;PUT AC INTO B
+        DMP     ;DUMP CONTENTS
+        HLT     ;END
+N1,     DEC 10  ;STORE 10 AT N1
+N2,     DEC 5   ;STORE 5 AT N2
+A,      DEC 0   ;STORE 0 AT A
+B,      DEC 0   ;STORE 0 AT B
+        END
+sh-3.00$ clear
+[H[2Jsh-3.00$ csos
+[2J[H
+                    Welcome to the csos operating system!
+                               CS 217
+               To see a list of commands type 'help' or '?'
+
+csos: assem lab6.src
+        ORG 100 ;ADDISON SNYDER
+        ENTRY
+0100    LDA N1  ;LOAD OPERAND AT A
+0101    CMA     ;COMPLEMENT AC
+0102    ADD N2  ;ADDS N2 TO COMPLEMENTED N1
+0103    SNA     ;SKIP NEXT IF AC NEGATIVE
+0104    STA A   ;STORE AC IN A
+0105    SPA     ;SKIP NEXT IF AC POSITIVE
+0106    STA B   ;PUT AC INTO B
+0107    DMP     ;DUMP CONTENTS
+0108    HLT     ;END
+0109 N1,        DEC 10  ;STORE 10 AT N1
+010a N2,        DEC 5   ;STORE 5 AT N2
+010b A, DEC 0   ;STORE 0 AT A
+010c B, DEC 0   ;STORE 0 AT B
+        END
+
+Symbol Table:
+        0100    1
+N1      0109    0
+N2      010a    0
+A       010b    0
+B       010c    0
+
+Object code:
+2109 7200 110a 7008 310b 7010 310c f001 
+7001 000a 0005 0000 0000 0000 0000 0000 
+
+csos: run   link lab6.src
+File to link lab6.src
+The file is not a .obj file 
+csos: ^X  link b labv 5 6.obj
+File to link lab6.obj
+obj  file name is lab6.obj
+exec file name is lab6.exec
+web simulator file name is lab6.cos
+csos: run lab6.exec
+No input file used, proceeding ...
+
+csos registers:
+   AC = fffa
+   PC = 0108
+
+   E flip-flop: 0
+
+csos memory:
+
+0100: 2109 7200 110a 7008 310b 7010 310c f001 
+0108: 7001 000a 0005 0000 fffa 0000 0000 0000 
+0110: ffff ffff ffff ffff ffff ffff ffff ffff 
+0118: ffff ffff ffff ffff ffff ffff ffff ffff 
+0120: ffff ffff ffff ffff ffff ffff ffff ffff 
+0128: ffff ffff ffff ffff ffff ffff ffff ffff 
+
+
+csos: exit
+sh-3.00$ exit
+There are stopped jobs.
+sh-3.00$ ^C
+script done on Mon Apr 28 23:48:38 2014

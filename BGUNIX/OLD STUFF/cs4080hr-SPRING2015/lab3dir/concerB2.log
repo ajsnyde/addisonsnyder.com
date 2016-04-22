@@ -1,0 +1,202 @@
+Script started on Fri Apr 10 23:10:09 2015
+sh-4.3$ [Ksh-4.3$ pwed  d
+/home/15/ajsnyde/cs4080hr/lab3dir
+sh-4.3$ ls
+a.out          concert.dat    concertA.log   concertB1.log
+concerB2.log   concertA.cpp   concertB.cpp   prTime.c
+sh-4.3$ a.out
+
+Fri Apr 10 23:10:48 2015> Welcome to the Concert Hall
+ Menu Choices are: 
+         Reserve (enter R)
+         Display (enter D)
+         Clear   (enter C)
+         Quit    (enter Q)
+ ++++++++++++++++++++++++++++++ 
+Enter a choice: D
+
+OOOOOOOO
+OOOOOOOO
+OOOOOOOO
+OOOOOOOO
+OOOOOOOO
+
+Fri Apr 10 23:11:08 2015> Welcome to the Concert Hall
+ Menu Choices are: 
+         Reserve (enter R)
+         Display (enter D)
+         Clear   (enter C)
+         Quit    (enter Q)
+ ++++++++++++++++++++++++++++++ 
+Enter a choice: D
+
+OOOOOOOO
+XXXOOOOO
+OOOOOOOO
+OOOOOOOO
+OOOOOOOO
+
+Fri Apr 10 23:11:24 2015> Welcome to the Concert Hall
+ Menu Choices are: 
+         Reserve (enter R)
+         Display (enter D)
+         Clear   (enter C)
+         Quit    (enter Q)
+ ++++++++++++++++++++++++++++++ 
+Enter a choice: R
+Please enter row  #:2
+Please enter seat RANGE in '#-#' format group: 2-6
+LOCKED!
+Read byte: 9
+Sorry, Row: 2 Seat: 2 was already reserved.Fri Apr 10 23:11:39 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 10
+Sorry, Row: 2 Seat: 3 was already reserved.Fri Apr 10 23:11:39 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 11
+Row: 2 Seat: 4 Was Successfully Reserved at Time: Fri Apr 10 23:11:39 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 12
+Row: 2 Seat: 5 Was Successfully Reserved at Time: Fri Apr 10 23:11:39 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 13
+Row: 2 Seat: 6 Was Successfully Reserved at Time: Fri Apr 10 23:11:39 2015
+
+UNLOCKED!
+
+Fri Apr 10 23:11:39 2015> Welcome to the Concert Hall
+ Menu Choices are: 
+         Reserve (enter R)
+         Display (enter D)
+         Clear   (enter C)
+         Quit    (enter Q)
+ ++++++++++++++++++++++++++++++ 
+Enter a choice: R
+Please enter row  #:3
+Please enter seat RANGE in '#-#' format group: 1-8
+LOCKED!
+Read byte: 16
+Row: 3 Seat: 1 Was Successfully Reserved at Time: Fri Apr 10 23:12:37 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 17
+Row: 3 Seat: 2 Was Successfully Reserved at Time: Fri Apr 10 23:12:37 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 18
+Row: 3 Seat: 3 Was Successfully Reserved at Time: Fri Apr 10 23:12:37 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 19
+Row: 3 Seat: 4 Was Successfully Reserved at Time: Fri Apr 10 23:12:37 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 20
+Row: 3 Seat: 5 Was Successfully Reserved at Time: Fri Apr 10 23:12:37 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 21
+Row: 3 Seat: 6 Was Successfully Reserved at Time: Fri Apr 10 23:12:37 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 22
+Row: 3 Seat: 7 Was Successfully Reserved at Time: Fri Apr 10 23:12:37 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 23
+Row: 3 Seat: 8 Was Successfully Reserved at Time: Fri Apr 10 23:12:37 2015
+
+UNLOCKED!
+
+Fri Apr 10 23:12:37 2015> Welcome to the Concert Hall
+ Menu Choices are: 
+         Reserve (enter R)
+         Display (enter D)
+         Clear   (enter C)
+         Quit    (enter Q)
+ ++++++++++++++++++++++++++++++ 
+Enter a choice: D
+
+OOOOOOOO
+XXXXXXOO
+XXXXXXXX
+OOOOOOOO
+OOOOOOOO
+
+Fri Apr 10 23:13:00 2015> Welcome to the Concert Hall
+ Menu Choices are: 
+         Reserve (enter R)
+         Display (enter D)
+         Clear   (enter C)
+         Quit    (enter Q)
+ ++++++++++++++++++++++++++++++ 
+Enter a choice: R
+Please enter row  #:4
+Please enter seat RANGE in '#-#' format group: 1-8
+LOCKED!
+Read byte: 24
+Sorry, Row: 4 Seat: 1 was already reserved.Fri Apr 10 23:13:18 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 25
+Sorry, Row: 4 Seat: 2 was already reserved.Fri Apr 10 23:13:18 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 26
+Sorry, Row: 4 Seat: 3 was already reserved.Fri Apr 10 23:13:18 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 27
+Sorry, Row: 4 Seat: 4 was already reserved.Fri Apr 10 23:13:18 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 28
+Sorry, Row: 4 Seat: 5 was already reserved.Fri Apr 10 23:13:18 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 29
+Sorry, Row: 4 Seat: 6 was already reserved.Fri Apr 10 23:13:18 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 30
+Sorry, Row: 4 Seat: 7 was already reserved.Fri Apr 10 23:13:18 2015
+
+UNLOCKED!
+LOCKED!
+Read byte: 31
+Sorry, Row: 4 Seat: 8 was already reserved.Fri Apr 10 23:13:18 2015
+
+UNLOCKED!
+
+Fri Apr 10 23:13:18 2015> Welcome to the Concert Hall
+ Menu Choices are: 
+         Reserve (enter R)
+         Display (enter D)
+         Clear   (enter C)
+         Quit    (enter Q)
+ ++++++++++++++++++++++++++++++ 
+Enter a choice: QW 
+sh-4.3$ exit
+
+script done on Fri Apr 10 23:13:32 2015

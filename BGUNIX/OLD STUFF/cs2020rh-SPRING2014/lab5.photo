@@ -1,0 +1,80 @@
+Script started on Wed Mar 05 23:11:55 2014
+sh-3.00$ pwd
+/home/15/ajsnyde/cs2020rh
+sh-3.00$ la s
+a.out          lab1a.cpp      lab1d.cpp      lab2b.cpp      lab5.cpp
+file.txt       lab1a.photo    lab1d.photo    lab2b.photo    lab5.photo
+file10.txt     lab1b.cpp      lab1e.cpp      lab3.cpp       lib
+file100.txt    lab1b.photo    lab1e.photo    lab3.photo     wired.txt
+file1000.txt   lab1c.cpp      lab2a.cpp      lab4.cpp
+file10000.txt  lab1c.photo    lab2a.photo    lab4.photo
+sh-3.00$ cat lab5.cpp
+//Addison Snyder
+//All work is mine
+//Pointer lab6
+//3/5/14
+#include <iostream> 
+
+
+using namespace std; 
+int main ()
+{
+        //fill array with the numbers 5, 10, 15, 20, 25
+        int Grades[] = {5,10,15,20,25};
+        int *ptrGrades = Grades;
+        //output contents of array using array name and subscript
+        for(int i = 0; i < 5; i++)
+                cout << "Grade #" << i << ": " << Grades[i] << "\n";
+        //output array contents using array name and offset
+        for(int i = 0; i < 5; i++)
+                cout << "Grade #" << i << ": " << Grades[0 + i] << "\n";
+        //point ptrGrades to the beginning of the Grades array
+        ptrGrades = &Grades[0];
+        //output array contents using a pointer variable without 
+        //a subscript and without an offset
+        for(int i = 0; i < 5; i++)
+                cout << "Grade #" << i << ": " << *ptrGrades++ << "\n";
+        //re-set pointer to the beginning of the Grades array
+        ptrGrades = &Grades[0];
+     //output the array contents using a pointer variable and
+     //a subscript
+        for(int i = 0; i < 5; i++)
+                cout << "Grade #" << i << ": " << ptrGrades[i] << "\n";
+        //re-set pointer to the beginning of the Grades array   
+        ptrGrades = &Grades[0];  
+        //output the array contents using a pointer variable and 
+        //an offset
+        for(int i = 0; i < 5; i++)
+                cout << "Grade #" << i << ": " << *(ptrGrades + i) << "\n";      
+        return 0; 
+}sh-3.00$ g++ lab5.cpp
+lab5.cpp:39:2: warning: no newline at end of file
+sh-3.00$ a.out
+Grade #0: 5
+Grade #1: 10
+Grade #2: 15
+Grade #3: 20
+Grade #4: 25
+Grade #0: 5
+Grade #1: 10
+Grade #2: 15
+Grade #3: 20
+Grade #4: 25
+Grade #0: 5
+Grade #1: 10
+Grade #2: 15
+Grade #3: 20
+Grade #4: 25
+Grade #0: 5
+Grade #1: 10
+Grade #2: 15
+Grade #3: 20
+Grade #4: 25
+Grade #0: 5
+Grade #1: 10
+Grade #2: 15
+Grade #3: 20
+Grade #4: 25
+sh-3.00$ exit
+
+script done on Wed Mar 05 23:12:24 2014

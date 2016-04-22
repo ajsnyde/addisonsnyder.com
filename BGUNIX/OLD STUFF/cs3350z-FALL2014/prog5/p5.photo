@@ -1,0 +1,916 @@
+Script started on Sat Dec 13 03:20:54 2014
+sh-4.3$ pwd
+/home/15/ajsnyde/cs3350z/prog5
+sh-4.3$ ls
+a.out       p5.cpp      p5.photo    p5dict.txt
+sh-4.3$ cat p5.cpp
+// Wordplay.cpp ADDISON sNYDER  12/13/14!
+// Containers used:
+//      vector (expandable array, much more versatile)
+//      string (pretty much specialized vector for chars)
+//      set    (A binary tree represented through a vector. Ordered set are excellent for searching speeds, but values can't be modified easily.)
+//      
+//      next_permutation - creates the next biggest possible object going in a cycle. For example, abc->acb->bac->bca->cab->cba
+//              - used to integrate divider symbols and find every possible combination of string with a certain set of chars
+//      string - used to hold basic combos, words, etc. In particular, they were very easy to integrate with sets and vectors, as they all had iterators and similar functions.
+//
+
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <vector>
+#include <fstream>
+#include <set>
+
+using namespace std;
+
+int main()
+{
+        string in, pre;
+        set<string> dict;
+        unsigned int i, q, x;
+        vector<string> key, fin;
+        string word;
+        bool isword, kill;
+        vector<string> edit;
+
+
+/////////////////////////////////////////////////////   Load dictionary
+
+        cout << "Loading dictionary. . .\n";
+        ifstream input;
+        input.open("p5dict.txt");
+
+
+        if(!input)      // In case file isn't found, program dies...
+        {
+                cout << "File not found!\n";
+        }
+
+                for(int i = 0; !input.eof(); i++)
+        {
+                input >> word;
+                dict.insert(word);
+        }
+        cout << "File loaded!\n";
+        input.close();
+
+/////////////////////////////////////////////////////   Basic input and basic preprocessing
+
+
+        cout << "Enter a string: ";     // Input
+        getline (cin, pre);
+
+        cout << "Transforming word to compatible chars. . .\n";
+
+        transform(pre.begin(), pre.end(), pre.begin(), ::tolower);      //Forces lowercase
+        for(i = 0; i < pre.size(); i++)
+        {
+                if(pre[i] >= 'a' && pre[i] <= 'z')      //Destroys punctuation
+                        in.push_back(pre[i]);
+        }
+        cout << in << "-\n";
+        cout << "How many words? ";                                     //Get number of words
+        cin >> x;
+        cout << "Adding spaces for # words. . .\n";
+        for(i = 0; i < x-1; i++)                                        //Apply special symbol to sygnify 'spaces' in between substrings
+                in.push_back('!');
+        cout << in << "-\n";
+/////////////////////////////////////////////////////   Sorting, Permutation, and Cleansing (organization of data)
+
+
+        cout << "Sorting letters. . .\n";
+        sort(in.begin(), in.end());     
+        cout << in << "-\n";                                                            //Sort chars before permutations and building predictable behavior
+        cout << "Permutation phase. . .\n";                     
+        key.push_back(in);                                              //seed vector
+        for(i = 0; next_permutation(in.begin(), in.end()); i++)         //Begin  filling vector with every possible combo       
+                key.push_back(in);
+        std::cout << "Initial number of possibilities: " << i+1 << "\n";
+        cout << "Killing redundent combos. . .\n";
+        for(unsigned int i = 0; i < key.size(); i++)                    //Checks over each combo for double spaces and spaces against the sides of the string
+        {
+                kill = false;                                           //kill flag
+                for(unsigned int q = 0; q < key[i].size(); q++)
+                {
+                        if(q < key[i].size()-1)
+                                if(key[i][q] == '!' && key[i][q+1] == '!' )
+                                        kill = true;
+                }
+                if(key[i][key[i].size()-1] != '!' && key[i][0] != '!' && !kill)         //cleansing
+                {
+                        edit.push_back(key[i]);
+                }
+
+        }
+        cout << "Killed " << (key.size()-edit.size()) << " combinations when checking for side-spaces and double-spaces.\n";    //status report
+        key = edit;
+
+        //for (i = 0; i < edit.size(); i++)
+        //      cout << edit[i] <<"\n";
+
+/////////////////////////////////////////////////////   Searching/Flagging of good data
+
+        word.erase();
+        cout << "Comparing sub-groups to dictionary terms. . .\n";
+        for(i = 0; i < key.size(); i++)                         // check strings for substrings (using '!'s as guidelines)
+        {
+                isword = true;                                  //seeds internal loop
+                for(q = 0; q < key[i].size(); q++)
+                {
+
+                        if(key[i][q] != '!')
+                                word.push_back(key[i][q]);      //add chars to test string so when '!' is found, test string can be tested using dictionary
+                        else //CHECK WORD AGAINST DICT          //detects substrings
+                        {
+
+                                if(dict.find(word) == dict.end())       //using binary search on dictionary with ordered set
+                                {
+                                        isword = false;
+                                        word.erase();
+                                        break;                          //if one substring is bad, the entire string is garbage. Terminates loop for increased efficiency
+                                }
+                                word.erase();
+                        }
+                }
+                if(dict.find(word) != dict.end() && isword)
+                        fin.push_back(key[i]);                          //adds the few meaningful strings to be further processed
+                word.erase();
+        }
+        cout << fin.size() << "words left!\n";
+/////////////////////////////////////////////////////   Prepping data for Final round of cleaning
+
+        cout << "Preparing for duplicate detection. . .\n";
+
+        vector<vector<string> > ending;
+        ending.resize(fin.size());
+        word.erase();
+
+        for(i = 0; i < fin.size(); i++)                                 //breaks final strings up back into substrings (made after creating adequate results on base program)
+        {
+                for(x = 0; x < fin[i].size(); x++)                      //inefficient, but better than not being there...
+                {
+                        if(fin[i][x] != '!')
+                                word.push_back(fin[i][x]);              //uses vectors within vectors to hold an unknown amount of sub-strings for each string
+                        else
+                        {
+                                ending[i].push_back(word);
+                                word.erase();
+                        }
+                }
+                ending[i].push_back(word);
+                word.erase();
+                sort(ending[i].begin(),ending[i].end());                //sorts all of these substrings so they can be compared against one another
+        }
+
+        for(i = 0; i < ending.size(); i++)
+        {
+                for(x = 0; x < ending[i].size(); x++)
+                        cout << ending[i][x] << " ";
+        cout << "\n";
+        }
+        
+
+////////////////////////////////////////////////////    Flagging/Erasing Duplicates
+
+        cout << "Flagging duplicates. . .\n";
+
+        for(i = 0; i < ending.size() - 1; i++)
+        {
+                for(x = 0; x < ending.size(); x++)                      // Big O of n^2 - fine for small numbers that make it this far (typically up to 30ish)
+                {
+                        if(ending[i] == ending[x] && x != i)
+                        {                                               //if the strings are the same, one gets flagged with a '-1' as first substring
+                                ending[x][0] = "1";                     //due to preprocessing, a naturally occurring -1 is impossible
+                        }
+                }
+        }
+
+        cout << "Filtering Duplicates. . .\n";
+
+        key.erase(key.begin(), key.end());                              //reuses old variables to store new  and refined info
+
+        for(i = 0; i < ending.size(); i++)                              //filters using -1, as described previously
+        {
+                if(ending[i][0] != "1")
+                        key.push_back(fin[i]);
+        }
+
+/////////////////////////////////////////////////////   Presentation of data
+
+        cout << "END RESULTS:\n~~~~~~~~~\n";                            //shows end results
+
+        for (i=0; i < key.size(); i++)
+        {
+                for(q = 0; q < key[i].size(); q++)
+                        if(key[i][q] == '!')
+                                key[i][q] = ' ';                
+                cout << key[i] << "\n";                                 //DONE!
+        }
+        return 0;
+}
+
+sh-4.3$ g++ pr 4 5.cpp
+sh-4.3$ a.out
+Loading dictionary. . .
+File loaded!
+Enter a string: Toy Boat
+Transforming word to compatible chars. . .
+toyboat-
+How many words? 2
+Adding spaces for # words. . .
+toyboat!-
+Sorting letters. . .
+!abootty-
+Permutation phase. . .
+Initial number of possibilities: 10080
+Killing redundent combos. . .
+Killed 2520 combinations when checking for side-spaces and double-spaces.
+Comparing sub-groups to dictionary terms. . .
+6words left!
+Preparing for duplicate detection. . .
+at booty 
+bay toot 
+boat toy 
+at booty 
+bay toot 
+boat toy 
+Flagging duplicates. . .
+Filtering Duplicates. . .
+END RESULTS:
+~~~~~~~~~
+at booty
+bay toot
+boat toy
+sh-4.3$ clear
+[H[2Jsh-4.3$ a.out
+Loading dictionary. . .
+File loaded!
+Enter a string: M Go BLUE
+Transforming word to compatible chars. . .
+mgoblue-
+How many words? 2
+Adding spaces for # words. . .
+mgoblue!-
+Sorting letters. . .
+!beglmou-
+Permutation phase. . .
+Initial number of possibilities: 40320
+Killing redundent combos. . .
+Killed 10080 combinations when checking for side-spaces and double-spaces.
+Comparing sub-groups to dictionary terms. . .
+22words left!
+Preparing for duplicate detection. . .
+bog mule 
+bole gum 
+bole mug 
+bug mole 
+bum loge 
+bum ogle 
+glue mob 
+gob mule 
+bole gum 
+gum lobe 
+gum lobe 
+lobe mug 
+bum loge 
+luge mob 
+glue mob 
+luge mob 
+bug mole 
+bole mug 
+lobe mug 
+bog mule 
+gob mule 
+bum ogle 
+Flagging duplicates. . .
+Filtering Duplicates. . .
+END RESULTS:
+~~~~~~~~~
+bog mule
+bole gum
+bole mug
+bug mole
+bum loge
+bum ogle
+glue mob
+gob mule
+gum lobe
+lobe mug
+luge mob
+sh-4.3$ a.out
+Loading dictionary. . .
+File loaded!
+Enter a string: 101 Dalmations!
+Transforming word to compatible chars. . .
+dalmations-
+How many words? 2
+Adding spaces for # words. . .
+dalmations!-
+Sorting letters. . .
+!aadilmnost-
+Permutation phase. . .
+Initial number of possibilities: 19958400
+Killing redundent combos. . .
+Killed 3628800 combinations when checking for side-spaces and double-spaces.
+Comparing sub-groups to dictionary terms. . .
+40words left!
+Preparing for duplicate detection. . .
+admit salon 
+amidst loan 
+atom island 
+distal moan 
+domain last 
+domain salt 
+domain slat 
+atom island 
+island moat 
+domain last 
+load mantis 
+load matins 
+amidst loan 
+mana stolid 
+load mantis 
+mason tidal 
+matinal sod 
+load matins 
+mild sonata 
+minot salad 
+distal moan 
+island moat 
+modal saint 
+modal satin 
+modal stain 
+old stamina 
+omit sandal 
+modal saint 
+minot salad 
+admit salon 
+domain salt 
+omit sandal 
+modal satin 
+domain slat 
+matinal sod 
+mild sonata 
+modal stain 
+old stamina 
+mana stolid 
+mason tidal 
+Flagging duplicates. . .
+Filtering Duplicates. . .
+END RESULTS:
+~~~~~~~~~
+admit salon
+amidst loan
+atom island
+distal moan
+domain last
+domain salt
+domain slat
+island moat
+load mantis
+load matins
+mana stolid
+mason tidal
+matinal sod
+mild sonata
+minot salad
+modal saint
+modal satin
+modal stain
+old stamina
+omit sandal
+sh-4.3$ a.out
+Loading dictionary. . .
+File loaded!
+Enter a string: Brute.Force
+Transforming word to compatible chars. . .
+bruteforce-
+How many words? 3
+Adding spaces for # words. . .
+bruteforce!!-
+Sorting letters. . .
+!!bceeforrtu-
+Permutation phase. . .
+Initial number of possibilities: 59875200
+Killing redundent combos. . .
+Killed 27216000 combinations when checking for side-spaces and double-spaces.
+Comparing sub-groups to dictionary terms. . .
+420words left!
+Preparing for duplicate detection. . .
+bee cur fort 
+bee curt for 
+bee curt fro 
+bee curt for 
+bee cur fort 
+bee curt fro 
+beef cur rot 
+beef cur tor 
+beef cur rot 
+beef cur tor 
+beer cot fur 
+beer cur oft 
+beer cut for 
+beer cut fro 
+beer cut for 
+beer cut fro 
+beer cot fur 
+beer cur oft 
+beet cur for 
+beet cur fro 
+beet cur for 
+beet cur fro 
+bet core fur 
+bet cur fore 
+bet cure for 
+bet cure fro 
+bet cure for 
+bet cur fore 
+bet cure fro 
+bet core fur 
+bore cur eft 
+bore cur eft 
+bore etc fur 
+bore etc fur 
+bet core fur 
+core eft rub 
+bet core fur 
+core eft rub 
+beer cot fur 
+cot free rub 
+beer cot fur 
+cot reef rub 
+cot free rub 
+cot reef rub 
+cub ere fort 
+cub fee torr 
+cub for tree 
+cub fore ret 
+cub ere fort 
+cub free rot 
+cub free tor 
+cub fret ore 
+cub fret roe 
+cub fro tree 
+cub fret ore 
+cub reef rot 
+cub reef tor 
+cub fore ret 
+cub fret roe 
+cub free rot 
+cub reef rot 
+cub free tor 
+cub reef tor 
+cub fee torr 
+cub for tree 
+cub fro tree 
+cube err oft 
+cube for ret 
+cube fro ret 
+cube err oft 
+cube for ret 
+cube fro ret 
+cue fort reb 
+cue fret orb 
+cue fret rob 
+cue fret orb 
+cue fort reb 
+cue fret rob 
+bee cur fort 
+beef cur rot 
+beef cur tor 
+beer cur oft 
+beet cur for 
+beet cur fro 
+bet cur fore 
+bore cur eft 
+bore cur eft 
+cur eft robe 
+cur feet orb 
+cur feet rob 
+cur fete orb 
+cur fete rob 
+cur fob tree 
+beet cur for 
+bet cur fore 
+bee cur fort 
+beet cur fro 
+beer cur oft 
+cur feet orb 
+cur fete orb 
+cur feet rob 
+cur fete rob 
+cur eft robe 
+beef cur rot 
+beef cur tor 
+cur fob tree 
+curb eft ore 
+curb eft roe 
+curb ere oft 
+curb fee rot 
+curb fee tor 
+curb foe ret 
+curb for tee 
+curb fro tee 
+curb ere oft 
+curb eft ore 
+curb foe ret 
+curb eft roe 
+curb fee rot 
+curb for tee 
+curb fro tee 
+curb fee tor 
+bet cure for 
+bet cure fro 
+cure eft orb 
+cure eft rob 
+cure fob ret 
+bet cure for 
+bet cure fro 
+cure oft reb 
+cure eft orb 
+cure oft reb 
+cure fob ret 
+cure eft rob 
+bee curt for 
+bee curt fro 
+curt ere fob 
+curt fee orb 
+curt fee rob 
+curt ere fob 
+curt foe reb 
+bee curt for 
+bee curt fro 
+curt fee orb 
+curt foe reb 
+curt fee rob 
+beer cut for 
+beer cut fro 
+beer cut for 
+cut fore reb 
+cut free orb 
+cut free rob 
+beer cut fro 
+cut free orb 
+cut orb reef 
+cut fore reb 
+cut orb reef 
+cut reef rob 
+cut free rob 
+cut reef rob 
+cute err fob 
+cute err fob 
+cute for reb 
+cute fro reb 
+cute for reb 
+cute fro reb 
+bore cur eft 
+core eft rub 
+bore cur eft 
+cur eft robe 
+curb eft ore 
+curb eft roe 
+cure eft orb 
+cure eft rob 
+cure eft orb 
+curb eft ore 
+cure eft rob 
+cur eft robe 
+curb eft roe 
+core eft rub 
+cub ere fort 
+curb ere oft 
+curt ere fob 
+curt ere fob 
+cub ere fort 
+curb ere oft 
+cube err oft 
+cute err fob 
+cute err fob 
+cube err oft 
+bore etc fur 
+etc fore rub 
+etc four reb 
+bore etc fur 
+etc fur robe 
+etc four reb 
+etc fur robe 
+etc fore rub 
+cub fee torr 
+curb fee rot 
+curb fee tor 
+curt fee orb 
+curt fee rob 
+curt fee orb 
+curt fee rob 
+curb fee rot 
+curb fee tor 
+cub fee torr 
+cur feet orb 
+cur feet rob 
+cur feet orb 
+cur feet rob 
+cur fete orb 
+cur fete rob 
+cur fete orb 
+cur fete rob 
+cur fob tree 
+cure fob ret 
+curt ere fob 
+cute err fob 
+curt ere fob 
+cute err fob 
+cure fob ret 
+cur fob tree 
+curb foe ret 
+curt foe reb 
+curt foe reb 
+curb foe ret 
+bee curt for 
+beer cut for 
+beet cur for 
+bet cure for 
+cub for tree 
+cube for ret 
+beet cur for 
+curb for tee 
+bet cure for 
+bee curt for 
+beer cut for 
+cute for reb 
+cute for reb 
+cube for ret 
+curb for tee 
+cub for tree 
+bet cur fore 
+cub fore ret 
+bet cur fore 
+cut fore reb 
+etc fore rub 
+cut fore reb 
+cub fore ret 
+etc fore rub 
+bee cur fort 
+cub ere fort 
+cue fort reb 
+bee cur fort 
+cub ere fort 
+cue fort reb 
+etc four reb 
+etc four reb 
+cot free rub 
+cub free rot 
+cub free tor 
+cut free orb 
+cut free rob 
+cut free orb 
+cut free rob 
+cub free rot 
+cot free rub 
+cub free tor 
+cub fret ore 
+cub fret roe 
+cue fret orb 
+cue fret rob 
+cue fret orb 
+cub fret ore 
+cue fret rob 
+cub fret roe 
+bee curt fro 
+beer cut fro 
+beet cur fro 
+bet cure fro 
+cub fro tree 
+cube fro ret 
+beet cur fro 
+curb fro tee 
+bet cure fro 
+bee curt fro 
+beer cut fro 
+cute fro reb 
+cute fro reb 
+cube fro ret 
+curb fro tee 
+cub fro tree 
+beer cot fur 
+bet core fur 
+bore etc fur 
+bet core fur 
+beer cot fur 
+bore etc fur 
+etc fur robe 
+etc fur robe 
+beer cur oft 
+cube err oft 
+beer cur oft 
+curb ere oft 
+cure oft reb 
+curb ere oft 
+cube err oft 
+cure oft reb 
+cue fret orb 
+cur feet orb 
+cur fete orb 
+cure eft orb 
+curt fee orb 
+cut free orb 
+cut orb reef 
+cure eft orb 
+curt fee orb 
+cur feet orb 
+cur fete orb 
+cut free orb 
+cue fret orb 
+cut orb reef 
+cub fret ore 
+curb eft ore 
+curb eft ore 
+cub fret ore 
+cue fort reb 
+cure oft reb 
+curt foe reb 
+cut fore reb 
+cute for reb 
+cute fro reb 
+etc four reb 
+curt foe reb 
+cute for reb 
+cut fore reb 
+cue fort reb 
+etc four reb 
+cute fro reb 
+cure oft reb 
+cot reef rub 
+cub reef rot 
+cub reef tor 
+cut orb reef 
+cut reef rob 
+cut orb reef 
+cut reef rob 
+cub reef rot 
+cot reef rub 
+cub reef tor 
+cub fore ret 
+cube for ret 
+cube fro ret 
+curb foe ret 
+cure fob ret 
+cure fob ret 
+curb foe ret 
+cube for ret 
+cub fore ret 
+cube fro ret 
+cue fret rob 
+cur feet rob 
+cur fete rob 
+cure eft rob 
+curt fee rob 
+cut free rob 
+cut reef rob 
+cure eft rob 
+curt fee rob 
+cur feet rob 
+cur fete rob 
+cut free rob 
+cue fret rob 
+cut reef rob 
+cur eft robe 
+cur eft robe 
+etc fur robe 
+etc fur robe 
+cub fret roe 
+curb eft roe 
+curb eft roe 
+cub fret roe 
+beef cur rot 
+cub free rot 
+cub reef rot 
+beef cur rot 
+curb fee rot 
+curb fee rot 
+cub free rot 
+cub reef rot 
+core eft rub 
+cot free rub 
+cot reef rub 
+core eft rub 
+etc fore rub 
+etc fore rub 
+cot free rub 
+cot reef rub 
+curb for tee 
+curb fro tee 
+curb for tee 
+curb fro tee 
+beef cur tor 
+cub free tor 
+cub reef tor 
+beef cur tor 
+curb fee tor 
+curb fee tor 
+cub free tor 
+cub reef tor 
+cub fee torr 
+cub fee torr 
+cub for tree 
+cub fro tree 
+cur fob tree 
+cur fob tree 
+cub for tree 
+cub fro tree 
+Flagging duplicates. . .
+Filtering Duplicates. . .
+END RESULTS:
+~~~~~~~~~
+bee cur fort
+bee curt for
+bee curt fro
+beef cur rot
+beef cur tor
+beer cot fur
+beer cur oft
+beer cut for
+beer cut fro
+beet cur for
+beet cur fro
+bet core fur
+bet cur fore
+bet cure for
+bet cure fro
+bore cur eft
+bore etc fur
+core eft rub
+cot free rub
+cot reef rub
+cub ere fort
+cub fee torr
+cub for tree
+cub fore ret
+cub free rot
+cub free tor
+cub fret ore
+cub fret roe
+cub fro tree
+cub reef rot
+cub reef tor
+cube err oft
+cube for ret
+cube fro ret
+cue fort reb
+cue fret orb
+cue fret rob
+cur eft robe
+cur feet orb
+cur feet rob
+cur fete orb
+cur fete rob
+cur fob tree
+curb eft ore
+curb eft roe
+curb ere oft
+curb fee rot
+curb fee tor
+curb foe ret
+curb for tee
+curb fro tee
+cure eft orb
+cure eft rob
+cure fob ret
+cure oft reb
+curt ere fob
+curt fee orb
+curt fee rob
+curt foe reb
+cut fore reb
+cut free orb
+cut free rob
+cut orb reef
+cut reef rob
+cute err fob
+cute for reb
+cute fro reb
+etc fore rub
+etc four reb
+etc fur robe
+sh-4.3$ WOW
+sh: WOW: command not found
+sh-4.3$ sudo sleep
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+Password:
+Sorry, try again.
+Password:
+
+[1]+  Stopped(SIGTSTP)        sudo sleep
+sh-4.3$ exit
+There are stopped jobs.
+sh-4.3$ exit
+Password:
+
+script done on Sat Dec 13 03:43:58 2014

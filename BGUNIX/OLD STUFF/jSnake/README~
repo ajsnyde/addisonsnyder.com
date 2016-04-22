@@ -1,0 +1,45 @@
+====================
+jSnake 1.0
+====================
+Jacob Boggs
+CS2020 Final
+====================
+README
+====================
+
+This program utilizes different linked list classes.  The primary 
+list class used for the final project was the scoresList list.
+This list contains a copy constructor, overloaded operators, and 
+has the ability to read and write between the linked list and
+a file. 
+
+====================
+OVERLOADED OPERATORS
+====================
+operator=()	copies the contents of a list
+operator==()	compares list size
+operator!=()	compares list size
+operator+()	compares list size
+operator>()	compares list size
+operator<()	compares list size
+operator>=()	compares list size
+operator<=() 	compares list size
+====================
+MORE OVERLOADED OPERATORS
+====================
+The other classes used in this program all contain their own 
+overloaded operators (and constructors/desctructors).  The most
+used overloaded operator in this program was the operator== 
+comparison of the listNode class.  This would check the (x,y)
+coordinates of the nodes being compared and return true if
+they were the same.  I did not overload the complementary 
+operator!= of the class because I wanted it to use the 
+default behavior specifically.
+====================
+EXTRA FEATURES
+====================
+My entire program is essentially "extra features", with
+the scoresList class playing a small role in handling the
+game's high scores list.  One of the most obvious extra features
+is using the curses.h library to manipulate the terminal in 
+ways beyond what was covered in class.  
