@@ -10,8 +10,9 @@
 
         <title>Addison Snyder</title>
 
-        <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
         <link href="css/1-col-portfolio.css" rel="stylesheet">
         <link href="css/custom.css" rel="stylesheet">
 
@@ -71,6 +72,35 @@
 
             <div class="row">
                 <div class="col-md-7">
+                    <img class="center-block" src="pics/LoginForm.PNG" alt="">
+                </div>
+                <div class="col-md-5">
+                    <h3>Login Window <small>10/7/15</small></h3>
+                    <h4>Written in C# using VS 2015</h4>
+                    <p class="hello">I made this program while playing around with Windows forms during a PoliSci lecture. Nothing too interesting, but it is the first time I've played with C# forms. Username is <b>Addison</b>, password is <b>Snyder</b>. While the authentication is primitive, it could easily be modified for server-side applications.</p>
+                    <a class="btn btn-primary" href="projects/LoginForm.zip">Download Project <span class="glyphicon glyphicon-download"></span></a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="pics/CohenSutherland1.png">
+                        <img class="img-responsive" src="pics/CohenSutherland1.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <h3>CohenSutherland & Line Clipping <small>5/6/15</small></h3>
+                    <h4>Written in C++ with OpenGL</h4>
+                    <p>I had written this for a graphics course. It compares the performance of two different <i>line clipping methods</i>.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-7">
                     <a href="projects/SnowyTrain.jar">
                         <img class="img-responsive" src="pics/SnowyTrain.png" alt="">
                     </a>
@@ -78,7 +108,7 @@
                 <div class="col-md-5">
                     <h3>Snowy Train <small>3/2/15</small></h3>
                     <h4>Written in Java</h4>
-                    <p>One of my last class-oriented java projects (completed as a no-specs extra credit assignment), SnowyTrain created many Snowflake objects, all of which inherited gravity and windspeed from the environment, which varied over time. A random modifier allowed each flake to have slightly different speeds in relation to the background wind, giving a more realistic feel. A "train" could move in the background, going offscreen for a while before returning to the left. All in all, this project was the height of any graphics project I made.</p>
+                    <p>One of my last class-oriented java projects (completed as a no-specs extra credit assignment), SnowyTrain created many Snowflake objects, all of which inherited gravity and windspeed from the environment, which varied over time. A random modifier allowed each flake to have <i>slightly different speeds in relation to the background wind</i>, giving a more realistic feel. A "train" could move in the background, going offscreen for a while before returning to the left. All in all, this project was the height of any graphics project I made.</p>
                     <a class="btn btn-primary" href="projects/SnowyTrain.jar">Download Runnable Jar <span class="glyphicon glyphicon-download"></span></a>
                     <a class="btn btn-primary" href="projects/SnowyTrain.zip">Download Project <span class="glyphicon glyphicon-download"></span></a>
                 </div>
@@ -95,7 +125,7 @@
                 <div class="col-md-5">
                     <h3>Map Generator <small>12/10/13</small></h3>
                     <h4>Written in C++</h4>
-                    <p>This is my first real code project. It runs on Unix and produces maps. The tiles are 100% customizable (color, char, chance attributes, etc.), and can be edited within the program before producing another map of custom size. This is one of the more simple presets, but there were cases where I had mountains, swamps, cities, and other landmarks, creating a pretty cool Dwarf-Fortress look. The generation is simple but effective. All in all, there were ~500 lines of code. I made a Windows equivelent as well, but can't seem to find it.</p>
+                    <p>This is my first real code project. It runs on <strong>Unix</strong> and produces maps. The tiles are 100% customizable (<b>color, char, chance attributes, etc.</b>), and can be edited within the program before producing another map of custom size. This is one of the more simple presets, but there were cases where I had mountains, swamps, cities, and other landmarks, creating a pretty cool <i>Dwarf-Fortress</i> look. The generation is simple but effective. All in all, there were <b>~500</b> lines of code. I made a Windows equivalent as well, but can't seem to find it.</p>
                 </div>
             </div>
 
@@ -132,8 +162,12 @@
             </footer>
         </div>
 
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        
+        <script
+            src="http://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     </body>
 </html>

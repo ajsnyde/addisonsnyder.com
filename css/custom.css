@@ -96,7 +96,25 @@ i {
 }
 b {
 	font-style:normal;
-	color: #66d9ef;
+	color: #D1A375
+}
+em {
+	font-style:normal;
+	color: #00FF00
+}
+strong {
+	font-style:normal;
+	color: #FE9720
+}
+hr {
+	border-top: 1px solid #666666;
+}
+.page-header {
+	border-bottom: 1px dotted #6E2F46;
+}
+.blue {
+	font-style:normal;
+	color: #7985A3;
 }
 .btn-primary {
     background-color: rgba(0,0,0,.4);
@@ -143,4 +161,19 @@ b {
 }
 ::-moz-selection {
   background: #757575; /* Gecko Browsers */
+}
+
+
+/*!
+ * Start Bootstrap - 1 Col Portfolio HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+footer {
+    margin: 50px 0;
 }
