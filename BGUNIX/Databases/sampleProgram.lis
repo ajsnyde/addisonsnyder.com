@@ -1,9 +1,0 @@
-
-Pro*C/C++: Release 10.2.0.4.0 - Production on Tue Feb 18 10:35:59 2014
-
-Copyright (c) 1982, 2007, Oracle.  All rights reserved.
-
-Error at line 207, column 10 in file sampleProgram.pc
-   207  #include <iostream.h>
-   207  .........1
-   207  PCC-S-02015, unable to open include file

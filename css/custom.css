@@ -171,9 +171,34 @@ hr {
  */
 
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 51px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 footer {
     margin: 50px 0;
+}
+
+.navbar-brand.active {
+	color: #fff;
+    background-color: #080808;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+.page-header {
+    margin-top: 10px;
+}
+
+.ace_scrollbar {
+    -webkit-transition: opacity .3s ease-in-out;
+       -moz-transition: opacity .3s ease-in-out;
+        -ms-transition: opacity .3s ease-in-out;
+         -o-transition: opacity .3s ease-in-out;
+            transition: opacity .3s ease-in-out;
+    opacity: 0;
+}
+.ace_editor .ace_scrollbar:hover {
+    opacity: 1;
+}ity: 1;
 }
