@@ -16,6 +16,7 @@ function head($title, $description)
     <meta name="description" content="' . $description . '">
     <meta name="author" content="' . $GLOBALS['author'] . '">
     <title>' . $title . '</title>
+    <link REL="shortcut icon" href="pics/favicon.png" TYPE="image/x-icon">
     <link href="css/1-col-portfolio.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/custom.css" rel="stylesheet">
@@ -66,7 +67,7 @@ function navbar()
   $results = $GLOBALS['db']->query('SELECT * FROM navItems ORDER BY displayOrder');
   while ($row = $results->fetchArray())
     {
-    // display individual items in the navbar
+    // display individual items in the navbar (active logic is super-messy but works..)
     echo ('<li '.(((strcmp(trim(strval(parse_url($_SERVER['REQUEST_URI'])['path'])),trim('/'.strval($row['link']))))) === 0?'class = "active"':'').'><a href="'.strval($row['link']).'">' . $row['displayText'] . '</a></li>');
     }
   echo ('</ul>
@@ -99,7 +100,7 @@ function portfolio()
   if (!isset($_GET['numberPerPage'])) $_GET['numberPerPage'] = 5;
   if (!isset($_GET['order'])) $_GET['order'] = 'DESC';
   if (!isset($_GET['pageNum']) || $_GET['pageNum'] < 1) $_GET['pageNum'] = 1;
-  if ($_GET['pageNum'] > ($GLOBALS['numResults'] / $_GET['numberPerPage'])) $_GET['pageNum'] = round($GLOBALS['numResults'] / $_GET['numberPerPage']);
+  if ($_GET['pageNum'] > ($GLOBALS['numResults'] / $_GET['numberPerPage'])) $_GET['pageNum'] = ceil($GLOBALS['numResults'] / $_GET['numberPerPage']);
   $query = 'SELECT * FROM posts ' . $_GET['whereClause'] . ' ORDER BY date ' . $_GET['order'] . ' LIMIT ' . $_GET['numberPerPage'] . ' OFFSET ' . ($_GET['numberPerPage'] * ($_GET['pageNum'] - 1));
   $results = $db->query($query);
   while ($row = $results->fetchArray())

@@ -1,13 +1,8 @@
 <html>
-    <?php
-        if (!isset($_GET['file'])){
-            header( 'Location: https://ace.c9.io/build/kitchen-sink.html' );
-            die();
-        }
-        include 'php/template.php';
+	<?php
+		include 'php/template.php';
         head($_GET['file'], 'Editor for the following file:'.$_GET['file']);
-    ?>
-
+	?>
     <body>
         <?php
           navBar();
@@ -36,20 +31,29 @@
             editor.setShowPrintMargin(false);
 
             <?php
-            $components = parse_url($_GET['file']);
-            #load via PHP if file is local to server, load via js otherwise
-            if(empty($components['host']) || strcasecmp($components['host'], $_SERVER['HTTP_HOST']))
-                echo('editor.setValue('.json_encode(file_get_contents($_GET['file'])).')');
-            else{
-                echo('
-            Online file functionality
-            var client = new XMLHttpRequest();
-            client.open("GET", '.'"'.$_GET['file'].'");
-            client.onreadystatechange = function() {
-                editor.setValue(client.responseText);
-            }
-            client.send();');
-            }
+            if (isset($_GET['file'])){
+	            $components = parse_url($_GET['file']);
+	            #load via PHP if file is local to server, load via js otherwise
+	            if(empty($components['host']) || strcasecmp($components['host'], $_SERVER['HTTP_HOST']))
+	                echo('editor.setValue('.json_encode(file_get_contents($_GET['file'])).')');
+	            else{
+	                echo('
+	            Online file functionality
+	            var client = new XMLHttpRequest();
+	            client.open("GET", '.'"'.$_GET['file'].'");
+	            client.onreadystatechange = function() {
+	                editor.setValue(client.responseText);
+	            }
+	            client.send();');
+	            }
+        	} else
+        		echo('editor.setValue()');
+            ?>
+        </script>
+    </body>
+</html>nt.send();');
+	            }
+        	}
             ?>
         </script>
     </body>
