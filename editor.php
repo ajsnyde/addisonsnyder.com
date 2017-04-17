@@ -51,10 +51,4 @@
             ?>
         </script>
     </body>
-</html>nt.send();');
-	            }
-        	}
-            ?>
-        </script>
-    </body>
 </html>
