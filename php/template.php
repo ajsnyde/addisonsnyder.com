@@ -33,7 +33,7 @@ function head($title, $description)
         <div class="row">
           <div class="col-lg-12">
             <p><a href="javascript:var%20s%20=%20document.createElement(&quot;script&quot;);s.type=&quot;text/javascript&quot;;document.body.appendChild(s);s.src=&quot;/js/asteroids.js&quot;;void(0);"><span id="kickass" metadot-translation="" class="ng-isolate-scope">Destroy this Site (not my code)</span></a></p>
-            <p>Hosted using <a href="https://hub.docker.com/_/php/">php:7.1.0-apache</a> Docker image through <a href="https://portal.cycle.io">Cycle.io</a></p>
+            <p>Hosted using <a href="https://aws.amazon.com/elasticbeanstalk/">Elastic Beanstalk</a> through <a href="https://aws.amazon.com/">AWS</a></p>
             <p>Copyright <span style="color: #f92672">&copy</span> </span><strong>' . date("Y") . '</strong> Addison Snyder </p>
             <!-- This Website was first created on 10/7/15 -->
           </div>
